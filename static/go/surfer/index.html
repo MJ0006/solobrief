@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting to Surfer SEO...</title>
+<!-- GA4 measurement — same ID as site config -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-XXXXXXXXXX', {send_page_view: false});
+
+(function() {
+  var dest = "https://surferseo.com?fp_ref=";
+  var slug = "surfer";
+  var ref = document.referrer ? new URL(document.referrer).pathname : "direct";
+  var articleSlug = ref.replace(/\/$/,"").split("/").pop() || "direct";
+
+  // Append UTM parameters to destination URL
+  var utmParams = [
+    "utm_source=site",
+    "utm_medium=affiliate",
+    "utm_campaign=" + slug,
+    "utm_content=" + articleSlug
+  ].join("&");
+  var sep = dest.indexOf("?") === -1 ? "?" : "&";
+  var finalUrl = dest + sep + utmParams;
+
+  // Fire GA4 event, then redirect
+  gtag("event", "affiliate_click", {
+    affiliate_program: slug,
+    article_slug: articleSlug,
+    destination: dest,
+    event_callback: function() { window.location.href = finalUrl; }
+  });
+
+  // Fallback redirect after 400ms if GA4 callback doesn't fire
+  setTimeout(function() { window.location.href = finalUrl; }, 400);
+})();
+</script>
+</head>
+<body>
+<p>Redirecting to <a href="https://surferseo.com?fp_ref=">Surfer SEO</a>...</p>
+</body>
+</html>

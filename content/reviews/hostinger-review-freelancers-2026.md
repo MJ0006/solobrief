@@ -12,7 +12,7 @@ categories: ["Tools & Software"]
 affiliate_disclosure: true
 schema_type: "Review"
 cover:
-  image: "/images/hostinger-review-freelancers-2026-featured.webp"
+  image: "/img/hostinger-review-freelancers-2026-featured.webp"
   alt: "Hostinger review for freelancers 2026 — cheapest web hosting for portfolio sites"
   caption: ""
   relative: false
