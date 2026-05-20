@@ -3,6 +3,7 @@ locale = "en-us"
 title = "SoloBrief"
 theme = "PaperMod"
 paginate = 10
+googleAnalytics = "G-QRQV8QDSRG"
 enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
