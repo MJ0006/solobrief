@@ -1,0 +1,116 @@
+baseURL = "https://solobrief.co"
+locale = "en-us"
+title = "SoloBrief"
+theme = "PaperMod"
+paginate = 10
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+[params]
+  author = "SoloBrief"
+  description = "Honest AI tool reviews for freelancers and solopreneurs. No hype — just tools that actually work."
+  defaultTheme = "light"
+  disableThemeToggle = true
+  ShowShareButtons = false
+  ShowReadingTime = true
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = false
+  ShowFullTextinRSS = false
+  ShowToc = true
+  TocOpen = false
+  env = "production"
+
+  # Brand tagline — used in home page header
+  [params.homeInfoParams]
+    Title = "AI tools that actually work for freelancers."
+    Content = "Honest reviews, real pricing, and clear verdicts — so you don't waste money on tools that don't deliver."
+
+  # Social links
+  [[params.socialIcons]]
+    name = "pinterest"
+    url = "https://pinterest.com/solobrief"
+
+  [[params.socialIcons]]
+    name = "twitter"
+    url = "https://twitter.com/solobrief"
+
+  [[params.socialIcons]]
+    name = "instagram"
+    url = "https://instagram.com/solobrief"
+
+  [[params.socialIcons]]
+    name = "reddit"
+    url = "https://reddit.com/u/solobrief"
+
+  # Cover image defaults
+  [params.cover]
+    hidden = false
+    hiddenInList = false
+    hiddenInSingle = false
+
+  # Schema / SEO
+  [params.schema]
+    publisherType = "Organization"
+    publisherLogo = "/images/solobrief-icon.svg"
+
+[menu]
+  [[menu.main]]
+    identifier = "reviews"
+    name = "Reviews"
+    url = "/reviews/"
+    weight = 10
+  [[menu.main]]
+    identifier = "comparisons"
+    name = "Comparisons"
+    url = "/comparisons/"
+    weight = 20
+  [[menu.main]]
+    identifier = "posts"
+    name = "Guides"
+    url = "/posts/"
+    weight = 30
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 40
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  codeFences = true
+  guessSyntax = true
+  style = "friendly"
+
+# Related posts — 3 articles at end of each post for internal link flow
+[related]
+  threshold = 80
+  includeNewer = true
+  toLower = false
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+  [[related.indices]]
+    name = "tags"
+    weight = 60
+
+# Minify for performance
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+
+[sitemap]
+  changefreq = "weekly"
+  priority = 0.5
