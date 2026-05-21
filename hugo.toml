@@ -58,7 +58,7 @@ buildExpired = false
     publisherLogo = "/images/solobrief-icon.svg"
 
 [params.footer]
-  text = '<a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/disclosure/">Affiliate Disclosure</a>'
+  text = '<a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/disclosure/">Affiliate Disclosure</a> · <a href="/contact/">Contact</a>'
 
 [menu]
   [[menu.main]]
@@ -81,23 +81,6 @@ buildExpired = false
     name = "About"
     url = "/about/"
     weight = 40
-
-  # Footer legal links
-  [[menu.footer]]
-    identifier = "privacy"
-    name = "Privacy Policy"
-    url = "/privacy/"
-    weight = 10
-  [[menu.footer]]
-    identifier = "terms"
-    name = "Terms of Service"
-    url = "/terms/"
-    weight = 20
-  [[menu.footer]]
-    identifier = "disclosure"
-    name = "Affiliate Disclosure"
-    url = "/disclosure/"
-    weight = 30
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]

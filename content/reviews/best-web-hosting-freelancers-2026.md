@@ -5,7 +5,7 @@ lastmod: 2026-05-20
 slug: "best-web-hosting-freelancers-2026"
 description: "The best web hosting options for freelancers in 2026. Ranked by price, ease of setup, and portfolio site performance. Includes free options and India market pricing."
 keywords: ["best web hosting for freelancers 2026", "web hosting for freelance portfolio", "cheapest web hosting india freelancers", "web hosting for solopreneurs", "best hosting for portfolio website"]
-author: "SoloBrief"
+author: "MJ"
 draft: false
 tags: ["web hosting", "freelance tools", "portfolio site"]
 categories: ["Tools & Software"]

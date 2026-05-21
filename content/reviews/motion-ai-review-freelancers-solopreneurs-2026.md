@@ -5,7 +5,7 @@ lastmod: 2026-05-20
 slug: "motion-ai-review-freelancers-solopreneurs-2026"
 description: "Honest Motion AI review for freelancers and solopreneurs. Does AI scheduling actually save time? We cover pricing, learning curve, real limitations, and who it's worth it for."
 keywords: ["motion ai for freelancers solopreneurs", "motion ai scheduling review 2026", "motion app worth $29 a month", "best ai scheduling tool for freelancers", "motion vs calendar.com", "motion ai productivity freelancer"]
-author: "SoloBrief"
+author: "MJ"
 draft: false
 tags: ["ai tools", "productivity", "scheduling", "freelance tools"]
 categories: ["Tools & Software"]

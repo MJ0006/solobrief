@@ -5,7 +5,7 @@ lastmod: 2026-05-20
 slug: "wispr-flow-review-freelance-writers-2026"
 description: "Honest Wispr Flow review for freelance writers and content creators. Does AI dictation actually speed up writing? Covers pricing, real limitations, and who it's worth it for."
 keywords: ["wispr flow for freelance writers", "wispr flow review 2026", "wispr flow vs dragon naturallyspeaking", "best voice dictation for mac freelancers", "is wispr flow worth $15 a month", "ai dictation tool for writers"]
-author: "SoloBrief"
+author: "MJ"
 draft: false
 tags: ["ai tools", "dictation", "freelance writing", "productivity"]
 categories: ["Tools & Software"]
