@@ -1,7 +1,7 @@
 ---
 title: "Affiliate Disclosure"
 url: "/disclosure/"
-description: "SoloBrief affiliate disclosure — how we earn commissions and how it affects (or doesn't affect) our reviews."
+description: "SoloBrief affiliate disclosure, how we earn commissions and how it affects (or doesn't affect) our reviews."
 ---
 
 Some links on SoloBrief are affiliate links. When you click one and make a purchase, we receive a commission from the seller at no additional cost to you.
@@ -12,7 +12,7 @@ Affiliate commissions help fund the time it takes to research and maintain these
 
 **What it doesn't mean:**
 
-Affiliate relationships do not determine which tools we recommend or how we rate them. We cover tools because they're relevant to freelancers — not because they have affiliate programs. Tools with affiliate programs receive the same critical review as tools without them. If a tool has a serious limitation, we include it regardless of commission rate.
+Affiliate relationships do not determine which tools we recommend or how we rate them. We cover tools because they're relevant to freelancers, not because they have affiliate programs. Tools with affiliate programs receive the same critical review as tools without them. If a tool has a serious limitation, we include it regardless of commission rate.
 
 **Which links are affiliate links:**
 

@@ -1,7 +1,7 @@
 ---
 title: "Terms of Service"
 url: "/terms/"
-description: "SoloBrief terms of service — the rules governing your use of this site."
+description: "SoloBrief terms of service, the rules governing your use of this site."
 ---
 
 **Effective date:** May 2026
@@ -20,7 +20,7 @@ SoloBrief publishes reviews, comparisons, and guides for freelancers and solopre
 
 ## Affiliate Links and Commissions
 
-Some links on SoloBrief are affiliate links. We earn a commission when you purchase through these links at no additional cost to you. This does not affect our editorial independence — see our [Affiliate Disclosure](/disclosure/) for full details.
+Some links on SoloBrief are affiliate links. We earn a commission when you purchase through these links at no additional cost to you. This does not affect our editorial independence, see our [Affiliate Disclosure](/disclosure/) for full details.
 
 Affiliate links on this site use `/go/` redirect paths (e.g., `/go/hostinger/`). These redirects include UTM tracking parameters for analytics and may fire a GA4 event before forwarding you to the merchant. No personally identifiable information is collected during this redirect.
 

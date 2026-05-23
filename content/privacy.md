@@ -1,14 +1,14 @@
 ---
 title: "Privacy Policy"
 url: "/privacy/"
-description: "SoloBrief privacy policy — what data we collect and how we use it."
+description: "SoloBrief privacy policy, what data we collect and how we use it."
 ---
 
 **Effective date:** May 2026
 
 ## What we collect
 
-**Analytics:** SoloBrief uses Google Analytics 4 to understand how the site is used — which pages are visited, how long readers stay, and where traffic comes from. This data is anonymous and aggregated. We do not collect or store personally identifiable information through analytics.
+**Analytics:** SoloBrief uses Google Analytics 4 to understand how the site is used, which pages are visited, how long readers stay, and where traffic comes from. This data is anonymous and aggregated. We do not collect or store personally identifiable information through analytics.
 
 **Email subscriptions:** If you subscribe to receive content from SoloBrief, we collect your email address. We use this to send you relevant articles and updates. We do not sell, rent, or share your email address with third parties. You can unsubscribe at any time via the link in any email we send.
 

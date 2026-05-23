@@ -11,7 +11,7 @@ buildExpired = false
 
 [params]
   author = "SoloBrief"
-  description = "Honest AI tool reviews for freelancers and solopreneurs. No hype — just tools that actually work."
+  description = "Honest AI tool reviews for freelancers and solopreneurs. No hype, just tools that actually work."
   defaultTheme = "light"
   disableThemeToggle = true
   ShowShareButtons = false
@@ -24,10 +24,10 @@ buildExpired = false
   TocOpen = false
   env = "production"
 
-  # Brand tagline — used in home page header
+  # Brand tagline, used in home page header
   [params.homeInfoParams]
     Title = "AI tools that actually work for freelancers."
-    Content = "Honest reviews, real pricing, and clear verdicts — so you don't waste money on tools that don't deliver."
+    Content = "Honest reviews, real pricing, and clear verdicts. So you don't waste money on tools that don't deliver."
 
   # Social links
   [[params.socialIcons]]
