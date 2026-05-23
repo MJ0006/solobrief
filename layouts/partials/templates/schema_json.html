@@ -161,23 +161,11 @@
   {{- end -}}
   "datePublished": {{ .PublishDate }},
   "dateModified": {{ .Lastmod }},
-  {{- with (.Params.author | default site.Params.author) }}
-  "author":
-    {{- if (or (eq (printf "%T" .) "[]string") (eq (printf "%T" .) "[]interface {}")) -}}
-  [{{- range $i, $v := . -}}
-  {{- if $i }}, {{end -}}
-  {
+  "author": {
     "@type": "Person",
-    "name": {{ $v }}
-  }
-  {{- end }}],
-    {{- else -}}
-  {
-    "@type": "Person",
-    "name": {{ . }}
+    "name": "G Mohan Jayanth",
+    "url": {{ (site.GetPage "/about/").Permalink | default (printf "%s/about/" site.Home.Permalink) | safeHTML }}
   },
-    {{- end -}}
-  {{- end }}
   "mainEntityOfPage": {
     "@type": "WebPage",
     "@id": {{ .Permalink | safeHTML }}
@@ -187,12 +175,35 @@
     "name": {{ site.Title }},
     "logo": {
       "@type": "ImageObject",
-      "url": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }}
+      "url": {{ site.Params.assets.favicon | default "/images/solobrief-icon.svg" | absURL }}
     }
   }
 }
 </script>
 {{- end }}{{/* schema type conditional end */}}
+
+{{/* FAQ schema -- output when faqs frontmatter array is present */}}
+{{- with .Params.faqs }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {{- range $i, $faq := . }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "Question",
+      "name": {{ $faq.question | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ $faq.answer | jsonify }}
+      }
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end }}
 
 {{- end }}{{/* .IsPage end */}}
 
