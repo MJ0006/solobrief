@@ -57,6 +57,9 @@ buildExpired = false
     publisherType = "Organization"
     publisherLogo = "/images/solobrief-icon.svg"
 
+  [params.assets]
+    favicon = "/images/solobrief-icon.svg"
+
 [params.footer]
   text = '<a href="/privacy/">Privacy Policy</a> · <a href="/terms/">Terms of Service</a> · <a href="/disclosure/">Affiliate Disclosure</a> · <a href="/contact/">Contact</a>'
 
@@ -118,3 +121,6 @@ buildExpired = false
 [sitemap]
   changefreq = "weekly"
   priority = 0.5
+
+# Homepage gets highest priority; articles override to 0.8 in frontmatter
+# Utility pages (about, contact, legal) inherit the 0.5 default
