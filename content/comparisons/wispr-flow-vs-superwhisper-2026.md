@@ -66,6 +66,8 @@ Both tools are Mac-only. If you're on Windows, neither applies.
 
 **Pick SuperWhisper if:** Your freelance contracts include NDAs, you handle client financial or legal data, you prefer local audio processing for privacy, or you want a one-time purchase instead of a monthly subscription.
 
+[Try Wispr Flow free for 7 days, no payment needed →](/go/wispr/)
+
 {{< verdict-box product="Wispr Flow" product-type="SoftwareApplication" rating="4.3/5" price="$15/month" best-for="Freelancers who want zero-friction daily dictation in every app" skip-if="Freelancers handling NDA or confidential client work" affiliate-url="/go/wispr/" affiliate-text="Try Wispr Flow free for 7 days" >}}
 
 ---
