@@ -9,14 +9,14 @@ author: "MJ"
 draft: false
 tags: ["ai tools", "dictation", "freelance writing", "productivity"]
 categories: ["Tools & Software"]
-affiliate_disclosure: false
+affiliate_disclosure: true
 schema_type: "Review"
 rating_value: 4.0
 rating_best: 5
 product_name: "Wispr Flow"
 brief_id: "brief-003"
 status: "ready"
-affiliate_note: "Check wisprflow.ai/affiliates before publishing, if program found, add link and update affiliate_disclosure to true"
+affiliate_note: "Affiliate enrolled 2026-05-24. Link: /go/wispr/ -> https://ref.wisprflow.ai/mohan-jayanth"
 cover:
   image: "/img/wispr-flow-review-freelance-writers-2026-featured.webp"
   alt: "Wispr Flow review for freelance writers 2026, AI dictation tool on Mac"
@@ -116,6 +116,8 @@ You write 5 client emails per week and don't use it for anything else. You save 
 
 **The honest answer:** The ROI is real if email and overhead writing genuinely dominate your week. Freelancers who primarily write long-form deliverables for clients won't see meaningful time savings, their writing is already the billable work, not the overhead.
 
+[Start the Wispr Flow free trial](/go/wispr/) and test it on your inbox for 7 days before paying anything.
+
 ---
 
 ## How to Use Wispr Flow in a Freelance Writing Workflow
@@ -151,7 +153,7 @@ Project status updates for clients, notes from calls, invoice memos. Low-stakes 
 
 **Free trial note:** Wispr Flow offers a trial period. Before paying, use it exclusively for your actual email workflow for one week. If you're not hitting the 30-minute weekly savings mark by day 7, the tool isn't fitting your actual workflow and the $15/month isn't justified.
 
-Check [wisprflow.ai](https://wisprflow.ai) for current pricing and trial details. If they have an affiliate program, we'll link it here, they didn't at time of writing, but that may have changed.
+[Try Wispr Flow free](/go/wispr/) and test it for one week on your email workflow before committing. Current pricing and plan details are on their site.
 
 ---
 

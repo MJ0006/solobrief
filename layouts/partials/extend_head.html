@@ -1,5 +1,60 @@
 <meta name="google-site-verification" content="uz0sKs9UIV4zhq9xV0ugS-Oq4T99IvfmgzaXY2zY4ZU" />
+<!-- Sticky ToC: highlight active section on scroll -->
+<script>
+(function(){
+  if(window.innerWidth < 1280) return;
+  document.addEventListener('DOMContentLoaded', function(){
+    var tocLinks = document.querySelectorAll('.toc a[href^="#"]');
+    if(!tocLinks.length) return;
+    var headings = Array.from(tocLinks).map(function(a){
+      return document.getElementById(a.getAttribute('href').slice(1));
+    }).filter(Boolean);
+    var active = null;
+    function update(){
+      var found = null;
+      for(var i = headings.length - 1; i >= 0; i--){
+        if(headings[i].getBoundingClientRect().top <= 120){ found = i; break; }
+      }
+      var idx = found === null ? 0 : found;
+      if(active !== idx){
+        tocLinks.forEach(function(a){ a.classList.remove('toc-active'); });
+        if(tocLinks[idx]) tocLinks[idx].classList.add('toc-active');
+        active = idx;
+      }
+    }
+    window.addEventListener('scroll', update, {passive: true});
+    update();
+    /* Force ToC open on desktop */
+    var toc = document.querySelector('.post-single .toc');
+    if(toc) toc.setAttribute('open', '');
+  });
+})();
+</script>
 <meta name="msvalidate.01" content="FC983120D3E1E4BCC38D73B123839CF9" />
+{{ if .IsHome -}}
+<!-- Organization schema — entity anchor for Google, Bing Copilot, Perplexity, ChatGPT -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SoloBrief",
+  "url": "https://solobrief.co",
+  "logo": "https://solobrief.co/images/solobrief-icon.svg",
+  "description": "Honest AI tool reviews for freelancers and solopreneurs. No hype, just tools that actually work.",
+  "sameAs": [
+    "https://pinterest.com/solobrief",
+    "https://twitter.com/solobrief",
+    "https://instagram.com/solobrief",
+    "https://reddit.com/u/solobrief"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "hello@solobrief.co",
+    "contactType": "editorial"
+  }
+}
+</script>
+{{- end }}
 <script>
   (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[]).push(arguments);}
   ,l=d.createElement(e),l.async=1,l.src=u,n=d.getElementsByTagName(e)[0],

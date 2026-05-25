@@ -1,0 +1,9 @@
+{{/* Individual FAQ item. Must be used inside {{< faq-section >}}...{{< /faq-section >}}.
+     Usage: {{< faq q="Question?" a="Answer text." >}}
+*/}}
+<div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+  <p class="faq-q" itemprop="name">{{ .Get "q" }}</p>
+  <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+    <p class="faq-a" itemprop="text">{{ .Get "a" }}</p>
+  </div>
+</div>

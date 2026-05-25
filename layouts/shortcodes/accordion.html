@@ -1,0 +1,7 @@
+{{- $title := .Get "title" | default "Show more" -}}
+<details class="sb-accordion">
+  <summary class="sb-accordion-title">{{ $title }}</summary>
+  <div class="sb-accordion-body">
+    {{ .Inner | markdownify }}
+  </div>
+</details>

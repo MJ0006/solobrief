@@ -1,0 +1,20 @@
+{{- $pros := .Get "pros" -}}
+{{- $cons := .Get "cons" -}}
+<div class="pros-cons-grid">
+  <div class="pros-block">
+    <h4 class="pros-title">What We Liked</h4>
+    <ul>
+      {{- range strings.Split $pros "|" }}
+      <li>{{ . | markdownify }}</li>
+      {{- end }}
+    </ul>
+  </div>
+  <div class="cons-block">
+    <h4 class="cons-title">Worth Knowing</h4>
+    <ul>
+      {{- range strings.Split $cons "|" }}
+      <li>{{ . | markdownify }}</li>
+      {{- end }}
+    </ul>
+  </div>
+</div>

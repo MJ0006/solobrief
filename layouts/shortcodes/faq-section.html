@@ -1,0 +1,9 @@
+{{/* Wrap all {{< faq >}} items in a valid FAQPage schema container.
+     Usage:
+       {{< faq-section >}}
+       {{< faq q="Question?" a="Answer." >}}
+       {{< /faq-section >}}
+*/}}
+<div class="faq-section" itemscope itemtype="https://schema.org/FAQPage">
+  {{ .Inner }}
+</div>

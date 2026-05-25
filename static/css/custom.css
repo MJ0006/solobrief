@@ -266,6 +266,252 @@ a:hover {
   font-size: 0.92rem;
 }
 
+/* ── Sticky Table of Contents (desktop sidebar) ─────────── */
+@media (min-width: 1280px) {
+  /* Pull ToC out of content flow into left gutter */
+  .post-single .toc {
+    position: sticky;
+    top: 4.5rem;
+    float: left;
+    clear: left;
+    width: 210px;
+    /* Shift left: past content left edge + gap */
+    margin-left: calc(-210px - 2rem);
+    margin-right: 0;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    font-size: 0.8rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 0.75rem 0.9rem;
+    /* Keep it visible when open */
+    z-index: 10;
+  }
+
+  .post-single .toc summary {
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    cursor: default;
+    list-style: none;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Force open on desktop — redundant closed state isn't useful on sidebar */
+  .post-single .toc[open] summary::before { content: none; }
+
+  .post-single .toc ul {
+    padding-left: 0.75rem;
+    margin: 0;
+  }
+
+  .post-single .toc li {
+    margin-bottom: 0.25rem;
+  }
+
+  .post-single .toc a {
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    text-decoration: none;
+    line-height: 1.45;
+    display: block;
+  }
+
+  .post-single .toc a:hover {
+    color: var(--accent);
+  }
+
+  /* Active section highlight — set by scroll observer JS */
+  .post-single .toc a.toc-active {
+    color: var(--accent);
+    font-weight: 600;
+  }
+}
+
+/* ── Accordion ───────────────────────────────────────────── */
+.sb-accordion {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin: 1.25rem 0;
+  overflow: hidden;
+}
+
+.sb-accordion-title {
+  cursor: pointer;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  font-size: 0.93rem;
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.sb-accordion-title::before {
+  content: "+";
+  font-size: 1.1rem;
+  color: var(--accent);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.sb-accordion[open] .sb-accordion-title::before {
+  content: "-";
+}
+
+.sb-accordion-body {
+  padding: 0.85rem 1rem 1rem;
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  border-top: 1px solid var(--border);
+}
+
+.sb-accordion-body table {
+  margin: 0.5rem 0;
+}
+
+/* ── YouTube Lite Embed ──────────────────────────────────── */
+.yt-lite {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 */
+  background: #000 center / cover no-repeat;
+  border-radius: var(--radius);
+  overflow: hidden;
+  cursor: pointer;
+  margin: 1.5rem 0;
+}
+
+.yt-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.18);
+  transition: background 0.15s;
+}
+
+.yt-lite:hover .yt-overlay {
+  background: rgba(0,0,0,0.08);
+}
+
+.yt-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  opacity: 0.92;
+  transition: opacity 0.15s, transform 0.15s;
+  pointer-events: none;
+}
+
+.yt-lite:hover .yt-play-btn {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+.yt-title {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.9rem;
+  right: 0.9rem;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+  pointer-events: none;
+}
+
+/* ── Pros / Cons Grid ────────────────────────────────────── */
+.pros-cons-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.pros-block,
+.cons-block {
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+}
+
+.pros-block {
+  background: #f0faf2;
+  border: 1px solid #b7dfc0;
+}
+
+.cons-block {
+  background: #fdf6f0;
+  border: 1px solid #f0cca8;
+}
+
+.pros-title {
+  color: #2d7a46;
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+  font-family: inherit;
+}
+
+.cons-title {
+  color: #b85c1a;
+  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+  font-family: inherit;
+}
+
+.pros-block ul,
+.cons-block ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.pros-block li,
+.cons-block li {
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+  color: var(--text-primary);
+}
+
+.pros-block li::marker { color: #2d7a46; }
+.cons-block li::marker { color: #b85c1a; }
+
+/* ── FAQ Section ─────────────────────────────────────────── */
+.faq-section {
+  margin: 2rem 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 0.9rem 0;
+}
+
+.faq-item:last-child { border-bottom: none; }
+
+.faq-q {
+  font-weight: 600;
+  font-size: 0.97rem;
+  color: var(--text-primary);
+  margin: 0 0 0.4rem;
+}
+
+.faq-a {
+  font-size: 0.93rem;
+  color: var(--text-secondary);
+  margin: 0;
+  line-height: 1.65;
+}
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 640px) {
   h1 { font-size: 1.6rem; }
@@ -283,5 +529,9 @@ a:hover {
   .cta-button {
     display: block;
     text-align: center;
+  }
+
+  .pros-cons-grid {
+    grid-template-columns: 1fr;
   }
 }

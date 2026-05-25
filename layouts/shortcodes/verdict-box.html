@@ -1,0 +1,48 @@
+{{- $rating      := .Get "rating" -}}
+{{- $price       := .Get "price" -}}
+{{- $bestFor     := .Get "best-for" -}}
+{{- $skipIf      := .Get "skip-if" -}}
+{{- $url         := .Get "affiliate-url" -}}
+{{- $cta         := .Get "affiliate-text" | default "Check current pricing" -}}
+{{- $product     := .Get "product" -}}
+{{- $productType := .Get "product-type" | default "SoftwareApplication" -}}
+{{- /* Extract numeric rating value from "4.1/5" or "4.1" */ -}}
+{{- $ratingValue := "" -}}
+{{- if $rating -}}
+  {{- $parts := strings.Split $rating "/" -}}
+  {{- $ratingValue = trim (index $parts 0) " " -}}
+{{- end -}}
+<div class="verdict-box" role="region" aria-label="Quick verdict">
+  <strong class="verdict-label">Quick Verdict</strong>
+  <table>
+    {{- if $rating }}<tr><td><strong>Rating</strong></td><td>{{ $rating }}</td></tr>{{ end -}}
+    {{- if $price }}<tr><td><strong>Price</strong></td><td>{{ $price }}</td></tr>{{ end -}}
+    {{- if $bestFor }}<tr><td><strong>Best for</strong></td><td>{{ $bestFor }}</td></tr>{{ end -}}
+    {{- if $skipIf }}<tr><td><strong>Skip if</strong></td><td>{{ $skipIf }}</td></tr>{{ end -}}
+    {{- if $url }}<tr><td colspan="2" style="border:0;padding-top:0.6rem"><a href="{{ $url }}" class="cta-button">{{ $cta }} &rarr;</a></td></tr>{{ end -}}
+  </table>
+</div>
+{{- /* Review + AggregateRating JSON-LD — only output when rating and product name are provided */ -}}
+{{- if and $ratingValue $product -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "Review",
+  "reviewRating": {
+    "@type": "Rating",
+    "ratingValue": "{{ $ratingValue }}",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "SoloBrief",
+    "url": "https://solobrief.co"
+  },
+  "itemReviewed": {
+    "@type": "{{ $productType }}",
+    "name": "{{ $product }}"
+  }
+}
+</script>
+{{- end -}}
