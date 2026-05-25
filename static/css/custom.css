@@ -519,6 +519,24 @@ a:hover {
   line-height: 1.65;
 }
 
+/* ── Tables: horizontal scroll on overflow ───────────────── */
+.post-content table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.verdict-box {
+  overflow-x: hidden;
+}
+
+.verdict-box table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  min-width: 260px;
+}
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 640px) {
   h1 { font-size: 1.6rem; }
@@ -531,6 +549,30 @@ a:hover {
   .post-content th,
   .post-content td {
     padding: 0.45rem 0.55rem;
+    white-space: nowrap;
+  }
+
+  .verdict-box {
+    padding: 0.9rem 1rem;
+  }
+
+  .verdict-box th,
+  .verdict-box td {
+    white-space: nowrap;
+    font-size: 0.85rem;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .home-info-container {
+    padding: 1.25rem 1.1rem;
+  }
+
+  .home-info-container h1 {
+    font-size: 1.35rem;
+  }
+
+  .sb-accordion-body {
+    padding: 0.75rem 0.85rem 0.9rem;
   }
 
   .cta-button {
@@ -540,5 +582,9 @@ a:hover {
 
   .pros-cons-grid {
     grid-template-columns: 1fr;
+  }
+
+  .newsletter-cta {
+    padding: 1.1rem 1rem;
   }
 }
