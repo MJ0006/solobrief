@@ -26,8 +26,9 @@
       iframe.title = '{{ $title }}';
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
       iframe.allowFullscreen = true;
-      iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0';
       el.innerHTML = '';
+      el.style.backgroundImage = 'none';
+      el.style.background = 'transparent';
       el.style.cursor = 'default';
       el.appendChild(iframe);
     }
