@@ -36,12 +36,11 @@ faqs:
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. We only recommend services we've researched thoroughly.*
 
 {{< verdict-box
-  product="Best Hosting for Freelancers 2026"
-  verdict="Hostinger Premium is the best starting point for most freelancers: under $3/month promo, free domain, LiteSpeed servers, one-click WordPress. SiteGround if you need premium performance and support. Cloudflare Pages if you build static sites. Skip free shared hosting entirely."
-  affiliate_url="/go/hostinger/"
-  affiliate_label="See Hostinger Deal"
-  pros="Hostinger under $3/month covers every portfolio need|Free options (Cloudflare Pages) are genuinely good for developers|5 ranked options across every budget"
-  cons="Renewal pricing triples or quadruples the promo rate on budget hosts|Free shared hosting is not appropriate for client-facing work|SiteGround renewal cost is steep for a simple portfolio"
+  verdict="Hostinger Premium is the best starting point for most freelancers: under $3/month promo, free domain, LiteSpeed servers, one-click WordPress. SiteGround if performance and support are the priority. Cloudflare Pages if you build static sites. Skip free shared hosting entirely."
+  best-for="Freelancers launching a first portfolio site on a budget"
+  skip-if="You need WooCommerce at scale, server control, or developer-grade infrastructure"
+  affiliate-url="/go/hostinger/"
+  affiliate-text="See current Hostinger deal"
 >}}
 
 Most freelancers are overpaying for hosting they don't need.

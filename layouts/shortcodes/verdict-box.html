@@ -6,6 +6,7 @@
 {{- $cta         := .Get "affiliate-text" | default "Check current pricing" -}}
 {{- $product     := .Get "product" -}}
 {{- $productType := .Get "product-type" | default "SoftwareApplication" -}}
+{{- $verdict     := .Get "verdict" -}}
 {{- /* Extract numeric rating value from "4.1/5" or "4.1" */ -}}
 {{- $ratingValue := "" -}}
 {{- if $rating -}}
@@ -14,6 +15,7 @@
 {{- end -}}
 <div class="verdict-box" role="region" aria-label="Quick verdict">
   <strong class="verdict-label">Quick Verdict</strong>
+  {{- if $verdict }}<p style="margin:0.5rem 0 0.75rem;font-size:0.95rem;color:var(--text-primary)">{{ $verdict | markdownify }}</p>{{ end -}}
   <table>
     {{- if $rating }}<tr><td><strong>Rating</strong></td><td>{{ $rating }}</td></tr>{{ end -}}
     {{- if $price }}<tr><td><strong>Price</strong></td><td>{{ $price }}</td></tr>{{ end -}}
