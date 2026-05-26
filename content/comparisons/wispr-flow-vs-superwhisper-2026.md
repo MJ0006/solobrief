@@ -198,11 +198,21 @@ Both have free options to test before paying. SuperWhisper's free tier gives you
 ## Frequently asked questions
 
 {{< faq-section >}}
-{{< faq q="Is Wispr Flow better than SuperWhisper for freelancers?" a="It depends on your work. Wispr Flow is better for everyday dictation tasks: emails, Slack messages, quick notes. It types directly into any Mac app with no friction. SuperWhisper is better if you handle NDA-covered or confidential client work, since all processing happens locally on your Mac. SuperWhisper also has a $99 one-time purchase option vs Wispr Flow's $15/month subscription." >}}
-{{< faq q="Does Wispr Flow send audio to the cloud?" a="Yes. Wispr Flow processes audio on Wispr's cloud servers. For most freelance work this is not a problem. But if your client contracts include NDAs or you handle confidential financial or legal data, cloud processing may not be appropriate. SuperWhisper is the local-processing alternative where audio never leaves your Mac." >}}
-{{< faq q="Is SuperWhisper accurate enough for professional work?" a="Yes. SuperWhisper's Ultra mode uses a large Whisper model and matches or exceeds cloud-tool accuracy for longer content. The trade-off is a 2 to 5 second processing pause after each spoken segment. Fast mode is good for quick messages. For proposals, project scopes, and long emails, Ultra mode is the right choice." >}}
-{{< faq q="Does either Wispr Flow or SuperWhisper work on Windows?" a="Neither works on Windows. Both are Mac-only apps with iPhone companion apps. Windows dictation alternatives include PowerToys Voice Typing or Whisper Desktop (an open-source local option)." >}}
-{{< faq q="Is SuperWhisper's one-time purchase worth it?" a="Yes, if you plan to use it for more than 9 months. SuperWhisper's one-time purchase is $99. The monthly plan is $12/month. Over two years, the one-time purchase saves $189 compared to Wispr Flow's monthly plan. For freelancers who prefer to avoid recurring subscriptions, it is the clear value choice." >}}
+{{< faq question="Is Wispr Flow better than SuperWhisper for freelancers?" >}}
+It depends on your work. Wispr Flow is better for everyday dictation tasks: emails, Slack messages, quick notes. It types directly into any Mac app with no friction. SuperWhisper is better if you handle NDA-covered or confidential client work, since all processing happens locally on your Mac. SuperWhisper also has a $99 one-time purchase option vs Wispr Flow's $15/month subscription.
+{{< /faq >}}
+{{< faq question="Does Wispr Flow send audio to the cloud?" >}}
+Yes. Wispr Flow processes audio on Wispr's cloud servers. For most freelance work this is not a problem. But if your client contracts include NDAs or you handle confidential financial or legal data, cloud processing may not be appropriate. SuperWhisper is the local-processing alternative where audio never leaves your Mac.
+{{< /faq >}}
+{{< faq question="Is SuperWhisper accurate enough for professional work?" >}}
+Yes. SuperWhisper's Ultra mode uses a large Whisper model and matches or exceeds cloud-tool accuracy for longer content. The trade-off is a 2 to 5 second processing pause after each spoken segment. Fast mode is good for quick messages. For proposals, project scopes, and long emails, Ultra mode is the right choice.
+{{< /faq >}}
+{{< faq question="Does either Wispr Flow or SuperWhisper work on Windows?" >}}
+Neither works on Windows. Both are Mac-only apps with iPhone companion apps. Windows dictation alternatives include PowerToys Voice Typing or Whisper Desktop (an open-source local option).
+{{< /faq >}}
+{{< faq question="Is SuperWhisper's one-time purchase worth it?" >}}
+Yes, if you plan to use it for more than 9 months. SuperWhisper's one-time purchase is $99. The monthly plan is $12/month. Over two years, the one-time purchase saves $189 compared to Wispr Flow's monthly plan. For freelancers who prefer to avoid recurring subscriptions, it is the clear value choice.
+{{< /faq >}}
 {{< /faq-section >}}
 
 ---

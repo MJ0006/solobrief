@@ -1,9 +1,13 @@
 {{/* Individual FAQ item. Must be used inside {{< faq-section >}}...{{< /faq-section >}}.
-     Usage: {{< faq q="Question?" a="Answer text." >}}
+     Style 1 (self-closing): {{< faq q="Question?" a="Answer text." >}}
+     Style 2 (paired):       {{< faq question="Question?" >}}Answer text.{{< /faq >}}
 */}}
+{{- $q := or (.Get "question") (.Get "q") -}}
+{{- $a_inner := .Inner | markdownify -}}
+{{- $a := or $a_inner (.Get "a") -}}
 <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-  <p class="faq-q" itemprop="name">{{ .Get "q" }}</p>
+  <p class="faq-q" itemprop="name">{{ $q }}</p>
   <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-    <p class="faq-a" itemprop="text">{{ .Get "a" }}</p>
+    <div class="faq-a" itemprop="text">{{ $a }}</div>
   </div>
 </div>
