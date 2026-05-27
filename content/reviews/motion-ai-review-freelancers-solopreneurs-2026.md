@@ -19,7 +19,7 @@ multimedia: true
 brief_id: "brief-004"
 status: "ready"
 cover:
-  image: "/img/motion-ai-review-freelancers-solopreneurs-2026-featured.webp"
+  image: "/img/motion-ai-review-freelancers-solopreneurs-2026.webp"
   alt: "Motion AI review for freelancers 2026, AI scheduling tool worth $29 per month"
   caption: ""
   relative: false
