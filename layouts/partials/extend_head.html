@@ -3,6 +3,23 @@
 <meta name="google-site-verification" content="uz0sKs9UIV4zhq9xV0ugS-Oq4T99IvfmgzaXY2zY4ZU" />
 <meta name="p:domain_verify" content="e0855cc466f650c6eb7827573f9a79b1"/>
 <meta name="impact-site-verification" value="86a63f88-a3d6-4cb1-94ca-77ea5cbfed60" />
+<!-- Reading progress bar -->
+<script>
+(function(){
+  document.addEventListener('DOMContentLoaded', function(){
+    var bar = document.createElement('div');
+    bar.id = 'sb-progress';
+    document.body.insertBefore(bar, document.body.firstChild);
+    function update(){
+      var s = document.documentElement;
+      var scrolled = s.scrollTop || document.body.scrollTop;
+      var total = s.scrollHeight - s.clientHeight;
+      bar.style.width = total > 0 ? (scrolled / total * 100) + '%' : '0%';
+    }
+    window.addEventListener('scroll', update, {passive: true});
+  });
+})();
+</script>
 <!-- Sticky ToC: highlight active section on scroll -->
 <script>
 (function(){

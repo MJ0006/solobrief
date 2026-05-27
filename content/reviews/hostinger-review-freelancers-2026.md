@@ -5,7 +5,8 @@ lastmod: 2026-05-25
 slug: "hostinger-review-freelancers-2026"
 description: "Honest Hostinger review for freelancers. We cover pricing, portfolio site setup, India market plans, and exactly who should, and shouldn't, use it."
 keywords: ["hostinger review for freelancers 2026", "hostinger for freelancers", "best cheap web hosting for freelancers", "cheapest web hosting india freelancers"]
-author: "MJ"
+author: "G Mohan Jayanth"
+authorURL: "/about/"
 draft: false
 tags: ["web hosting", "freelance tools", "portfolio site"]
 categories: ["Tools & Software"]

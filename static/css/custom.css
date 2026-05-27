@@ -593,3 +593,211 @@ a:hover {
   min-width: 0;
   width: 100%;
 }
+
+/* ── Secondary / outline CTA button ─────────────────────────── */
+.cta-button-outline {
+  display: inline-block;
+  background: transparent;
+  color: var(--accent) !important;
+  border: 2px solid var(--accent);
+  padding: 0.6rem 1.4rem;
+  border-radius: var(--radius);
+  text-decoration: none !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0.5rem 0;
+  transition: background 0.18s ease, color 0.18s ease;
+  letter-spacing: 0.01em;
+}
+
+.cta-button-outline:hover {
+  background: var(--accent);
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+/* ── Blockquote ──────────────────────────────────────────────── */
+.post-content blockquote {
+  border-left: 3px solid var(--accent);
+  background: var(--bg-secondary);
+  margin: 1.75rem 0;
+  padding: 0.9rem 1.25rem;
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  font-size: 0.98rem;
+}
+
+.post-content blockquote p {
+  margin: 0;
+}
+
+/* ── Inline code ─────────────────────────────────────────────── */
+.post-content code {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 0.12em 0.38em;
+  font-size: 0.88em;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+/* Don't double-style code inside pre blocks */
+.post-content pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+}
+
+.post-content pre {
+  background: #1e1e1e;
+  color: #d4d4d4;
+  border-radius: var(--radius);
+  padding: 1.1rem 1.25rem;
+  overflow-x: auto;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 1.5rem 0;
+}
+
+/* ── Heading anchor hover links ──────────────────────────────── */
+.post-content h2[id],
+.post-content h3[id] {
+  position: relative;
+}
+
+.post-content h2[id]:hover::after,
+.post-content h3[id]:hover::after {
+  content: " #";
+  color: var(--accent);
+  font-size: 0.75em;
+  font-weight: 400;
+  opacity: 0.7;
+  font-family: monospace;
+}
+
+/* ── Focus-visible states (keyboard navigation) ──────────────── */
+a:focus-visible,
+.cta-button:focus-visible,
+.cta-button-outline:focus-visible,
+button:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Remove default focus ring for mouse users */
+a:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ── Skip-to-content link (accessibility) ────────────────────── */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  z-index: 9999;
+  border-radius: 0 0 var(--radius) 0;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ── Reading progress bar ────────────────────────────────────── */
+#sb-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: var(--accent);
+  z-index: 9998;
+  transition: width 0.1s linear;
+  pointer-events: none;
+}
+
+/* ── Article header / meta bar ───────────────────────────────── */
+.post-meta {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.post-meta a {
+  color: var(--text-muted);
+  text-decoration: underline;
+}
+
+.post-meta a:hover {
+  color: var(--accent);
+}
+
+/* ── Print styles ────────────────────────────────────────────── */
+@media print {
+  #sb-progress,
+  .header,
+  .footer,
+  .toc,
+  .newsletter-cta,
+  .affiliate-disclosure,
+  nav {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+
+  .post-content {
+    max-width: 100%;
+  }
+
+  h1, h2, h3 {
+    color: #000;
+    page-break-after: avoid;
+  }
+
+  .cta-button,
+  .cta-button-outline {
+    display: inline;
+    border: none;
+    background: none;
+    color: #000 !important;
+    padding: 0;
+    font-weight: normal;
+    font-size: inherit;
+  }
+
+  /* Show URLs after links in print */
+  .cta-button::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #555;
+  }
+
+  .verdict-box {
+    border: 1px solid #999;
+    background: #f5f5f5;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
