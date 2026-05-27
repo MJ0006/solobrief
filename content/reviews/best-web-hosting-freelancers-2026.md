@@ -178,8 +178,6 @@ For developers who want free hosting, Cloudflare Pages and GitHub Pages are the 
 
 ## How to Set Up Your Freelance Portfolio Site in Under 3 Hours
 
-{{< youtube-lite id="AGmSV79-EMY" title="Hostinger full setup tutorial for beginners (Ferdy Korpershoek)" >}}
-
 If you go with Hostinger, here's the actual flow:
 
 **Step 1, Sign up and choose your plan**  
@@ -201,6 +199,8 @@ Home, About, Services, Portfolio/Work, Contact. That's the full structure for a 
 Both are handled in hPanel. SSL takes up to 24 hours to propagate. DNS changes can take up to 48 hours if your domain is with a third-party registrar.
 
 Three hours is realistic for this setup including theme customisation. Some freelancers do it faster.
+
+{{< youtube-lite id="AGmSV79-EMY" title="Hostinger full setup tutorial for beginners (Ferdy Korpershoek)" >}}
 
 ---
 
