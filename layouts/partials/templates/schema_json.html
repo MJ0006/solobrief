@@ -117,6 +117,23 @@
   "name": {{ .Title | plainify }},
   "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }},
   "url": {{ .Permalink | safeHTML }},
+  "datePublished": {{ .PublishDate }},
+  "dateModified": {{ .Lastmod }},
+  {{- if .Params.list_items }}
+  "numberOfItems": {{ len .Params.list_items }},
+  "itemListElement": [
+    {{- range $i, $item := .Params.list_items }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $i 1 }},
+      "name": {{ $item.name | jsonify }}{{ if $item.url }},
+      "url": {{ $item.url | jsonify }}{{ end }}{{ if $item.description }},
+      "description": {{ $item.description | jsonify }}{{ end }}
+    }
+    {{- end }}
+  ],
+  {{- end }}
   "author": {
     "@type": "Person",
     "name": "G Mohan Jayanth",
@@ -129,6 +146,62 @@
       "@type": "ImageObject",
       "url": {{ site.Params.assets.favicon | default "/images/solobrief-icon.svg" | absURL }}
     }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | safeHTML }}
+  }
+}
+</script>
+
+{{- else if eq $schemaType "Comparison" }}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": {{ .Title | plainify }},
+  "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }},
+  "datePublished": {{ .PublishDate }},
+  "dateModified": {{ .Lastmod }},
+  "inLanguage": {{ .Language.Lang | default "en-us" }},
+  "wordCount": "{{ .WordCount }}",
+  {{- if .Params.cover.image }}
+  "image": {{ .Params.cover.image | absURL }},
+  {{- end }}
+  "author": {
+    "@type": "Person",
+    "name": "G Mohan Jayanth",
+    "url": {{ (site.GetPage "/about/").Permalink | default (printf "%s/about/" site.Home.Permalink) | safeHTML }}
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.Title }},
+    "logo": {
+      "@type": "ImageObject",
+      "url": {{ site.Params.assets.favicon | default "/images/solobrief-icon.svg" | absURL }}
+    }
+  },
+  {{- if .Params.products_compared }}
+  "about": [
+    {{- range $i, $p := .Params.products_compared }}
+    {{- if $i }},{{ end }}
+    {
+      "@type": "SoftwareApplication",
+      "name": {{ $p.name | jsonify }}{{ if $p.operating_system }},
+      "operatingSystem": {{ $p.operating_system | jsonify }}{{ end }}{{ if $p.application_category }},
+      "applicationCategory": {{ $p.application_category | jsonify }}{{ end }}{{ if $p.url }},
+      "url": {{ $p.url | jsonify }}{{ end }}{{ if $p.price_model }},
+      "offers": {
+        "@type": "Offer",
+        "description": {{ $p.price_model | jsonify }}
+      }{{ end }}
+    }
+    {{- end }}
+  ],
+  {{- end }}
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": {{ .Permalink | safeHTML }}
   }
 }
 </script>

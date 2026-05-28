@@ -11,8 +11,18 @@ draft: false
 tags: ["dictation tools", "productivity", "mac apps", "freelance tools"]
 categories: ["Tools & Software"]
 affiliate_disclosure: true
-schema_type: "Review"
-product_name: "Wispr Flow vs SuperWhisper"
+schema_type: "Comparison"
+products_compared:
+  - name: "Wispr Flow"
+    operating_system: "macOS"
+    application_category: "ProductivityApplication"
+    price_model: "Subscription, USD 15 per month"
+    url: "https://wisprflow.ai"
+  - name: "SuperWhisper"
+    operating_system: "macOS"
+    application_category: "ProductivityApplication"
+    price_model: "One-time purchase, USD 99"
+    url: "https://superwhisper.com"
 brief_id: "brief-007"
 multimedia: true
 faq_schema: true

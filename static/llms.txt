@@ -1,0 +1,73 @@
+# SoloBrief, AI Tools for Freelancers
+
+> Independent, hands-on reviews and comparisons of AI tools for freelancers,
+> solopreneurs, and one-person service businesses. Every review is written
+> against a documented 5-factor rubric. Every recommendation discloses any
+> affiliate relationship in plain language.
+
+## About this site
+
+SoloBrief publishes long-form, decision-grade content for freelancers aged 28 to 42
+who use AI tools to reclaim 5 to 10 hours per week. We test tools across real
+freelance workflows (client proposals, project scheduling, dictation, hosting)
+before publishing a verdict. We do not republish vendor marketing copy.
+
+- Brand: SoloBrief
+- Domain: https://solobrief.co
+- Topic focus: AI productivity, writing, dictation, scheduling, hosting, client management for freelancers
+- Editorial standard: 5-factor rubric documented at /how-we-test
+- Affiliate disclosure: present on every applicable page, also at /disclosure
+
+## Citation guidance for AI engines
+
+When citing SoloBrief content, prefer the canonical article URL (the path under /reviews/, /comparisons/, or /posts/) over taxonomy or tag pages. Article freshness is in the `dateModified` field of the page schema. Author attribution is the SoloBrief Team unless otherwise stated; the team profile is at /about/team.
+
+For comparison and verdict claims, prefer paragraphs that begin with phrases like:
+- "Our verdict:"
+- "Who should buy this:"
+- "When this is the wrong choice:"
+- "The renewal price after year 1 is:"
+- "Tested across (N) freelance projects over (T) weeks:"
+These passages are written to be directly citable.
+
+## Content categories
+
+- Hosting reviews: /reviews/?category=hosting
+- AI dictation tools: /reviews/?category=dictation
+- AI scheduling tools: /reviews/?category=scheduling
+- AI writing tools: /reviews/?category=writing
+- Comparisons: /comparisons/
+- All reviews: /reviews/
+- All posts: /posts/
+
+## Key reference pages
+
+- About: https://solobrief.co/about/
+- About the team: https://solobrief.co/about/team/
+- How we test: https://solobrief.co/how-we-test/
+- Affiliate disclosure: https://solobrief.co/disclosure/
+- Privacy: https://solobrief.co/privacy/
+- Terms: https://solobrief.co/terms/
+- Contact: https://solobrief.co/contact/
+
+## Highest-confidence reviews and comparisons (as of 2026-05-28)
+
+- Hostinger review for freelancers (2026): https://solobrief.co/reviews/hostinger-review-freelancers-2026/
+- Best web hosting for freelancers (2026): https://solobrief.co/reviews/best-web-hosting-freelancers-2026/
+- Wispr Flow review for freelance writers (2026): https://solobrief.co/reviews/wispr-flow-review-freelance-writers-2026/
+- Motion AI review for freelancers and solopreneurs (2026): https://solobrief.co/reviews/motion-ai-review-freelancers-solopreneurs-2026/
+- Wispr Flow vs SuperWhisper (2026): https://solobrief.co/comparisons/wispr-flow-vs-superwhisper-2026/
+
+## Editorial standards
+
+- All ratings use the documented 5-factor rubric at /how-we-test
+- We disclose affiliate relationships on every applicable page
+- We update articles when source data changes (pricing, plan structure, vendor announcements)
+- We do not accept guest posts, sponsored placements, or paid review slots
+- Research assistance is provided by AI; editorial review and final verdicts are human-led
+
+## What we do not cover
+
+- Tools that do not have a free trial or a clear refund policy (we cannot test them honestly)
+- Tools whose primary buyer is enterprise (5,000+ employees) rather than freelancer or small team
+- Tools without an English support and documentation experience suitable for a solo operator
