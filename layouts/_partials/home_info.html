@@ -1,0 +1,19 @@
+{{- with site.Params.homeInfoParams }}
+<article class="first-entry home-info">
+    <header class="entry-header">
+        <h1>{{ .Title | markdownify }}</h1>
+    </header>
+    <div class="entry-content md-content">
+        {{ $opts := dict "display" "block" }}
+        {{ .Content | $.Page.RenderString $opts }}
+    </div>
+    <section class="newsletter-cta home-optin">
+        <h3>Get one honest AI tool review a week</h3>
+        <p>Real pricing, clear verdicts, no hype. Join freelancers who check here before they buy a tool. Unsubscribe any time.</p>
+        <div class="ml-embedded" data-form="fd3x0P"></div>
+    </section>
+    <footer class="entry-footer">
+        {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
+    </footer>
+</article>
+{{- end -}}
