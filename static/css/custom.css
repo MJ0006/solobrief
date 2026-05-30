@@ -801,3 +801,82 @@ button:focus:not(:focus-visible) {
     max-width: 100%;
   }
 }
+
+/* ============================================================
+   Homepage enhancements (2026-05-31): trust strip + browse-by-type
+   ============================================================ */
+
+.home-trust {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem 0;
+  max-width: var(--max-content);
+  margin: 0.5rem auto 1.5rem;
+  padding: 0;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.home-trust li {
+  display: inline-flex;
+  align-items: center;
+}
+
+.home-trust li:not(:first-child)::before {
+  content: "\00B7";
+  margin: 0 0.9rem;
+  color: var(--border-strong);
+}
+
+.home-browse {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  max-width: var(--max-content);
+  margin: 1.75rem auto 0;
+}
+
+.browse-card {
+  display: block;
+  padding: 1.1rem 1.25rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.browse-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(26, 26, 26, 0.06);
+}
+
+.browse-card strong {
+  display: block;
+  font-family: "Lora", Georgia, serif;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.browse-card:hover strong {
+  color: var(--accent-hover);
+}
+
+.browse-card span {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+@media (max-width: 560px) {
+  .home-browse {
+    grid-template-columns: 1fr;
+  }
+}

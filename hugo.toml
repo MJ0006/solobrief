@@ -14,6 +14,8 @@ buildExpired = false
   description = "Honest AI tool reviews for freelancers and solopreneurs. No hype, just tools that actually work."
   defaultTheme = "light"
   disableThemeToggle = true
+  # Homepage feed: surface reviews, comparisons, and guides (not just the largest section).
+  mainSections = ["reviews", "comparisons", "posts"]
   ShowShareButtons = false
   ShowReadingTime = true
   ShowPostNavLinks = true
@@ -74,11 +76,13 @@ buildExpired = false
     name = "Comparisons"
     url = "/comparisons/"
     weight = 20
-  [[menu.main]]
-    identifier = "posts"
-    name = "Guides"
-    url = "/posts/"
-    weight = 30
+  # "Guides" (/posts/) hidden from nav until the first guides are published (2026-05-31).
+  # Restore this block once 2+ guides are live.
+  # [[menu.main]]
+  #   identifier = "posts"
+  #   name = "Guides"
+  #   url = "/posts/"
+  #   weight = 30
   [[menu.main]]
     identifier = "about"
     name = "About"

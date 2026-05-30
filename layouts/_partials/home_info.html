@@ -7,11 +7,27 @@
         {{ $opts := dict "display" "block" }}
         {{ .Content | $.Page.RenderString $opts }}
     </div>
+    <ul class="home-trust" aria-label="Why freelancers trust SoloBrief">
+        <li>Written by G Mohan Jayanth</li>
+        <li>Real pricing</li>
+        <li>Clear verdicts</li>
+        <li>No affiliate hype</li>
+    </ul>
     <section class="newsletter-cta home-optin">
         <h3>Get one honest AI tool review a week</h3>
         <p>Real pricing, clear verdicts, no hype. Join freelancers who check here before they buy a tool. Unsubscribe any time.</p>
         <div class="ml-embedded" data-form="fd3x0P"></div>
     </section>
+    <nav class="home-browse" aria-label="Browse by type">
+        <a class="browse-card" href="/reviews/">
+            <strong>Reviews</strong>
+            <span>Hands-on, single-tool reviews with a clear verdict.</span>
+        </a>
+        <a class="browse-card" href="/comparisons/">
+            <strong>Comparisons</strong>
+            <span>Head to head: which tool actually wins for freelancers.</span>
+        </a>
+    </nav>
     <footer class="entry-footer">
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </footer>
