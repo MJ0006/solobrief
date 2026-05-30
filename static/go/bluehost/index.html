@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Redirecting to Speechify...</title>
-<!-- GA4 measurement - same ID as site config -->
+<title>Redirecting to Bluehost...</title>
+<meta name="robots" content="noindex, nofollow">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QRQV8QDSRG"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -12,12 +12,11 @@ gtag('js', new Date());
 gtag('config', 'G-QRQV8QDSRG', {send_page_view: false});
 
 (function() {
-  var dest = "https://speechify.com?source=";
-  var slug = "speechify";
+  var dest = "https://bluehost.sjv.io/yZ9qOy";
+  var slug = "bluehost";
   var ref = document.referrer ? new URL(document.referrer).pathname : "direct";
   var articleSlug = ref.replace(/\/$/,"").split("/").pop() || "direct";
 
-  // Append UTM parameters to destination URL
   var utmParams = [
     "utm_source=site",
     "utm_medium=affiliate",
@@ -27,7 +26,6 @@ gtag('config', 'G-QRQV8QDSRG', {send_page_view: false});
   var sep = dest.indexOf("?") === -1 ? "?" : "&";
   var finalUrl = dest + sep + utmParams;
 
-  // Fire GA4 event, then redirect
   gtag("event", "affiliate_click", {
     affiliate_program: slug,
     article_slug: articleSlug,
@@ -35,12 +33,11 @@ gtag('config', 'G-QRQV8QDSRG', {send_page_view: false});
     event_callback: function() { window.location.href = finalUrl; }
   });
 
-  // Fallback redirect after 400ms if GA4 callback doesn't fire
   setTimeout(function() { window.location.href = finalUrl; }, 400);
 })();
 </script>
 </head>
 <body>
-<p>Redirecting to <a href="https://speechify.com?source=">Speechify</a>...</p>
+<p>Redirecting to <a href="https://bluehost.sjv.io/yZ9qOy">Bluehost</a>...</p>
 </body>
 </html>
