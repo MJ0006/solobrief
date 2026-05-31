@@ -76,13 +76,11 @@ buildExpired = false
     name = "Comparisons"
     url = "/comparisons/"
     weight = 20
-  # "Guides" (/posts/) hidden from nav until the first guides are published (2026-05-31).
-  # Restore this block once 2+ guides are live.
-  # [[menu.main]]
-  #   identifier = "posts"
-  #   name = "Guides"
-  #   url = "/posts/"
-  #   weight = 30
+  [[menu.main]]
+    identifier = "posts"
+    name = "Guides"
+    url = "/posts/"
+    weight = 30
   [[menu.main]]
     identifier = "about"
     name = "About"
