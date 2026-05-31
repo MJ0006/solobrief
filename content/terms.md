@@ -42,7 +42,7 @@ SoloBrief links to external websites that are not under our control. We are not 
 
 ## Email Subscriptions
 
-If you subscribe to email updates, you may unsubscribe at any time via the link in any email we send. We use MailerLite to manage email subscriptions. See our [Privacy Policy](/privacy/) for how subscriber data is handled.
+If you subscribe to email updates, you may unsubscribe at any time via the link in any email we send. We use Kit (formerly ConvertKit) to manage email subscriptions. See our [Privacy Policy](/privacy/) for how subscriber data is handled.
 
 ## Changes to These Terms
 
