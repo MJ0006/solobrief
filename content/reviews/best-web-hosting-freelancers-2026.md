@@ -89,6 +89,9 @@ That's the full list. Everything else is a host upselling features at your expen
 
 ## #1 Hostinger: Best Budget Hosting for Freelancers
 
+![Hostinger web hosting plans and pricing 2026](/img/screenshots/hostinger-pricing.webp)
+*Hostinger's plans. Public pricing page, June 2026.*
+
 **Price:** From ~₹69–₹209/month promo (India market); renews higher  
 **Free domain:** Yes, on annual plans  
 **Best for:** Freelancers launching a first portfolio site, India market, budget-conscious solopreneurs
@@ -114,6 +117,9 @@ For the India market specifically, [hostinger.com/in](/go/hostinger/) has dedica
 
 ## #2 SiteGround: Best for Portfolio Performance
 
+![SiteGround web hosting homepage 2026](/img/screenshots/siteground-homepage.webp)
+*SiteGround's site. Public marketing page, June 2026.*
+
 **Price:** From $2.99/month intro; renews at $17.99–$29.99/month  
 **Free domain:** No  
 **Best for:** Freelancers whose site performance is a client-facing concern; anyone who needs reliable technical support
@@ -132,6 +138,9 @@ No free domain is also worth noting, budget ₹1,000–₹1,500/year to buy your
 ---
 
 ## #3 Free Options: Cloudflare Pages and GitHub Pages
+
+![Cloudflare Pages free static hosting homepage 2026](/img/screenshots/cloudflare-pages-homepage.webp)
+*Cloudflare Pages: free static hosting for developers. Public marketing page, June 2026.*
 
 Both are legitimate choices for developers and tech-savvy freelancers. Neither is right for freelancers who want a WordPress site or who don't want to touch a command line.
 

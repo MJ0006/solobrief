@@ -79,6 +79,9 @@ What you don't get: staging environments, dedicated IPs, Git from the panel, or 
 
 ## Hostinger pricing: what you actually pay
 
+![Hostinger web hosting plans and pricing 2026](/img/screenshots/hostinger-pricing.webp)
+*Hostinger's pricing page. The promo rate is tied to a long term (note the 48-month default) and steps up at renewal. Public pricing page, June 2026.*
+
 This is the part most reviews skip past. Here it is upfront.
 
 {{< accordion title="Hostinger plan pricing breakdown" >}}
@@ -99,6 +102,8 @@ Lock in the longest term you're comfortable with. A 48-month Premium plan at pro
 ---
 
 ## Setting up your portfolio site: step by step
+
+{{< video-loop src="/img/ai/wordpress-install-concept.mp4" poster="/img/ai/wordpress-install-concept-poster.webp" caption="How a one-click WordPress install flows: click, progress, site live. Illustration." >}}
 
 Hostinger's onboarding is among the smoother ones in the budget host category, based on what users consistently report across review platforms. Here is the actual flow from signup to live site.
 

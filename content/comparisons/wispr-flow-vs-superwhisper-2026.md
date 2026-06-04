@@ -62,6 +62,9 @@ Both tools are Mac-only. If you're on Windows, neither applies.
 
 ## Quick Verdict: Which One to Pick
 
+![Wispr Flow vs SuperWhisper key differences for freelancers in 2026](/img/wispr-flow-vs-superwhisper-2026-infographic.webp)
+*The short version: Wispr Flow for speed, SuperWhisper for privacy.*
+
 | | Wispr Flow | SuperWhisper |
 |---|---|---|
 | **Price** | $15/month | $12/month or $99 one-time |
@@ -85,6 +88,9 @@ Both tools are Mac-only. If you're on Windows, neither applies.
 ---
 
 ## What Wispr Flow Does (And Why Freelancers Like It)
+
+![Wispr Flow voice dictation app homepage 2026](/img/screenshots/wispr-flow-homepage.webp)
+*Wispr Flow's pitch: dictate into any app. Public marketing page, June 2026.*
 
 Wispr Flow is an AI dictation layer that sits on top of every app on your Mac. You activate it with a keyboard shortcut, speak, and it types directly into whatever field is active: Gmail, Notion, Slack, Google Docs, a client proposal in Pages, a Figma comment, or a browser text box.
 

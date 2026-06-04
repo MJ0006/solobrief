@@ -21,9 +21,7 @@ MJ writes the verdicts, evaluates the trade-offs, and signs off on every publish
 
 ## How we test AI tools
 
-Every review on SoloBrief follows a documented 5-factor rubric. Read the full methodology at [how we test](/how-we-test/).
-
-In short:
+Every review on SoloBrief follows a documented 5-factor rubric:
 
 1. **Real workflows, not demo flows.** We use the tool inside actual freelance work: client proposals, daily email triage, project scheduling, deliverable writing. Not feature tours.
 2. **Time tracking.** Every review includes time-on-task measurements (with N samples) compared against a baseline of doing the same task without the tool.

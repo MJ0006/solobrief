@@ -76,6 +76,9 @@ On most hosting plans, an annual term includes a free domain for the first year,
 
 ## Step 3: Choose your platform and hosting
 
+![Hostinger web hosting plans and pricing 2026](/img/screenshots/hostinger-pricing.webp)
+*Affordable hosting like Hostinger includes a free first-year domain. Public pricing page, June 2026.*
+
 You have two broad paths:
 
 - **A hosted website builder** (Wix, Squarespace, Framer): fastest to start, but more expensive over time, and your content lives inside their platform.

@@ -19,7 +19,7 @@ multimedia: true
 brief_id: "brief-004"
 status: "ready"
 cover:
-  image: "/img/motion-ai-review-freelancers-solopreneurs-2026.webp"
+  image: "/img/motion-ai-review-freelancers-solopreneurs-2026-featured.webp"
   alt: "Motion AI review for freelancers 2026, AI scheduling tool worth $29 per month"
   caption: ""
   relative: false
@@ -56,6 +56,9 @@ Worth $29/month if you manage 3+ concurrent clients with shifting priorities. Th
 ---
 
 ## What Motion AI Actually Does (In Plain English)
+
+![Motion AI calendar and task scheduler homepage 2026](/img/screenshots/motion-homepage.webp)
+*Motion's pitch: AI that schedules your tasks for you. Public marketing page, June 2026.*
 
 Motion isn't a to-do list with a calendar view. It's a scheduling layer that sits on top of your calendar and makes decisions.
 

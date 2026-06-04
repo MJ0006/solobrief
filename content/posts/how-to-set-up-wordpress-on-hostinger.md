@@ -56,6 +56,9 @@ WordPress runs roughly 43% of all websites on the internet, according to W3Techs
 
 ## Step 1: Which Hostinger plan should a freelancer pick for WordPress?
 
+![Hostinger web hosting plans and pricing 2026](/img/screenshots/hostinger-pricing.webp)
+*Match the plan to how many sites you will run. Public pricing page, June 2026.*
+
 Match the plan to how many sites you will run, not to the feature list.
 
 - **One portfolio or a single client site:** the Premium shared plan is enough. It runs WordPress fine and includes a free domain for year one on annual terms.
@@ -75,6 +78,8 @@ You have two paths:
 If you are still choosing a name, register the domain and the matching social handles at the same time so your brand is consistent across the web.
 
 ## Step 3: How do you install WordPress on Hostinger?
+
+{{< video-loop src="/img/ai/wordpress-install-concept.mp4" poster="/img/ai/wordpress-install-concept-poster.webp" caption="How a one-click WordPress install flows: click, progress, site live. Illustration." >}}
 
 This is the part hPanel makes genuinely easy, and the reason setup feels fast.
 

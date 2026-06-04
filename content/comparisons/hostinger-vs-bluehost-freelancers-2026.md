@@ -58,6 +58,9 @@ The short version: **for most freelancers, Hostinger is the better value and the
 
 ## Quick Verdict: Hostinger vs Bluehost
 
+![Hostinger vs Bluehost key differences for freelancers in 2026](/img/hostinger-vs-bluehost-freelancers-2026-infographic.webp)
+*The short version of how the two hosts differ for freelancers.*
+
 | | Hostinger | Bluehost |
 |---|---|---|
 | **Intro price** | From about $3/month (long term) | From about $3/month (long term) |
@@ -85,6 +88,9 @@ The short version: **for most freelancers, Hostinger is the better value and the
 
 ## Price: Where Freelancers Actually Get Caught
 
+![Hostinger web hosting plans and pricing 2026](/img/screenshots/hostinger-pricing.webp)
+*Hostinger's pricing page. The discount is tied to a long subscription term (note the 48-month default), which is the prepay catch this section is about. Public pricing page, June 2026.*
+
 Both hosts run the same playbook. The price you see advertised, often right around three dollars a month, is an introductory rate that requires prepaying for a long term, usually two to four years. It is a real discount, but it ends.
 
 This is the part I learned firsthand on Hostinger. The intro term was genuinely cheap and the value was excellent while it lasted. The renewal was the one unwelcome surprise: it stepped up to a meaningfully higher monthly rate. Nothing dishonest happened, the terms were stated, but if you only look at the headline number you will misjudge what hosting costs you in year three.
@@ -104,6 +110,8 @@ On total cost across a typical two-to-three year horizon, Hostinger usually come
 ---
 
 ## Setup and Control Panel: hPanel vs cPanel
+
+{{< video-loop src="/img/ai/wordpress-install-concept.mp4" poster="/img/ai/wordpress-install-concept-poster.webp" caption="How a one-click WordPress install flows: click, progress, site live. Illustration." >}}
 
 This is where my Hostinger experience was the most positive, and it is the difference a freelancer feels every single week.
 

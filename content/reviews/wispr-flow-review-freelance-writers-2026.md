@@ -59,6 +59,9 @@ Wispr Flow is an AI dictation tool designed specifically for that overhead. You 
 
 ## What Wispr Flow Actually Does (And How It's Different from Siri)
 
+![Wispr Flow voice dictation app homepage 2026](/img/screenshots/wispr-flow-homepage.webp)
+*Wispr Flow runs as a background layer that types into any app. Public marketing page, June 2026.*
+
 Siri and Google Voice dictation require you to say your punctuation out loud ("comma", "period", "new line"). They also drop accuracy the moment you drift from a neutral accent or switch between ideas mid-sentence. They're fine for a quick note. They're unusable for client emails.
 
 Wispr Flow works differently. It runs as a background layer on your Mac, activated by a keyboard shortcut. You speak naturally, with filler words, hesitations, incomplete sentences, and it cleans up the output before placing it in your cursor's current position. It learns your vocabulary and writing patterns over time, so accuracy improves with use.

@@ -1,0 +1,16 @@
+{{- /* GIF-style looping video: autoplay, muted, loop, inline. CWV-safe (preload=metadata, poster).
+       Usage: {{< video-loop src="/img/ai/x.mp4" poster="/img/ai/x-poster.webp" caption="..." >}} */ -}}
+{{- $src := .Get "src" -}}
+{{- $poster := .Get "poster" -}}
+{{- $caption := .Get "caption" -}}
+<figure class="video-loop" style="margin:1.5rem 0;">
+  <video
+    {{ with $poster }}poster="{{ . }}"{{ end }}
+    autoplay loop muted playsinline preload="metadata"
+    style="width:100%;height:auto;border-radius:12px;display:block;">
+    <source src="{{ $src }}" type="video/mp4">
+  </video>
+  {{- with $caption }}
+  <figcaption style="text-align:center;font-size:0.9rem;color:#6b7280;margin-top:0.5rem;"><em>{{ . }}</em></figcaption>
+  {{- end }}
+</figure>
