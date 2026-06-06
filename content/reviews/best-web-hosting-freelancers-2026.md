@@ -207,6 +207,9 @@ Home, About, Services, Portfolio/Work, Contact. That's the full structure for a 
 **Step 6, Connect your domain and SSL**  
 Both are handled in hPanel. SSL takes up to 24 hours to propagate. DNS changes can take up to 48 hours if your domain is with a third-party registrar.
 
+**Step 7, Install an SEO plugin**  
+WordPress does not optimise itself for search. Once your pages are live, add an SEO plugin so Google reads your titles, descriptions, and structured data correctly. Rank Math is the one we recommend for freelancers. Its free tier covers meta titles and descriptions, XML sitemaps, and schema markup, which is everything a portfolio site needs to get indexed properly. If you later add a blog to attract inbound clients, the paid tier's Content AI assists with on-page optimisation. Yoast SEO is the main alternative and works fine; Rank Math's free version simply includes more out of the box. Setup takes about five minutes. [Set up Rank Math →](/go/rankmath/)
+
 Three hours is realistic for this setup including theme customisation. Some freelancers do it faster.
 
 {{< youtube-lite id="AGmSV79-EMY" title="Hostinger full setup tutorial for beginners (Ferdy Korpershoek)" >}}
