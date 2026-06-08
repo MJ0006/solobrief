@@ -92,6 +92,8 @@ Rank Math handles LocalBusiness schema markup, the structured data that tells Go
 
 Local SEO is one of the two reasons I moved from the free plan to PRO. If you do any work for local clients, plumbers, clinics, salons, trades, restaurants, this is the feature that justifies the plugin on its own. It's also a genuine freelance upsell: "I'll set up your local SEO properly" is a line item a client understands and pays for.
 
+**[See Rank Math's local SEO tools →](/go/rankmath/)**
+
 ---
 
 ## Redirections and the llms.txt File
