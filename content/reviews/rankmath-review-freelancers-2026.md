@@ -138,6 +138,8 @@ If you build or manage WordPress sites, this is an easy recommendation. My own t
 
 The only people who should skip it are those not on WordPress at all. If your portfolio is a static site built with Hugo, Astro, or plain HTML, like the site you're reading this on, an SEO plugin is not the tool you need. Everyone else on WordPress: install the free version today, and upgrade to PRO the first time a client's local SEO or an AI workflow makes it pay for itself.
 
+If you are still choosing where to host that WordPress site, our [best web hosting for freelancers guide](/reviews/best-web-hosting-freelancers-2026/) walks through the full setup, including where Rank Math fits in at Step 7.
+
 **[Set up Rank Math on your WordPress site →](/go/rankmath/)**
 
 ---
