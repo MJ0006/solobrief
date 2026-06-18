@@ -39,7 +39,7 @@ faqs:
   product="Rank Math"
   product-type="SoftwareApplication"
   rating="4.5/5"
-  price="Free plan available; PRO around $7/month billed annually (verify current pricing)"
+  price="Free plan available; PRO $8.99/month billed annually (about $108/year), often discounted in seasonal sales (verify current pricing)"
   best-for="Freelancers who build or manage WordPress sites, especially anything with a local-SEO angle"
   skip-if="Your site is static (Hugo, Astro, plain HTML): Rank Math is WordPress-only"
   affiliate-url="/go/rankmath/"
@@ -128,7 +128,7 @@ My honest advice: price PRO on its SEO features, the local SEO, the advanced sch
 
 **Stay on free if:** you're running a single portfolio or a simple WordPress site and you mainly need titles, meta descriptions, sitemaps, schema, and the on-page score. The free version covers all of that without nagging you to pay.
 
-**Upgrade to PRO if:** you do local SEO for clients, or you want the Content AI assistant and accept the credit model. PRO sits at around $7/month billed annually at the time of writing, though you should check current pricing before committing because these plans change. For one client project with a local angle, I found the PRO cost easy to fold into the project fee.
+**Upgrade to PRO if:** you do local SEO for clients, or you want the Content AI assistant and accept the credit model. PRO sits at $8.99/month billed annually at the time of writing (about $108/year, and often discounted in seasonal sales), though you should check current pricing before committing because these plans change. For one client project with a local angle, I found the PRO cost easy to fold into the project fee.
 
 The freelancer math is simple: if a single client engagement pays for a year of PRO in one line item, the decision makes itself.
 
