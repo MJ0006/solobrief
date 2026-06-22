@@ -86,6 +86,11 @@ buildExpired = false
     name = "About"
     url = "/about/"
     weight = 40
+  [[menu.main]]
+    identifier = "toolkit"
+    name = "Toolkit"
+    url = "/go/freelancer-ai-toolkit/"
+    weight = 50
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
@@ -102,7 +107,7 @@ buildExpired = false
   guessSyntax = true
   style = "friendly"
 
-# Related posts — 3 articles at end of each post for internal link flow
+# Related posts -3 articles at end of each post for internal link flow
 [related]
   threshold = 80
   includeNewer = true

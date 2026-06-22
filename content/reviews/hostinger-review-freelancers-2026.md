@@ -26,9 +26,9 @@ sitemap:
   priority: 0.8
 faqs:
   - question: "Is Hostinger good for freelancers in India?"
-    answer: "Yes. Hostinger India via hostinger.com/in is one of the most competitive options in the Indian market. Plans start at approximately 69 rupees per month at promo pricing with LiteSpeed servers, free domain on annual plans, and free SSL included. Premium at 119 rupees per month covers everything a freelance portfolio needs. Setup takes 2 to 3 hours with one-click WordPress and does not require a developer."
+    answer: "Yes. Hostinger India via hostinger.com/in is one of the most competitive options in the Indian market. Plans start at approximately 69 rupees per month at promo pricing with LiteSpeed servers, free domain on annual plans, and free SSL included. Premium at 149 rupees per month covers everything a freelance portfolio needs. Setup takes 2 to 3 hours with one-click WordPress and does not require a developer."
   - question: "What happens to my Hostinger price at renewal?"
-    answer: "Renewal pricing is 3 to 4 times the promo rate. The Premium plan renews at approximately 499 rupees per month, compared to the 119 rupees per month promo rate. This is standard across all major shared hosts. The fix: commit to the longest initial term (48 months) at signup to lock in the promo rate for four years."
+    answer: "Renewal pricing is roughly 3 times the promo rate. The Premium plan renews at approximately 449 rupees per month, compared to the 149 rupees per month promo rate. This is standard across all major shared hosts. The fix: commit to the longest initial term (48 months) at signup to lock in the promo rate for four years."
   - question: "Does Hostinger support WordPress?"
     answer: "Yes. Hostinger includes one-click WordPress installation from hPanel. The installer takes under 2 minutes. All plans include automatic WordPress updates. Hostinger is listed on WordPress.org as a recommended host and is one of the most widely used WordPress hosting providers globally."
   - question: "How fast is Hostinger for a portfolio site?"
@@ -87,15 +87,15 @@ This is the part most reviews skip past. Here it is upfront.
 {{< accordion title="Hostinger plan pricing breakdown" >}}
 | Plan | Promo price | Renewal price | Best for |
 |------|------------|--------------|---------|
-| Single | ~₹69/month | ~₹299/month | One small site; limited features |
-| Premium | ~₹119/month | ~₹499/month | Most freelancers, start here |
-| Business | ~₹209/month | ~₹799/month | Faster resources + daily backups |
+| Single | ~₹69/month | ~₹289/month | One small site; limited features |
+| Premium | ~₹149/month | ~₹449/month | Most freelancers, start here |
+| Business | ~₹249/month | ~₹649/month | Faster resources + daily backups |
 | Cloud Startup | ~₹699/month | ~₹2,099/month | High-traffic sites; overkill for portfolios |
 {{< /accordion >}}
 
 *India market pricing via [hostinger.com/in](/go/hostinger/). Prices approximate; check current rates, as promotions change frequently.*
 
-The promo price applies to your first term (12, 24, or 48 months). At renewal, you pay the standard rate, roughly 3 to 4x higher. Every major host does this, but it's worth knowing before you commit to the cheapest-looking plan.
+The promo price applies to your first term (12, 24, or 48 months). At renewal, you pay the standard rate, roughly 3x higher. Every major host does this, but it's worth knowing before you commit to the cheapest-looking plan.
 
 Lock in the longest term you're comfortable with. A 48-month Premium plan at promo pricing runs significantly cheaper per month than a 12-month renewal at standard rates.
 
@@ -171,8 +171,8 @@ If you're building a straightforward portfolio, you're unlikely to run into the 
 
 | | Hostinger Premium | Bluehost Basic | SiteGround Startup |
 |---|---|---|---|
-| Promo price | ~₹119/month | ~₹219/month | ~₹269/month |
-| Renewal price | ~₹499/month | ~₹699/month | ~₹1,299/month |
+| Promo price | ~₹149/month | ~₹219/month | ~₹269/month |
+| Renewal price | ~₹449/month | ~₹699/month | ~₹1,299/month |
 | Free domain | Yes (annual) | Yes (first year) | No |
 | Free SSL | Yes | Yes | Yes |
 | Speed | Good (LiteSpeed) | Average | Excellent |
@@ -193,7 +193,7 @@ Price is the decision: Hostinger wins on cost. If support and performance matter
 
 ## The renewal question: is it still worth it at year 2?
 
-At standard renewal rates, Premium runs ~₹499/month. Still cheaper than SiteGround or WP Engine, but no longer the headline deal.
+At standard renewal rates, Premium runs ~₹449/month. Still cheaper than SiteGround or WP Engine, but no longer the headline deal.
 
 Whether to renew with Hostinger comes down to one question: have your needs changed? If your site is still a simple portfolio and you're comfortable with the dashboard, renewing makes sense. If your freelance business has grown to where you need better performance or more control, it's worth migrating to SiteGround or a VPS at renewal time.
 
@@ -220,10 +220,10 @@ If you want to see how Hostinger compares across five budget hosting options, we
 
 {{< faq-section >}}
 {{< faq question="Is Hostinger good for freelancers in India?" >}}
-Yes. Hostinger India via hostinger.com/in is one of the most competitive options in the Indian market. Plans start at approximately 69 rupees per month at promo pricing with LiteSpeed servers, free domain on annual plans, and free SSL included. Premium at 119 rupees per month covers everything a freelance portfolio needs. Setup takes 2 to 3 hours with one-click WordPress and does not require a developer.
+Yes. Hostinger India via hostinger.com/in is one of the most competitive options in the Indian market. Plans start at approximately 69 rupees per month at promo pricing with LiteSpeed servers, free domain on annual plans, and free SSL included. Premium at 149 rupees per month covers everything a freelance portfolio needs. Setup takes 2 to 3 hours with one-click WordPress and does not require a developer.
 {{< /faq >}}
 {{< faq question="What happens to my Hostinger price at renewal?" >}}
-Renewal pricing is 3 to 4 times the promo rate. The Premium plan renews at approximately 499 rupees per month, compared to the 119 rupees per month promo rate. This is standard across all major shared hosts. The fix: commit to the longest initial term, 48 months at signup, to lock in the promo rate for four years.
+Renewal pricing is roughly 3 times the promo rate. The Premium plan renews at approximately 449 rupees per month, compared to the 149 rupees per month promo rate. This is standard across all major shared hosts. The fix: commit to the longest initial term, 48 months at signup, to lock in the promo rate for four years.
 {{< /faq >}}
 {{< faq question="Does Hostinger support WordPress?" >}}
 Yes. Hostinger includes one-click WordPress installation from hPanel. The installer takes under 2 minutes. All plans include automatic WordPress updates. Hostinger is listed on WordPress.org as a recommended host and is one of the most widely used WordPress hosting providers globally.
@@ -244,7 +244,7 @@ Hostinger works for most freelancers who need a portfolio site and don't want to
 
 It's not the choice if you need strong technical support, plan to build something beyond a basic portfolio, or have specific server requirements. Those situations call for a bigger budget.
 
-For most freelancers just getting online: under ₹120/month for a site that loads fast and doesn't require a tech background to maintain is a fair trade.
+For most freelancers just getting online: under ₹150/month for a site that loads fast and doesn't require a tech background to maintain is a fair trade.
 
 **[Get the current Hostinger deal →](/go/hostinger/)**
 

@@ -1,7 +1,7 @@
 <link rel="icon" href="/images/solobrief-icon.svg" type="image/svg+xml">
 <link rel="shortcut icon" href="/images/solobrief-icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/css/custom.css">
-<!-- Cookiebot: GDPR cookie consent — must load first, before any tracking scripts -->
+<!-- Cookiebot: GDPR cookie consent,must load first, before any tracking scripts -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73f0d960-3239-4cc7-9f31-b77784af19ce" data-blockingmode="auto" type="text/javascript"></script>
 <meta name="google-site-verification" content="uz0sKs9UIV4zhq9xV0ugS-Oq4T99IvfmgzaXY2zY4ZU" />
 <meta name="p:domain_verify" content="e0855cc466f650c6eb7827573f9a79b1"/>
@@ -56,7 +56,7 @@
 </script>
 <meta name="msvalidate.01" content="FC983120D3E1E4BCC38D73B123839CF9" />
 {{ if .IsHome -}}
-<!-- Organization schema — entity anchor for Google, Bing Copilot, Perplexity, ChatGPT -->
+<!-- Organization schema,entity anchor for Google, Bing Copilot, Perplexity, ChatGPT -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -88,4 +88,18 @@
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wx18h76oye");
+</script>
+<!-- Freelancer AI Toolkit announcement banner (dismissible, sitewide) -->
+<script>
+(function(){
+  document.addEventListener('DOMContentLoaded', function(){
+    try{ if(localStorage.getItem('sb-banner-dismissed')==='1') return; }catch(e){}
+    var b=document.createElement('div');
+    b.className='sb-banner';
+    b.innerHTML='New: <a href="/go/freelancer-ai-toolkit/">The Freelancer\'s AI Toolkit</a>. 24 prompts, 4 systems, 2 buildable automations for $9. <button class="sb-x" type="button" aria-label="Dismiss">&times;</button>';
+    document.body.insertBefore(b, document.body.firstChild);
+    var x=b.querySelector('.sb-x');
+    if(x) x.addEventListener('click', function(){ b.remove(); try{localStorage.setItem('sb-banner-dismissed','1');}catch(e){} });
+  });
+})();
 </script>

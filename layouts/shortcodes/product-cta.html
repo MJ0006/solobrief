@@ -1,0 +1,9 @@
+{{- /* In-article CTA for the Freelancer's AI Toolkit. Usage:
+       {{< product-cta >}}
+       {{< product-cta title="..." text="..." cta="..." >}} */ -}}
+<aside class="sb-cta">
+  <div class="sb-cta-eyebrow">From SoloBrief</div>
+  <h4>{{ .Get "title" | default "The Freelancer's AI Toolkit" }}</h4>
+  <p>{{ .Get "text" | default "Prompts, systems, and two automations you can actually build, that absorb the admin you hate. 24 prompts, 4 systems, 2 recipes." }} <span class="sb-price">One-time $9.</span></p>
+  <a class="sb-btn" href="/go/freelancer-ai-toolkit/">{{ .Get "cta" | default "Get the toolkit" }}</a>
+</aside>
