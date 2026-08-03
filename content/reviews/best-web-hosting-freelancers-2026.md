@@ -96,7 +96,7 @@ That's the full list. Everything else is a host upselling features at your expen
 **Free domain:** Yes, on annual plans  
 **Best for:** Freelancers launching a first portfolio site, India market, budget-conscious solopreneurs
 
-Hostinger's Premium plan covers everything a freelance portfolio needs: 100GB SSD storage, a free domain for the first year, free SSL, LiteSpeed web server (faster than Apache-based budget hosts), and WordPress one-click install. Load times in published third-party tests run 400–700ms for basic sites, well within acceptable range.
+Hostinger's Premium plan covers everything a freelance portfolio needs: 100GB SSD storage, a free domain for the first year, free SSL, LiteSpeed web server (faster than Apache-based budget hosts), and WordPress one-click install. Load times in published third-party tests run 400 to 700ms for basic sites, well within acceptable range.
 
 The setup is faster than most in the budget category. WordPress installs from hPanel in one click. Themes like Astra or Kadence are free and portfolio-ready. Most freelancers have a working site within 3 hours of signing up.
 
@@ -120,15 +120,15 @@ For the India market specifically, [hostinger.com/in](/go/hostinger/) has dedica
 ![SiteGround web hosting homepage 2026](/img/screenshots/siteground-homepage.webp)
 *SiteGround's site. Public marketing page, June 2026.*
 
-**Price:** From $2.99/month intro; renews at $17.99–$29.99/month  
+**Price:** From $2.99/month intro; renews at $17.99 to $29.99/month  
 **Free domain:** No  
 **Best for:** Freelancers whose site performance is a client-facing concern; anyone who needs reliable technical support
 
 SiteGround consistently leads third-party speed and reliability benchmarks at the budget end of managed WordPress hosting. Their load times are measurably faster than Hostinger at equivalent plan levels, their uptime track record is excellent, and their support quality is consistently rated above average across Trustpilot, G2, and independent reviews.
 
-The reason it's #2 rather than #1 is one word: renewal pricing. The introductory rates are competitive, but the $17.99–$29.99/month renewal prices are genuinely steep for what's still a portfolio site. If you're billing premium clients and your website is part of the pitch, SiteGround's speed and support track record justify the cost. If you're a freelancer whose site is functional rather than essential, Hostinger's value is better.
+The reason it's #2 rather than #1 is one word: renewal pricing. The introductory rates are competitive, but the $17.99 to $29.99/month renewal prices are genuinely steep for what's still a portfolio site. If you're billing premium clients and your website is part of the pitch, SiteGround's speed and support track record justify the cost. If you're a freelancer whose site is functional rather than essential, Hostinger's value is better.
 
-No free domain is also worth noting, budget ₹1,000–₹1,500/year to buy your domain separately.
+No free domain is also worth noting, budget ₹1,000 to ₹1,500/year to buy your domain separately.
 
 {{< pros-cons
   pros="Consistently leads speed and reliability benchmarks at the budget tier|Support quality rated above average across G2 and Trustpilot|Excellent uptime track record"
@@ -181,7 +181,7 @@ Free shared hosting services, InfinityFree, 000webhost, AwardSpace, exist, and t
 
 The problems are real: unpredictable uptime, forced ads on some services, slow load times, no email forwarding, and support that ranges from minimal to nonexistent. When a potential client clicks your portfolio link and gets a slow-loading page with a "hosted for free by [service]" banner, that's the impression you leave.
 
-For developers who want free hosting, Cloudflare Pages and GitHub Pages are the right answer, they're genuinely good, just static-site-only. For everyone else, the $2–3/month entry price for Hostinger is the minimum worth paying.
+For developers who want free hosting, Cloudflare Pages and GitHub Pages are the right answer, they're genuinely good, just static-site-only. For everyone else, the $2 to $3/month entry price for Hostinger is the minimum worth paying.
 
 ---
 

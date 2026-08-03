@@ -120,7 +120,7 @@ Dragon has been the professional dictation benchmark for 20 years. For context:
 
 For most freelancers, this isn't really a comparison. Dragon Professional costs $500 and requires training. Wispr Flow costs $15/month and works in minutes.
 
-The real Dragon use case is professionals who need offline processing (lawyers, doctors, journalists in the field) or who dictate hundreds of hours annually and need maximum accuracy on technical vocabulary. For a freelance writer dictating 5–10 hours of overhead writing per week, Wispr Flow's accuracy is adequate and the setup time is nearly zero.
+The real Dragon use case is professionals who need offline processing (lawyers, doctors, journalists in the field) or who dictate hundreds of hours annually and need maximum accuracy on technical vocabulary. For a freelance writer dictating 5 to 10 hours of overhead writing per week, Wispr Flow's accuracy is adequate and the setup time is nearly zero.
 
 If you're coming from Dragon and switching platforms: reviewers generally find Wispr Flow's UX meaningfully better, with slightly lower accuracy on highly technical terms. For general client communication and content work, the difference isn't meaningful.
 

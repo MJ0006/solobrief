@@ -78,7 +78,7 @@ The tool makes the most sense with this scenario:
 
 You have Client A needing a content batch by Wednesday. Client B has an SEO audit due Friday. Client C just moved their weekly review call to Tuesday at 3pm. And you have 6 smaller tasks scattered across the week with no fixed deadline.
 
-Without Motion, you spend Monday morning manually figuring out when everything fits, then manually adjusting when the Tuesday call moved. This takes 20–30 minutes and you still feel uncertain about whether you've got the week right.
+Without Motion, you spend Monday morning manually figuring out when everything fits, then manually adjusting when the Tuesday call moved. This takes 20 to 30 minutes and you still feel uncertain about whether you've got the week right.
 
 With Motion, you've added all those tasks and deadlines once. When the Tuesday call moved, Motion rearranged everything automatically. On Monday morning, you open the app and your day is already planned. The only question is whether you want to override any of its decisions.
 
@@ -90,13 +90,13 @@ The value isn't the scheduling itself, you could do that manually. The value is 
 
 This is where most reviews are honest: Motion is frustrating in week one.
 
-The tool needs to understand your work patterns before its suggestions are useful. In the first 3–5 days, it schedules things at times that don't match how you actually work. You'll override its suggestions frequently. You'll wonder if you're using it wrong.
+The tool needs to understand your work patterns before its suggestions are useful. In the first 3 to 5 days, it schedules things at times that don't match how you actually work. You'll override its suggestions frequently. You'll wonder if you're using it wrong.
 
-Users who stick with it past this period consistently report the opposite experience by week 2–3: the scheduling becomes accurate enough that they stop second-guessing it, and the daily planning overhead genuinely drops.
+Users who stick with it past this period consistently report the opposite experience by week 2 to 3: the scheduling becomes accurate enough that they stop second-guessing it, and the daily planning overhead genuinely drops.
 
 The practical implication: if you try Motion for 5 days and abandon it because the scheduling feels off, you've drawn the wrong conclusion. The correct test is a 14-day committed trial where you add all your real tasks and don't work around the tool.
 
-There's also a one-time setup cost that's real: entering all your recurring tasks, setting priorities, and connecting your calendar correctly. Budget 2–3 hours for this on day one. It's not complicated, just thorough.
+There's also a one-time setup cost that's real: entering all your recurring tasks, setting priorities, and connecting your calendar correctly. Budget 2 to 3 hours for this on day one. It's not complicated, just thorough.
 
 ---
 
@@ -115,7 +115,7 @@ Here's the ROI calculation:
 | 30 min/day planning | $50/hr | $375/month |
 | 30 min/day planning | $100/hr | $750/month |
 
-**The conservative case:** 20 minutes of daily planning time saved, which is what users consistently report after the first two weeks, at a $50/hour rate equals $250/month in recovered capacity. The tool costs ~$19–$29. The math works.
+**The conservative case:** 20 minutes of daily planning time saved, which is what users consistently report after the first two weeks, at a $50/hour rate equals $250/month in recovered capacity. The tool costs ~$19 to $29. The math works.
 
 **The caveat:** This only holds if you actually experience the time savings. Freelancers with simple, predictable workflows won't save 20 minutes/day because they weren't spending 20 minutes/day on scheduling friction in the first place. The ROI is real for multi-client freelancers; it's speculative for single-client ones.
 
@@ -125,7 +125,7 @@ Here's the ROI calculation:
 
 | | Motion | Reclaim.ai | Sunsama | Google Calendar alone |
 |---|---|---|---|---|
-| **Price** | $19–$29/mo | Free tier / $8/mo | $20/mo | Free |
+| **Price** | $19 to $29/mo | Free tier / $8/mo | $20/mo | Free |
 | **AI auto-scheduling** | Yes (core feature) | Yes | No (manual) | No |
 | **Task management** | Basic | Basic | Daily planning | No |
 | **Calendar integration** | Google + Outlook | Google + Outlook | Google + Outlook | Native |
@@ -185,7 +185,7 @@ The first week, you'll notice Motion scheduling things at wrong times. Override 
 
 ## The Bottom Line
 
-Motion is a legitimate time-saver for multi-client freelancers who experience real scheduling friction. The $19–$29/month cost is justified if it eliminates 20+ minutes of daily planning overhead, that math resolves quickly at any reasonable hourly rate.
+Motion is a legitimate time-saver for multi-client freelancers who experience real scheduling friction. The $19 to $29/month cost is justified if it eliminates 20+ minutes of daily planning overhead, that math resolves quickly at any reasonable hourly rate.
 
 The learning curve is not marketing softening, it's a real two-week investment before the tool earns its keep. Freelancers who stick with it generally find it pays off. Freelancers who judge it in week one generally write it off prematurely.
 
