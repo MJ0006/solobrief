@@ -14,7 +14,6 @@ affiliate_disclosure: true
 schema_type: "Article"
 brief_id: "brief-011"
 multimedia: true
-faq_schema: true
 cover:
   image: "/img/how-to-set-up-wordpress-on-hostinger.webp"
   alt: "Setting up WordPress on Hostinger hPanel for a freelance website"
@@ -22,19 +21,6 @@ cover:
   relative: false
 sitemap:
   priority: 0.7
-faqs:
-  - question: "Which Hostinger plan is best for a WordPress site?"
-    answer: "For a single portfolio or one client site, the Premium plan is enough. If you run several WordPress sites at once (your portfolio plus client work) or want managed WordPress features like staging and built-in caching, the Business WordPress plan is the better fit. I used the Business WordPress plan and it comfortably held a portfolio, client sites, and test builds on one account. Buy the longest term you are comfortable with, since the intro price is much lower than the renewal."
-  - question: "How long does it take to install WordPress on Hostinger?"
-    answer: "Under 15 minutes from signup to a live WordPress dashboard. Hostinger's hPanel has a guided onboarding that installs WordPress for you and asks a few setup questions. The one-click installer does the database, the WordPress core files, and the admin account in one step, so there is no manual configuration."
-  - question: "Do I need to install WordPress manually on Hostinger?"
-    answer: "No. Hostinger installs WordPress through hPanel's auto installer, so you never touch a database or upload files by FTP. You pick WordPress, set your admin login, and it provisions everything. Manual installation is only needed for non-standard setups, which most freelancers never require."
-  - question: "Does Hostinger include a free domain and SSL for WordPress?"
-    answer: "Yes. Annual Hostinger plans typically include a free domain for the first year and a free SSL certificate, so your WordPress site loads over HTTPS from day one. After the first year the domain renews at standard registration pricing. If you already own a domain, you can point it at Hostinger instead of registering a new one."
-  - question: "What is the catch with Hostinger's cheap WordPress hosting price?"
-    answer: "The renewal. The low advertised price is an introductory rate tied to a multi-year prepay. When that term ends, hosting renews at a materially higher monthly rate. This is the one thing I would tell any freelancer to plan for. Lock in the longest term you are comfortable with up front and budget for the renewal rate, not the promo rate."
-  - question: "Can I host multiple client WordPress sites on one Hostinger plan?"
-    answer: "Yes, on the Premium and Business plans, which allow up to around 100 websites. This is useful for freelancers who keep a portfolio plus several client sites in one place. The Business WordPress plan adds daily backups, a staging environment, and object caching, which matter once you are managing live client work rather than a single hobby site."
 ---
 
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. We only recommend tools we've researched thoroughly, and I share my own experience where I have it.*

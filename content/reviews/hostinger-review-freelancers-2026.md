@@ -16,7 +16,6 @@ rating_value: 4.1
 rating_best: 5
 product_name: "Hostinger"
 multimedia: true
-faq_schema: true
 cover:
   image: "/img/hostinger-review-freelancers-2026-featured.webp"
   alt: "Hostinger review for freelancers 2026, cheapest web hosting for portfolio sites"
@@ -24,17 +23,6 @@ cover:
   relative: false
 sitemap:
   priority: 0.8
-faqs:
-  - question: "Is Hostinger good for freelancers in India?"
-    answer: "Yes. Hostinger India via hostinger.com/in is one of the most competitive options in the Indian market. Plans start at approximately 69 rupees per month at promo pricing with LiteSpeed servers, free domain on annual plans, and free SSL included. Premium at 149 rupees per month covers everything a freelance portfolio needs. Setup takes 2 to 3 hours with one-click WordPress and does not require a developer."
-  - question: "What happens to my Hostinger price at renewal?"
-    answer: "Renewal pricing is roughly 3 times the promo rate. The Premium plan renews at approximately 449 rupees per month, compared to the 149 rupees per month promo rate. This is standard across all major shared hosts. The fix: commit to the longest initial term (48 months) at signup to lock in the promo rate for four years."
-  - question: "Does Hostinger support WordPress?"
-    answer: "Yes. Hostinger includes one-click WordPress installation from hPanel. The installer takes under 2 minutes. All plans include automatic WordPress updates. Hostinger is listed on WordPress.org as a recommended host and is one of the most widely used WordPress hosting providers globally."
-  - question: "How fast is Hostinger for a portfolio site?"
-    answer: "Fast enough. Data from GTmetrix and independent monitoring services from 2025 to 2026 shows average load times of 400 to 700ms for basic WordPress sites on Hostinger's LiteSpeed servers. This is faster than most Apache-based budget hosts at the same price. For a freelance portfolio with text, images, and a contact form, clients will not notice the difference at these speeds."
-  - question: "Is Hostinger reliable enough for client-facing work?"
-    answer: "Yes. Hostinger claims 99.9% uptime, and independent monitoring tools typically confirm 99.8 to 99.95% in practice. That is under 2 hours of unplanned downtime per year. A portfolio site going briefly offline is a minor inconvenience. If you need SLA-backed uptime guarantees, managed WordPress hosts provide them at a higher price point."
 ---
 
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. We only recommend tools we've researched thoroughly.*

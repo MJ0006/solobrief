@@ -22,15 +22,6 @@ cover:
   relative: false
 sitemap:
   priority: 0.8
-faqs:
-  - question: "Is Rank Math good for freelancers?"
-    answer: "Yes, if your work involves WordPress. The free version handles meta titles and descriptions, XML sitemaps, schema markup, and Search Console submission, which covers most portfolio and client sites. The per-post SEO score makes on-page work fast even if SEO is not your specialty. The one caveat is the upsell pressure around the Content AI credits in the PRO plan."
-  - question: "Is Rank Math PRO worth it?"
-    answer: "For a single portfolio site, the free version is usually enough. PRO becomes worth it when you are doing local SEO for clients or want the Content AI writing assistant. I upgraded specifically for local SEO and Content AI on a client project. The honest catch is that the AI features run on a credit system the plugin pushes you to top up, so price PRO on its SEO features, not the AI."
-  - question: "Rank Math vs Yoast: which is easier?"
-    answer: "I have only used Rank Math directly, but I compared both interfaces side by side before choosing. Rank Math's setup wizard and per-module layout were clearly easier to follow than Yoast's, and Rank Math includes schema and redirections in its free tier that Yoast gates behind its premium plan. On UI alone, Rank Math was the easier choice for me."
-  - question: "Does Rank Math slow down a WordPress site?"
-    answer: "Across six months on a client site I did not notice a meaningful speed hit on a properly hosted WordPress install. Rank Math is modular, so you can switch off modules you do not use (news sitemaps, video sitemaps, and similar), which keeps it lean. Hosting quality matters far more for site speed than the SEO plugin does."
 ---
 
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. I'm writing this from six months of first-hand use, not a feature-list summary.*
@@ -145,6 +136,10 @@ If you are still choosing where to host that WordPress site, our [best web hosti
 **[Set up Rank Math on your WordPress site →](/go/rankmath/)**
 
 ---
+
+This third-party walkthrough shows the setup flow end to end if you would rather watch it first.
+
+{{< youtube-lite id="z7QF9wdGhuU" title="Rank Math Review 2026, optimizing a site with the free WordPress SEO plugin" >}}
 
 ## The Bottom Line
 

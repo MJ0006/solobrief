@@ -14,7 +14,6 @@ affiliate_disclosure: true
 schema_type: "Article"
 brief_id: "brief-012"
 multimedia: true
-faq_schema: true
 cover:
   image: "/img/how-to-launch-freelance-portfolio-website-2026.webp"
   alt: "Planning the pages of a freelance portfolio website"
@@ -22,19 +21,6 @@ cover:
   relative: false
 sitemap:
   priority: 0.7
-faqs:
-  - question: "Do freelancers really need a portfolio website in 2026?"
-    answer: "Yes, if you want to charge more and rely less on marketplaces. A site you own is the one place a prospect can verify you are real, see your best work, and contact you without an algorithm in the middle. Profiles on Upwork or Behance can be suspended or deranked overnight. Your own domain cannot. It is also the asset that lets you show up in Google and AI search for your name and your service."
-  - question: "Should a freelance portfolio be on WordPress or a website builder?"
-    answer: "If you want the lowest long-term cost and full control, WordPress on your own hosting is the most flexible option, and it is what most freelancers grow into. Hosted builders are faster to start but cost more over time and lock your content into their platform. For a portfolio you plan to keep and grow, WordPress on affordable hosting is the better long-term call. See our WordPress on Hostinger walkthrough for the exact setup."
-  - question: "How many pages does a freelance portfolio website need?"
-    answer: "Five is plenty to start: Home, Work or Portfolio, About, Services, and Contact. More pages do not make you look more professional. Clients want to confirm you are real, see relevant work, understand what you offer, and reach you quickly. Build those five well before adding a blog or extras."
-  - question: "What should go on the work or portfolio page?"
-    answer: "Short case studies beat a wall of thumbnails. For each project show the client problem, what you did, and the result, ideally with a number (faster, more signups, more revenue). Three to six strong, relevant case studies convert better than twenty random samples, because they show outcomes a buyer cares about, not just visuals."
-  - question: "How much does it cost to launch a freelance portfolio website?"
-    answer: "On WordPress with affordable shared hosting, the realistic starting cost is low: hosting often starts around three dollars a month on a longer intro term, usually with a free domain for the first year and free SSL. Budget for the higher renewal rate after the intro term ends, since that is the cost most people forget to plan for."
-  - question: "How do I get clients to find my portfolio site in Google?"
-    answer: "Use a clean domain (your name), install an SEO plugin to manage titles and meta descriptions, keep the site fast, and write a few pages targeting the work you want, such as a services page for your specific niche. Speed and clear structure matter because Google's Core Web Vitals reward fast, well-organized sites, and clients often search your name before they reply."
 ---
 
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. We only recommend tools we've researched thoroughly, and I share my own experience where I have it.*

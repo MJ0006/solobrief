@@ -25,17 +25,6 @@ cover:
   relative: false
 sitemap:
   priority: 0.8
-faqs:
-  - question: "Is Wispr Flow worth $15/month for freelance writers?"
-    answer: "Yes, if you write 2 or more hours of client emails and overhead communication per week. The ROI math is straightforward: dictating a 300-word client email takes roughly 90 seconds versus 5 minutes of typing. Across 20 emails a week, that is 60 minutes reclaimed weekly. At a $50 per hour freelance rate, the tool recovers $200 per month in billable capacity and costs $15. The math only works if email and overhead writing dominate your week, not if your primary work is long-form creative writing."
-  - question: "Does Wispr Flow work on Windows?"
-    answer: "No. Wispr Flow is Mac only as of mid-2026. There is no Windows version. Windows users should look at alternatives such as PowerToys Voice Typing (free) or Whisper Desktop (open-source). If you work on both Mac and Windows, neither tool covers both platforms."
-  - question: "Is Wispr Flow safe for client work under NDA?"
-    answer: "With a caveat. Wispr Flow processes audio on its cloud servers. Your dictated content leaves your device. Their privacy policy states they do not sell data and do not train on your audio, but cloud processing is happening. For general client emails and overhead communication, this is acceptable for most freelancers. For content covered by strict NDAs or containing sensitive client data, local-processing tools like SuperWhisper are the safer choice. See our Wispr Flow vs SuperWhisper comparison for details."
-  - question: "How is Wispr Flow different from Siri dictation?"
-    answer: "Siri requires you to speak punctuation aloud and places dictated text in a bubble you then paste from. Wispr Flow types directly into your active app, cleans up filler words and hesitations automatically, and works in any app on your Mac without switching contexts. The accuracy difference on natural conversational speech is also significant, especially for longer messages or non-neutral accents."
-  - question: "Does Wispr Flow have a free trial?"
-    answer: "Yes, Wispr Flow offers a 7-day free trial. Use it exclusively for your email workflow during the trial to get an accurate read on the time savings. If you are not hitting at least 30 minutes of weekly savings by day 7, the tool is not fitting your workflow and the subscription is not worth it."
 ---
 
 {{< verdict-box
@@ -162,6 +151,10 @@ Project status updates for clients, notes from calls, invoice memos. Low-stakes 
 **What stays typed:** Everything where the quality of the writing is what the client is paying for. Articles, content deliverables, copy. Use dictation for overhead; use your own typing for the work itself.
 
 ---
+
+Dictation is easier to judge by watching than by reading. This third-party review shows it running live.
+
+{{< youtube-lite id="PS8VYNn2_NQ" title="Wispr Flow Review 2026, AI voice dictation" >}}
 
 ## Verdict: Who Should Use Wispr Flow
 
