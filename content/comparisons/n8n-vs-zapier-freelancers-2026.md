@@ -14,7 +14,6 @@ affiliate_disclosure: true
 schema_type: "Comparison"
 brief_id: "brief-010"
 multimedia: true
-faq_schema: true
 pricing_verified: 2026-08-03
 pricing_sources:
   - "https://zapier.com/pricing"
@@ -41,17 +40,6 @@ cover:
   relative: false
 sitemap:
   priority: 0.8
-faqs:
-  - question: "Is n8n cheaper than Zapier for freelancers?"
-    answer: "Usually yes, and the reason is the billing model rather than the sticker price. Zapier bills per task, meaning per successful action step. n8n bills per workflow execution, meaning one full run counts once no matter how many steps it contains. A workflow with four billable actions running 500 times a month is 2,000 Zapier tasks but 500 n8n executions. Self-hosted n8n Community edition is free, though running it somewhere reliable costs about 5 US dollars a month on a small host. Pricing verified 3 August 2026."
-  - question: "Do Zapier triggers count as tasks?"
-    answer: "No. Zapier does not bill triggers, and it does not bill its built-in tools either: Formatter, Paths, Filter, Delay, Looping, Sub-Zap, Digest, Zapier Manager, Storage, Tables and Forms are all free. Only successful actions count. This matters because most comparison articles count every visible step in a Zap and overstate what Zapier actually charges. Failed actions are not counted either. Verified on the Zapier pricing page, 3 August 2026."
-  - question: "Is n8n open source?"
-    answer: "No, and this is a common error. n8n ships under a source-available Sustainable Use Licence, not an open source licence. You can read the source and self-host it for free, but that is not the same thing as open source, and practitioners correct the claim regularly in public discussion. The practical effect for a freelancer is small, since self-hosting is free either way, but it is worth knowing the licence you are relying on."
-  - question: "Is n8n hard to learn?"
-    answer: "The difficulty is not where most reviews say it is. The canvas is fine. The confusing part is choosing the right operation inside a node. A Google Sheets node asks whether you are pulling data or updating it, which row, which column, and it will not infer your intent. If you do not already know exactly what you want that step to do, you will stall there. Realistic time to a first working workflow: days to a week for a beginner, one to two days if you have built automations before, one afternoon if you are experienced."
-  - question: "Can I run n8n for free?"
-    answer: "You can run the Community edition free on your own machine, but there is a catch worth understanding. A locally hosted instance only runs when your computer is on and you have started it, which defeats the purpose of automating anything that needs to fire on a schedule or at 2am. Free cloud tiers are thin: Railway's free plan gives 1 US dollar of monthly usage credit, which covers roughly a week of continuous running, so budget about 5 dollars a month for a host that is actually always on."
 ---
 
 Most comparisons of these three line the features up side by side and leave you to guess. But features are rarely what bites you. What decides this is how each tool counts what you owe it, and all three count differently enough that the same workflow can be cheap on one and expensive on another.
@@ -101,6 +89,10 @@ Take a realistic freelancer workflow. A form submission arrives, a filter drops 
 So the honest gap between n8n and Zapier on this workflow is about four to one, not the six to one you get from naive step counting. Four to one is still decisive. It is also defensible line by line, which the inflated version is not.
 
 Now notice what that does to the plans. 2,000 tasks puts you past Zapier's 750-task entry tier. 500 executions sits comfortably inside n8n's 2,500-execution Starter plan at EUR 20 a month. 2,500 credits fits Make's 5,000-credit plan at 9 US dollars.
+
+If you would rather see all three side by side before reading on, this third-party walkthrough covers the same ground visually.
+
+{{< youtube-lite id="jHVmi41AhxE" title="Make vs n8n vs Zapier, side by side comparison" >}}
 
 ### The cost driver is fan-out, not workflow length
 
@@ -210,11 +202,42 @@ The case against it is narrow and specific: volume. Once you are processing a lo
 
 **Choose Zapier** if your automations are simple, low-volume, and you want to spend zero time thinking about infrastructure. The convenience is real and the free-step allowance makes light use cheaper than its reputation.
 
+{{< pros-cons pros="Easiest of the three by a distance|Instant event triggers, no polling|Runs without you hosting anything|Triggers, filters, paths and formatting are free|Largest integration catalogue" cons="Per-task billing compounds fast at volume|2,000 tasks on our example workflow, the most of the three|Fan-out over many records gets expensive quickly|Pays us nothing, so we have no stake either way" >}}
+
 **Choose Make** if you want most of n8n's flexibility without n8n's setup cost. It was noticeably easier to set up and use than n8n in my experience, its built-in human-in-the-loop approval step is genuinely useful for client work, and at 9 dollars for 5,000 credits it is the cheapest paid entry point of the three.
+
+{{< pros-cons pros="Much easier to set up and use than n8n, first-hand|Human in the loop approval built in, useful for client work|Cheapest paid entry point at 9 dollars for 5,000 credits|Routers and error handlers cost nothing|AI Agents on every plan" cons="Credit counter is widely misread, the scenario list shows a cumulative total|Free allowance disappears fast during testing|Per-module billing still scales worse than per-execution|This is the only tool here that pays us, so weigh our praise accordingly" >}}
 
 **Choose n8n** if you are running high-volume or many-step workflows and hosting something is not intimidating. Per-execution billing is the most forgiving model at volume by a wide margin, and it is what runs my own production workflow today.
 
+{{< pros-cons pros="Per-execution billing, cheapest by far at volume|Self-hosted Community edition is free|Native AI Workflow Builder plus run-time AI agents|Fails loudly at the exact node that broke, observed first-hand|500 executions on our example workflow versus 2,000 Zapier tasks" cons="Steepest learning curve, and it is operation selection inside a node, not the canvas|Polls by default rather than firing on events|A local instance only runs when your machine is on|Not open source, it uses a source-available licence|Pays us nothing" >}}
+
 For most freelancers reading this, the realistic shortlist is Make or Zapier, and the deciding question is whether you are optimising for the smallest possible learning curve or for cost as you grow.
+
+{{< accordion title="Full pricing detail for all three, verified 3 August 2026" >}}
+
+| | Free tier | Entry paid plan | Billing unit | What is free |
+|---|---|---|---|---|
+| **n8n** | Community edition, self-hosted, unlimited | EUR 20/mo billed annually, 2,500 executions | workflow execution | step count does not affect cost |
+| **Zapier** | 100 tasks/mo | USD 19.99/mo billed annually, 750 tasks | task (successful action) | triggers, Filter, Paths, Formatter, Delay, Looping, Sub-Zap, Digest, Manager, Storage, Tables, Forms |
+| **Make** | 1,000 credits/mo | USD 9/mo, 5,000 credits | credit (module action) | Routers, error handlers |
+
+n8n Pro is EUR 50/mo annually for 10,000 executions, Business EUR 667/mo for 40,000. Zapier Team starts at USD 69/mo annually for 2,000 tasks. Note n8n Cloud is priced in euros, not dollars.
+
+Self-hosting note: Railway's free plan gives 1 US dollar of monthly usage credit at roughly 0.5 GB memory, which covers about a week of continuous running, not a month. Budget around 5 dollars a month for a host that is genuinely always on.
+
+{{< /accordion >}}
+
+## Common questions
+
+{{< faq-section >}}
+{{< faq question="Is n8n cheaper than Zapier for freelancers?" >}}Usually yes, and the reason is the billing model rather than the sticker price. Zapier bills per task, meaning per successful action step. n8n bills per workflow execution, so one full run counts once no matter how many steps it contains. A workflow with four billable actions running 500 times a month is 2,000 Zapier tasks but 500 n8n executions. Self-hosted n8n Community edition is free, though running it somewhere reliable costs about 5 US dollars a month on a small host. Pricing verified 3 August 2026.{{< /faq >}}
+{{< faq question="Do Zapier triggers count as tasks?" >}}No. Zapier does not bill triggers, and it does not bill its built-in tools either: Formatter, Paths, Filter, Delay, Looping, Sub-Zap, Digest, Zapier Manager, Storage, Tables and Forms are all free. Only successful actions count, and failed actions are not counted. This matters because most comparison articles count every visible step in a Zap and overstate what Zapier actually charges.{{< /faq >}}
+{{< faq question="Is n8n open source?" >}}No, and this is a common error. n8n ships under a source-available Sustainable Use Licence, not an open source licence. You can read the source and self-host it for free, but that is not the same thing as open source, and practitioners correct the claim regularly in public discussion. The practical effect for a freelancer is small, since self-hosting is free either way.{{< /faq >}}
+{{< faq question="Is n8n hard to learn?" >}}The difficulty is not where most reviews say it is. The canvas is fine. The confusing part is choosing the right operation inside a node. A Google Sheets node asks whether you are pulling data or updating it, which row, which column, and it will not infer your intent. Realistic time to a first working workflow: days to a week for a beginner, one to two days if you have built automations before, one afternoon if you are experienced.{{< /faq >}}
+{{< faq question="Can I run n8n for free?" >}}You can run the Community edition free on your own machine, but there is a catch. A locally hosted instance only runs when your computer is on and you have started it, which defeats the purpose of automating anything that needs to fire on a schedule or at 2am. Free cloud tiers are thin: Railway's free plan gives 1 US dollar of monthly usage credit, which covers roughly a week of continuous running, so budget about 5 dollars a month for a host that is actually always on.{{< /faq >}}
+{{< faq question="Which automation tool is best for a freelancer in 2026?" >}}It depends on volume more than anything else. Pick Zapier if your automations are simple and low-volume and you never want to think about infrastructure. Pick Make if you want most of n8n's flexibility without the setup cost, and you value a built-in human approval step. Pick n8n if you run high-volume or many-step workflows and hosting something does not intimidate you, because per-execution billing is by far the most forgiving model at volume.{{< /faq >}}
+{{< /faq-section >}}
 
 ## Disclosure, specifically
 
