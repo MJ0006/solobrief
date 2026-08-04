@@ -131,3 +131,16 @@ buildExpired = false
 
 # Homepage gets highest priority; articles override to 0.8 in frontmatter
 # Utility pages (about, contact, legal) inherit the 0.5 default
+
+# CRAWL BUDGET, added 2026-08-04 after the site SEO audit.
+# The audit found 20 of 40 sitemap URLs were thin /tags/ and /categories/ list pages
+# (154 words each, against 2,426 for a real article), all index,follow, while TWO real
+# money pages had never been crawled at all despite months in the sitemap. On a site
+# with zero inbound links, crawl budget is the scarce resource and it was being spent
+# on taxonomy. These pages stay for navigation and for the related-posts feature; they
+# just stop competing for crawl and stop being indexed.
+[[cascade]]
+  [cascade.params]
+    robotsNoIndex = true
+  [cascade.target]
+    kind = "{term,taxonomy}"

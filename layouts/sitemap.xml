@@ -1,0 +1,24 @@
+{{/* Sitemap that excludes thin taxonomy pages.
+     Hugo's default sitemap lists every page kind, which put 20 tag and category list
+     pages alongside the 10 real articles. Those pages are now noindex, so listing them
+     in the sitemap sends a contradictory signal and wastes crawl budget on a site that
+     currently has zero inbound links. Articles and real sections only. */}}
+{{ printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {{- range .Data.Pages }}
+  {{- if and (ne .Kind "term") (ne .Kind "taxonomy") }}
+  <url>
+    <loc>{{ .Permalink }}</loc>
+    {{- if not .Lastmod.IsZero }}
+    <lastmod>{{ safeHTML ( .Lastmod.Format "2006-01-02T15:04:05-07:00" ) }}</lastmod>
+    {{- end }}
+    {{- with .Sitemap.ChangeFreq }}
+    <changefreq>{{ . }}</changefreq>
+    {{- end }}
+    {{- if ge .Sitemap.Priority 0.0 }}
+    <priority>{{ .Sitemap.Priority }}</priority>
+    {{- end }}
+  </url>
+  {{- end }}
+  {{- end }}
+</urlset>
