@@ -92,8 +92,19 @@ buildExpired = false
     url = "/go/freelancer-ai-toolkit/"
     weight = 50
 
+# CRAWL BUDGET, part 2. Added 2026-08-04 after a GSC export showed Google had
+# crawled 14 RSS feeds and reported every one as "Crawled - currently not indexed".
+# Hugo generated 25 index.xml feeds, 21 of them for individual tags and categories.
+# They were never in the sitemap; Google discovered them through the rel="alternate"
+# link Hugo puts in every page head, so the earlier sitemap fix did not touch them.
+# An RSS feed for a tag with two posts is not something anyone subscribes to, and on a
+# site with zero inbound links every crawl spent on one is a crawl not spent on an
+# article. Feeds now exist only for the home page and the real sections.
 [outputs]
   home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML"]
+  term = ["HTML"]
 
 [taxonomies]
   category = "categories"
