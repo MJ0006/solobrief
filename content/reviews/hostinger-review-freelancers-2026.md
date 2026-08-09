@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Hostinger Review for Freelancers 2026: Is Under $3/Month Worth It?"
 date: 2026-05-20
 lastmod: 2026-05-25
