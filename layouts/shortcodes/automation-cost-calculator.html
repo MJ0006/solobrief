@@ -1,0 +1,249 @@
+{{/* Automation Cost Calculator: Zapier vs n8n vs Make.
+     Self-contained, vanilla JS, no dependencies, no network calls.
+     Consumption math is exact arithmetic. Plan fit uses vendor tiers
+     verified on the date printed in the footnote. */}}
+<div class="acc-tool" id="acc-tool">
+  <form class="acc-form" id="acc-form" novalidate>
+    <div class="acc-row">
+      <label for="acc-runs">
+        How many times does the workflow run per month?
+        <span class="acc-hint">One "run" is one trigger firing. A form submission, a new row, a scheduled check.</span>
+      </label>
+      <input type="number" id="acc-runs" min="0" max="1000000" step="1" value="500" inputmode="numeric">
+    </div>
+
+    <div class="acc-row">
+      <label for="acc-items">
+        How many items does each run process?
+        <span class="acc-hint">This is fan-out. One form submission is 1. A run that loops over 20 spreadsheet rows is 20. This field is usually the one that decides your bill.</span>
+      </label>
+      <input type="number" id="acc-items" min="1" max="100000" step="1" value="1" inputmode="numeric">
+    </div>
+
+    <div class="acc-row">
+      <label for="acc-per-item">
+        Billable actions inside the loop (once per item)
+        <span class="acc-hint">Steps that touch each item: create a record, send an email, update a row.</span>
+      </label>
+      <input type="number" id="acc-per-item" min="0" max="200" step="1" value="4" inputmode="numeric">
+    </div>
+
+    <div class="acc-row">
+      <label for="acc-per-run">
+        Billable actions outside the loop (once per run)
+        <span class="acc-hint">Steps that happen once no matter how many items came in: a summary email, a final log entry.</span>
+      </label>
+      <input type="number" id="acc-per-run" min="0" max="200" step="1" value="0" inputmode="numeric">
+    </div>
+
+    <details class="acc-note">
+      <summary>What does not count as a billable action</summary>
+      <p><strong>Zapier</strong> does not bill the trigger, and it does not bill its own built-in tools: Formatter, Paths, Filter, Delay, Looping, Sub-Zap, Digest, Zapier Manager, Storage, Tables and Forms. Failed actions are not billed either. Leave all of those out of the two fields above.</p>
+      <p><strong>n8n</strong> bills the whole run once, so node count does not change the number. Nothing to exclude.</p>
+      <p><strong>Make</strong> bills one credit per module action, and the trigger module is billable, which the calculator adds for you. Routers and error handlers are free, and filters sit on connections rather than being modules, so leave those out too.</p>
+    </details>
+  </form>
+
+  <div class="acc-results" id="acc-results" aria-live="polite">
+    <div class="acc-headline" id="acc-headline"></div>
+
+    <table class="acc-table">
+      <thead>
+        <tr><th>Tool</th><th>Billed per</th><th>Monthly usage</th><th>Plan that fits</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Zapier</strong></td>
+          <td>task</td>
+          <td class="acc-num" id="acc-zap-usage"></td>
+          <td id="acc-zap-plan"></td>
+        </tr>
+        <tr>
+          <td><strong>n8n</strong></td>
+          <td>workflow execution</td>
+          <td class="acc-num" id="acc-n8n-usage"></td>
+          <td id="acc-n8n-plan"></td>
+        </tr>
+        <tr>
+          <td><strong>Make</strong></td>
+          <td>credit</td>
+          <td class="acc-num" id="acc-make-usage"></td>
+          <td id="acc-make-plan"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="acc-explain" id="acc-explain"></div>
+  </div>
+
+  <p class="acc-verified">
+    Plan limits and prices read from
+    <a href="https://zapier.com/pricing" rel="nofollow noopener" target="_blank">Zapier</a>,
+    <a href="https://n8n.io/pricing/" rel="nofollow noopener" target="_blank">n8n</a> and
+    <a href="https://www.make.com/en/pricing" rel="nofollow noopener" target="_blank">Make</a>
+    on 3 August 2026. Zapier's prices were re-checked on 9 August 2026 and were unchanged.
+    The n8n and Make pages render their prices with JavaScript, so we could not re-check
+    those two automatically, which is worth knowing rather than hiding.
+    Open the vendor page before you buy. The usage numbers above are arithmetic and do not go stale.
+  </p>
+</div>
+
+<style>
+.acc-tool{border:1px solid var(--border-strong,#D4D0C8);border-radius:var(--radius,6px);padding:1.25rem;margin:1.75rem 0;background:var(--bg-secondary,#F5F3EF)}
+.acc-form{margin:0}
+.acc-row{margin-bottom:1rem}
+.acc-row label{display:block;font-weight:600;font-size:0.95rem;margin-bottom:0.35rem;color:var(--text-primary,#1A1A1A)}
+.acc-hint{display:block;font-weight:400;font-size:0.83rem;line-height:1.45;color:var(--text-muted,#6B6B67);margin-top:0.2rem}
+.acc-row input{width:100%;max-width:220px;padding:0.5rem 0.6rem;font-size:1rem;border:1px solid var(--border-strong,#D4D0C8);border-radius:var(--radius,6px);background:#fff;color:var(--text-primary,#1A1A1A)}
+.acc-row input:focus{outline:2px solid var(--accent,#E8A045);outline-offset:1px}
+.acc-note{margin:0.5rem 0 0;font-size:0.87rem;color:var(--text-secondary,#4A4A47)}
+.acc-note summary{cursor:pointer;font-weight:600;color:var(--accent-hover,#C8852F)}
+.acc-note p{margin:0.6rem 0 0;line-height:1.55}
+.acc-results{margin-top:1.4rem;padding-top:1.1rem;border-top:1px solid var(--border-strong,#D4D0C8)}
+.acc-headline{font-size:1.02rem;font-weight:600;line-height:1.5;margin-bottom:0.9rem;color:var(--text-primary,#1A1A1A)}
+.acc-table{width:100%;border-collapse:collapse;font-size:0.92rem;background:#fff}
+.acc-table th,.acc-table td{padding:0.55rem 0.6rem;border:1px solid var(--border,#E8E6E1);text-align:left;vertical-align:top}
+.acc-table th{background:var(--bg-secondary,#F5F3EF);font-size:0.83rem;text-transform:uppercase;letter-spacing:0.02em;color:var(--text-muted,#6B6B67)}
+.acc-num{font-variant-numeric:tabular-nums;white-space:nowrap;font-weight:600}
+.acc-explain{margin-top:1rem;font-size:0.9rem;line-height:1.6;color:var(--text-secondary,#4A4A47)}
+.acc-explain p{margin:0 0 0.6rem}
+.acc-explain strong{color:var(--text-primary,#1A1A1A)}
+.acc-verified{margin:1rem 0 0;font-size:0.8rem;line-height:1.5;color:var(--text-muted,#6B6B67)}
+.acc-flag{display:inline-block;background:var(--accent-light,#FEF3E2);border:1px solid var(--accent,#E8A045);border-radius:4px;padding:0.1rem 0.4rem;font-size:0.78rem;font-weight:600;color:var(--accent-hover,#C8852F)}
+@media (max-width:520px){.acc-table{font-size:0.85rem}.acc-table th,.acc-table td{padding:0.45rem 0.4rem}}
+</style>
+
+<script>
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var els = {
+    runs: $('acc-runs'), items: $('acc-items'),
+    perItem: $('acc-per-item'), perRun: $('acc-per-run'),
+    headline: $('acc-headline'), explain: $('acc-explain'),
+    zapU: $('acc-zap-usage'), zapP: $('acc-zap-plan'),
+    n8nU: $('acc-n8n-usage'), n8nP: $('acc-n8n-plan'),
+    makeU: $('acc-make-usage'), makeP: $('acc-make-plan')
+  };
+  if (!els.runs) { return; }
+
+  var fmt = function (n) { return n.toLocaleString('en-US'); };
+
+  var num = function (el, min, max, fallback) {
+    var v = parseInt(el.value, 10);
+    if (isNaN(v)) { return fallback; }
+    if (v < min) { return min; }
+    if (v > max) { return max; }
+    return v;
+  };
+
+  // Plan tiers. Limits read from the vendor pricing pages 2026-08-03; Zapier
+  // re-verified live 2026-08-09 and unchanged ($0 / $19.99 / $69). n8n and Make
+  // inject prices with JS so they cannot be re-checked automatically.
+  // Only tiers we have actually read are listed. Above the top listed tier the
+  // calculator says so rather than guessing at a price.
+  var PLANS = {
+    zapier: [
+      { limit: 100,  label: 'Free, 100 tasks/mo' },
+      { limit: 750,  label: 'Professional, from $19.99/mo billed annually (750 tasks)' }
+    ],
+    zapierOver: 'Above the entry Professional tier. Zapier prices Professional by task volume, so read the slider on its pricing page.',
+    n8n: [
+      { limit: 2500, label: 'Starter, EUR 20/mo billed annually (2,500 executions)' }
+    ],
+    n8nOver: 'Above Starter. n8n Pro and above are priced by execution volume, so check the live page.',
+    make: [
+      { limit: 1000, label: 'Free, 1,000 credits/mo' },
+      { limit: 5000, label: 'Core, from $9/mo (5,000 credits)' }
+    ],
+    makeOver: 'Above Core. Make prices by credit volume within each plan, so check the live page.'
+  };
+
+  var planFor = function (usage, tiers, over) {
+    for (var i = 0; i < tiers.length; i++) {
+      if (usage <= tiers[i].limit) { return tiers[i].label; }
+    }
+    return over;
+  };
+
+  function render() {
+    var runs    = num(els.runs, 0, 1000000, 500);
+    var items   = num(els.items, 1, 100000, 1);
+    var perItem = num(els.perItem, 0, 200, 4);
+    var perRun  = num(els.perRun, 0, 200, 0);
+
+    var billablePerRun = perRun + (perItem * items);
+
+    var zapier = billablePerRun * runs;              // trigger and built-ins are free
+    var n8n    = runs;                               // whole run counts once
+    var make   = (1 + billablePerRun) * runs;        // trigger module is billable
+
+    els.zapU.textContent  = fmt(zapier) + ' tasks';
+    els.n8nU.textContent  = fmt(n8n) + ' executions';
+    els.makeU.textContent = fmt(make) + ' credits';
+
+    els.zapP.textContent  = planFor(zapier, PLANS.zapier, PLANS.zapierOver);
+    els.n8nP.innerHTML    = planFor(n8n, PLANS.n8n, PLANS.n8nOver) +
+                            '<br><span class="acc-hint">Community edition self-hosted is free and unlimited, but it only runs while your machine or host is on. Budget about $5/mo for a VPS that is always on.</span>';
+    els.makeP.textContent = planFor(make, PLANS.make, PLANS.makeOver);
+
+    // Headline
+    if (runs === 0 || billablePerRun === 0) {
+      els.headline.textContent = 'Add at least one billable action and one run to see the numbers.';
+      els.explain.innerHTML = '';
+      return;
+    }
+
+    var ratio = zapier / n8n;
+    els.headline.textContent =
+      'The same workflow bills ' + fmt(zapier) + ' tasks on Zapier, ' +
+      fmt(n8n) + ' executions on n8n and ' + fmt(make) + ' credits on Make.';
+
+    var out = [];
+
+    out.push('<p><strong>Why the three numbers differ so much.</strong> They are not measuring the same thing. ' +
+      'Zapier counts every successful action, so its number grows with the work inside the run. ' +
+      'n8n counts the run itself, so its number is just how often you fire, which is why it stays at ' + fmt(n8n) + ' no matter what you put in the two step fields. ' +
+      'Make counts each module action plus the trigger, which puts it slightly above Zapier on the same shape of workflow.</p>');
+
+    if (items > 1) {
+      var withoutFanout = (perRun + perItem) * runs;
+      out.push('<p><span class="acc-flag">Fan-out is driving this</span> ' +
+        'Each run processes ' + fmt(items) + ' items, so the ' + fmt(perItem) + ' in-loop action' + (perItem === 1 ? '' : 's') +
+        ' fire ' + fmt(perItem * items) + ' times per run. If each run handled a single item, Zapier would bill ' +
+        fmt(withoutFanout) + ' tasks instead of ' + fmt(zapier) + '. ' +
+        '<strong>Your bill scales with how many items you process, not with how long your workflow is.</strong> ' +
+        'A short workflow that fans out over hundreds of records costs more than a long one that runs once. ' +
+        'n8n is unaffected by this, which is the entire reason per-execution billing pulls away at volume.</p>');
+    } else {
+      out.push('<p><strong>Try raising the items-per-run field.</strong> ' +
+        'Most people discover their real bill the first time a workflow loops over a list. ' +
+        'Set it to 20 and watch which of the three numbers moves and which one does not.</p>');
+    }
+
+    out.push('<p><strong>The gap here is about ' + (ratio < 10 ? ratio.toFixed(1) : fmt(Math.round(ratio))) +
+      ' to 1 between Zapier and n8n.</strong> ' +
+      'That is the honest figure, counting only what each vendor actually bills. ' +
+      'Comparisons that count every visible step in a Zap arrive at a bigger number and a wrong one.</p>');
+
+    els.explain.innerHTML = out.join('');
+  }
+
+  ['input', 'change'].forEach(function (evt) {
+    [els.runs, els.items, els.perItem, els.perRun].forEach(function (el) {
+      el.addEventListener(evt, render);
+    });
+  });
+
+  render();
+})();
+</script>
+
+<noscript>
+  <p><strong>This calculator needs JavaScript.</strong> The arithmetic is simple enough to do by hand, so here it is. Let <em>R</em> be runs per month, <em>I</em> items per run, <em>A</em> billable actions inside the loop and <em>B</em> billable actions outside it.</p>
+  <ul>
+    <li><strong>Zapier tasks</strong> = (B + A &times; I) &times; R. The trigger and the built-in tools are free.</li>
+    <li><strong>n8n executions</strong> = R. The whole run counts once, whatever is inside it.</li>
+    <li><strong>Make credits</strong> = (1 + B + A &times; I) &times; R. The extra 1 is the trigger module.</li>
+  </ul>
+  <p>Worked example: 4 in-loop actions, 1 item per run, 500 runs a month gives 2,000 Zapier tasks, 500 n8n executions and 2,500 Make credits.</p>
+</noscript>

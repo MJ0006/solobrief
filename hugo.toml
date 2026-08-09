@@ -82,6 +82,11 @@ buildExpired = false
     url = "/posts/"
     weight = 30
   [[menu.main]]
+    identifier = "tools"
+    name = "Free Tools"
+    url = "/tools/"
+    weight = 35
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
