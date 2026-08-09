@@ -39,7 +39,7 @@ Hostinger is worth it for most freelancers starting out. Under $3/month with the
 
 ## Quick Verdict
 
-{{< verdict-box product="Hostinger" product-type="Product" rating="4.1/5" price="From â‚¹69/month (promo)" best-for="Freelancers launching a first portfolio site" skip-if="WooCommerce at scale or needing server-level control" affiliate-url="/go/hostinger/" affiliate-text="Check current Hostinger pricing" >}}
+{{< verdict-box product="Hostinger" product-type="Product" rating="4.1/5" price="From ₹69/month (promo)" best-for="Freelancers launching a first portfolio site" skip-if="WooCommerce at scale or needing server-level control" affiliate-url="/go/hostinger/" affiliate-text="Check current Hostinger pricing" >}}
 
 ---
 
@@ -75,10 +75,10 @@ This is the part most reviews skip past. Here it is upfront.
 {{< accordion title="Hostinger plan pricing breakdown" >}}
 | Plan | Promo price | Renewal price | Best for |
 |------|------------|--------------|---------|
-| Single | ~â‚¹69/month | ~â‚¹289/month | One small site; limited features |
-| Premium | ~â‚¹149/month | ~â‚¹449/month | Most freelancers, start here |
-| Business | ~â‚¹249/month | ~â‚¹649/month | Faster resources + daily backups |
-| Cloud Startup | ~â‚¹699/month | ~â‚¹2,099/month | High-traffic sites; overkill for portfolios |
+| Single | ~₹69/month | ~₹289/month | One small site; limited features |
+| Premium | ~₹149/month | ~₹449/month | Most freelancers, start here |
+| Business | ~₹249/month | ~₹649/month | Faster resources + daily backups |
+| Cloud Startup | ~₹699/month | ~₹2,099/month | High-traffic sites; overkill for portfolios |
 {{< /accordion >}}
 
 *India market pricing via [hostinger.com/in](/go/hostinger/). Prices approximate; check current rates, as promotions change frequently.*
@@ -159,8 +159,8 @@ If you're building a straightforward portfolio, you're unlikely to run into the 
 
 | | Hostinger Premium | Bluehost Basic | SiteGround Startup |
 |---|---|---|---|
-| Promo price | ~â‚¹149/month | ~â‚¹219/month | ~â‚¹269/month |
-| Renewal price | ~â‚¹449/month | ~â‚¹699/month | ~â‚¹1,299/month |
+| Promo price | ~₹149/month | ~₹219/month | ~₹269/month |
+| Renewal price | ~₹449/month | ~₹699/month | ~₹1,299/month |
 | Free domain | Yes (annual) | Yes (first year) | No |
 | Free SSL | Yes | Yes | Yes |
 | Speed | Good (LiteSpeed) | Average | Excellent |
@@ -169,7 +169,7 @@ If you're building a straightforward portfolio, you're unlikely to run into the 
 
 Price is the decision: Hostinger wins on cost. If support and performance matter more than cost, SiteGround is worth paying for. Bluehost sits awkwardly in the middle, more expensive than Hostinger and slower than SiteGround.
 
-[View the full web hosting comparison for freelancers â†’](/reviews/best-web-hosting-freelancers-2026/)
+[View the full web hosting comparison for freelancers →](/reviews/best-web-hosting-freelancers-2026/)
 
 ---
 
@@ -181,7 +181,7 @@ Price is the decision: Hostinger wins on cost. If support and performance matter
 
 ## The renewal question: is it still worth it at year 2?
 
-At standard renewal rates, Premium runs ~â‚¹449/month. Still cheaper than SiteGround or WP Engine, but no longer the headline deal.
+At standard renewal rates, Premium runs ~₹449/month. Still cheaper than SiteGround or WP Engine, but no longer the headline deal.
 
 Whether to renew with Hostinger comes down to one question: have your needs changed? If your site is still a simple portfolio and you're comfortable with the dashboard, renewing makes sense. If your freelance business has grown to where you need better performance or more control, it's worth migrating to SiteGround or a VPS at renewal time.
 
@@ -200,7 +200,7 @@ A few things before you click through:
 - The free domain is included on annual plans, don't buy it separately elsewhere.
 - Budget 2 to 3 hours for initial setup. WordPress installs in one click, but theme setup and adding your content takes time.
 
-If you want to see how Hostinger compares across five budget hosting options, we have a full side-by-side in our [best web hosting for freelancers guide â†’](/reviews/best-web-hosting-freelancers-2026/).
+If you want to see how Hostinger compares across five budget hosting options, we have a full side-by-side in our [best web hosting for freelancers guide →](/reviews/best-web-hosting-freelancers-2026/).
 
 ---
 
@@ -232,9 +232,9 @@ Hostinger works for most freelancers who need a portfolio site and don't want to
 
 It's not the choice if you need strong technical support, plan to build something beyond a basic portfolio, or have specific server requirements. Those situations call for a bigger budget.
 
-For most freelancers just getting online: under â‚¹150/month for a site that loads fast and doesn't require a tech background to maintain is a fair trade.
+For most freelancers just getting online: under ₹150/month for a site that loads fast and doesn't require a tech background to maintain is a fair trade.
 
-**[Get the current Hostinger deal â†’](/go/hostinger/)**
+**[Get the current Hostinger deal →](/go/hostinger/)**
 
 ---
 
