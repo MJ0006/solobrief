@@ -12,6 +12,9 @@ tags: ["seo tools", "wordpress", "freelance tools"]
 categories: ["Tools & Software"]
 affiliate_disclosure: true
 schema_type: "Review"
+product_name: "Rank Math"
+rating_value: 4.5
+rating_best: 5
 multimedia: true
 brief_id: "brief-010"
 status: "published"

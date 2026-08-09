@@ -24,8 +24,20 @@
     {{- if $url }}<tr><td colspan="2" style="border:0;padding-top:0.6rem"><a href="{{ $url }}" class="cta-button">{{ $cta }} &rarr;</a></td></tr>{{ end -}}
   </table>
 </div>
-{{- /* Review + AggregateRating JSON-LD — only output when rating and product name are provided */ -}}
-{{- if and $ratingValue $product -}}
+{{- /* Review JSON-LD, emitted only when this page is not already publishing one.
+
+     A page with schema_type "Review" AND a product_name already gets a full
+     page-level Review block from partials/templates/schema_json.html, including
+     itemReviewed, dates, image and mainEntityOfPage. When this shortcode also fired,
+     the page carried TWO Review blocks for the same product, which is the same defect
+     shape as the duplicate FAQPage found on 2026-08-04 and can make Google ignore the
+     markup entirely.
+
+     Comparison pages use schema_type "Comparison", whose page-level block is an Article,
+     so there this shortcode is the ONLY Review markup and must still fire. That is why
+     this is conditional rather than deleted. */ -}}
+{{- $pageOwnsReview := and (eq (.Page.Params.schema_type | default "") "Review") .Page.Params.product_name -}}
+{{- if and $ratingValue $product (not $pageOwnsReview) -}}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org/",

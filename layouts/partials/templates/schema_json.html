@@ -86,8 +86,13 @@
     }
   },
   {{- if .Params.product_name }}
+  {{- /* Was hardcoded SoftwareApplication, which is wrong for anything that is not
+         software (a hosting company is an Organization). Note the type is printed
+         WITHOUT surrounding quotes: Go's html/template JSON-encodes strings inside a
+         script block, so adding quotes here would double-encode it, which is exactly
+         the bug that shipped `"\"Hostinger\""` on three pages. */ -}}
   "itemReviewed": {
-    "@type": "SoftwareApplication",
+    "@type": {{ .Params.item_reviewed_type | default "SoftwareApplication" }},
     "name": {{ .Params.product_name }}
   },
   {{- end }}
@@ -127,9 +132,9 @@
     {
       "@type": "ListItem",
       "position": {{ add $i 1 }},
-      "name": {{ $item.name | jsonify }}{{ if $item.url }},
-      "url": {{ $item.url | jsonify }}{{ end }}{{ if $item.description }},
-      "description": {{ $item.description | jsonify }}{{ end }}
+      "name": {{ $item.name }}{{ if $item.url }},
+      "url": {{ $item.url }}{{ end }}{{ if $item.description }},
+      "description": {{ $item.description }}{{ end }}
     }
     {{- end }}
   ],
@@ -187,13 +192,13 @@
     {{- if $i }},{{ end }}
     {
       "@type": "SoftwareApplication",
-      "name": {{ $p.name | jsonify }}{{ if $p.operating_system }},
-      "operatingSystem": {{ $p.operating_system | jsonify }}{{ end }}{{ if $p.application_category }},
-      "applicationCategory": {{ $p.application_category | jsonify }}{{ end }}{{ if $p.url }},
-      "url": {{ $p.url | jsonify }}{{ end }}{{ if $p.price_model }},
+      "name": {{ $p.name }}{{ if $p.operating_system }},
+      "operatingSystem": {{ $p.operating_system }}{{ end }}{{ if $p.application_category }},
+      "applicationCategory": {{ $p.application_category }}{{ end }}{{ if $p.url }},
+      "url": {{ $p.url }}{{ end }}{{ if $p.price_model }},
       "offers": {
         "@type": "Offer",
-        "description": {{ $p.price_model | jsonify }}
+        "description": {{ $p.price_model }}
       }{{ end }}
     }
     {{- end }}
@@ -266,10 +271,10 @@
     {{- if $i }},{{ end }}
     {
       "@type": "Question",
-      "name": {{ $faq.question | jsonify }},
+      "name": {{ $faq.question }},
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": {{ $faq.answer | jsonify }}
+        "text": {{ $faq.answer }}
       }
     }
     {{- end }}

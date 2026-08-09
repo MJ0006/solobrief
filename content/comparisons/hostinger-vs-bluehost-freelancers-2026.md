@@ -72,9 +72,9 @@ If you would rather see both control panels side by side, this third-party compa
 
 [Check Hostinger's current freelancer plans and pricing &rarr;](/go/hostinger/)
 
-{{< verdict-box product="Hostinger" product-type="Product" rating="4.2/5" price="From ~$3/mo intro, renews higher" best-for="Freelancers who want the lowest real cost and an easy panel for portfolio plus client sites" skip-if="You specifically need the WordPress.org-recommended brand or prefer cPanel" affiliate-url="/go/hostinger/" affiliate-text="See Hostinger plans" >}}
+{{< verdict-box product="Hostinger" product-type="Organization" rating="4.2/5" price="From ~$3/mo intro, renews higher" best-for="Freelancers who want the lowest real cost and an easy panel for portfolio plus client sites" skip-if="You specifically need the WordPress.org-recommended brand or prefer cPanel" affiliate-url="/go/hostinger/" affiliate-text="See Hostinger plans" >}}
 
-{{< verdict-box product="Bluehost" product-type="Product" price="From ~$3/mo intro, renews higher" best-for="Freelancers who want the WordPress.org-recommended host or prefer cPanel and US-based support" skip-if="Your priority is the lowest total cost or the simplest control panel" affiliate-url="/go/bluehost/" affiliate-text="See Bluehost plans" >}}
+{{< verdict-box product="Bluehost" product-type="Organization" price="From ~$3/mo intro, renews higher" best-for="Freelancers who want the WordPress.org-recommended host or prefer cPanel and US-based support" skip-if="Your priority is the lowest total cost or the simplest control panel" affiliate-url="/go/bluehost/" affiliate-text="See Bluehost plans" >}}
 
 ---
 

@@ -12,6 +12,7 @@ tags: ["web hosting", "freelance tools", "portfolio site"]
 categories: ["Tools & Software"]
 affiliate_disclosure: true
 schema_type: "Review"
+item_reviewed_type: "Organization"
 rating_value: 4.1
 rating_best: 5
 product_name: "Hostinger"
