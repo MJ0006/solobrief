@@ -188,6 +188,8 @@ Check [motion.app](https://motion.app) for their current trial offer. If they ha
 
 If you want to recover time on communication overhead alongside scheduling, see our [Wispr Flow review for freelancers](/reviews/wispr-flow-review-freelance-writers-2026/) for how AI dictation compares on the same ROI math.
 
+Motion decides when you do the work. It does not do any of the work for you. If the tasks themselves are repetitive rather than badly scheduled, the tool you want is an automation platform instead, and [n8n vs Zapier vs Make for freelancers](/comparisons/n8n-vs-zapier-freelancers-2026/) covers how each one bills before you pick.
+
 ---
 
 ## Frequently Asked Questions

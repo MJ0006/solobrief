@@ -108,6 +108,8 @@ The second reason I upgraded to PRO was Content AI, Rank Math's built-in writing
 
 My honest advice: price PRO on its SEO features, the local SEO, the advanced schema, the analytics, and treat Content AI as a bonus rather than the reason you pay. If you go in expecting unlimited AI, you'll hit the credit wall and feel nickel-and-dimed. If you go in for the SEO toolkit and use the AI occasionally, PRO is fair value.
 
+This credit-wall problem is not unique to Rank Math. It is how most AI-adjacent tools price now, and automation tools are the worst offenders because each one counts a different thing. If you are budgeting for those, our [automation cost calculator](/tools/automation-cost-calculator/) works out what one real workflow costs on each of the three main tools before you commit.
+
 {{< pros-cons
   pros="Setup wizard and Search Console submission are genuinely fast, saves time on every client site|Free tier is capable: schema, sitemaps, redirections, and on-page scoring with no paywall|Local SEO and LocalBusiness schema are excellent, the standout for client service businesses|Per-post SEO score works as a fast pre-flight checklist|UI is cleaner and easier to learn than the alternative|llms.txt generation is a one-toggle future-proofing for AI search"
   cons="The Content AI credit system feels like a recurring upsell inside the workflow|WordPress-only: useless for static or non-WordPress sites|Hitting a high SEO score can tempt over-optimized writing if you treat it as a grade|PRO pricing is best justified by SEO features, not the AI"

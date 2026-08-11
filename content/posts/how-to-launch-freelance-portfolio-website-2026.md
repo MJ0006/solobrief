@@ -130,6 +130,8 @@ Before you share the link:
 
 For most freelancers, WordPress on affordable hosting is the best balance of control, cost, and credibility. It is the setup I use for my own portfolio and client sites. If you want to follow the same path, start with the [WordPress on Hostinger walkthrough](/posts/how-to-set-up-wordpress-on-hostinger/), and if you are ready to pick a plan you can [get started with Hostinger here](/go/hostinger/). Just remember to budget for the renewal rate, not only the intro price.
 
+The site is the one-time build. The ongoing cost is the software you run the business on, and that adds up faster than hosting ever will. Before you subscribe to anything that bills by usage, run the numbers in our free [automation cost calculator](/tools/automation-cost-calculator/).
+
 ## Frequently asked questions
 
 {{< faq-section >}}
