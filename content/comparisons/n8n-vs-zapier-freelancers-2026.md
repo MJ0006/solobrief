@@ -250,3 +250,7 @@ So I have no financial stake whatsoever in the headline matchup this article is 
 If you want to check my reasoning rather than take my word for it, the comparison table near the top is built entirely from the three vendor pricing pages, all verified on 3 August 2026, and every practitioner quote links to its source thread.
 
 [Try Make](/go/make/)
+
+---
+
+**Not sure you need one of these yet?** This page assumes you have already decided to automate something and are choosing between tools. If you are earlier than that, start with [how to automate the manual parts of client work with AI](/posts/automate-client-work-with-ai/), which covers what is actually worth handing to a machine, what it costs, and the two things that broke in my own workflow.

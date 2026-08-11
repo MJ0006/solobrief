@@ -82,6 +82,10 @@ A form submission arrives. A filter drops the incomplete ones. Then four things 
 
 Now watch what that does to the plans. 2,000 tasks puts you past Zapier's entry tier. 500 executions sits comfortably inside n8n's Starter plan. 2,500 credits fits inside Make's entry paid plan. Three tools, one workflow, and the cheapest option depends entirely on a billing rule that none of the marketing pages lead with.
 
+## Not sure what to automate yet?
+
+Costing a workflow is the second decision. The first is whether the job is worth automating at all, and a surprising number are not. If you are still at that stage, read [how to automate the manual parts of client work with AI](/posts/automate-client-work-with-ai/) first. It covers which jobs are genuinely worth handing over, the review step that keeps the output yours, and the two things that broke in my own workflow.
+
 ## What the calculator deliberately does not do
 
 It does not predict your invoice, and any tool that claims to is guessing.
