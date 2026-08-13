@@ -17,3 +17,30 @@ I research every tool I cover. Pricing tables include renewal rates, not just pr
 **On affiliate links:** Some links on this site are affiliate links, if you buy through them, I earn a small commission at no extra cost to you. Affiliate relationships never influence my recommendations or verdicts. Tools I cover because they have affiliate programs get the same scrutiny as tools that don't. I disclose affiliate links on every page that contains them. See the full [Affiliate Disclosure](/disclosure/).
 
 **Questions or corrections?** If something in a review is wrong or outdated, I want to know. Reach me at [hello@solobrief.co](mailto:hello@solobrief.co).
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://solobrief.co/about/#person",
+  "name": "G Mohan Jayanth",
+  "alternateName": "MJ",
+  "url": "https://solobrief.co/about/",
+  "jobTitle": "Founder and Editor",
+  "description": "Freelancer and solopreneur based in India who researches AI tools for one-person businesses and writes the verdicts on SoloBrief.",
+  "email": "hello@solobrief.co",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "SoloBrief",
+    "url": "https://solobrief.co"
+  },
+  "knowsAbout": [
+    "AI productivity tools",
+    "dictation software",
+    "scheduling apps",
+    "web hosting for small sites",
+    "project management for one-person businesses",
+    "workflow automation"
+  ]
+}
+</script>

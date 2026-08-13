@@ -1,25 +1,21 @@
 {{ if .IsHome }}
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "{{- ( site.Params.schema.publisherType | default "Organization") | title -}}",
-  "name": {{ site.Title }},
-  "url": {{ site.Home.Permalink }},
-  "description": {{ site.Params.description | plainify | truncate 180 | safeHTML }},
-  {{- if (eq site.Params.schema.publisherType "Person") }}
-  "image": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
-  {{- else }}
-  "logo": {{ site.Params.assets.favicon | default "favicon.ico" | absURL }},
-  {{- end }}
-  "sameAs": [
-    {{- if site.Params.schema.sameAs }}
-      {{ range $i, $e := site.Params.schema.sameAs }}{{ if $i }}, {{ end }}{{ trim $e " " }}{{ end }}
-    {{- else}}
-      {{ range $i, $e := site.Params.SocialIcons }}{{ if $i }}, {{ end }}"{{ trim $e.url " " }}"{{ end }}
-    {{- end}}
-  ]
-}
-</script>
+{{/* DUPLICATE ORGANIZATION REMOVED 2026-08-13.
+
+     This block emitted a second Organization entity on the home page. The first
+     is in layouts/_partials/extend_head.html, which is the deliberate one: its
+     own comment calls it the "entity anchor for Google, Bing Copilot, Perplexity,
+     ChatGPT", and it is richer (contactPoint with the editorial email, a written
+     description, an explicit sameAs list). This one was incidental theme output.
+
+     Measured before the fix: the live home page returned 2 "@type":"Organization"
+     blocks. Two competing entities for one brand is a self-inflicted ambiguity on
+     a site whose whole problem is that Google does not know what it is.
+
+     site_audit.py check_duplicate_schema did NOT catch this: it only looks for
+     duplicate FAQPage. Worth widening if another duplicate class ever appears.
+
+     If the entity anchor ever needs to become config-driven again, restore this
+     block and delete the one in extend_head.html instead. Never run both. */}}
 {{- else if (or .IsPage .IsSection) }}
 {{/* BreadcrumbList */}}
 {{- $url := replace .Parent.Permalink ( printf "%s" site.Home.Permalink) "" }}
