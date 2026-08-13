@@ -48,10 +48,23 @@
     "bestRating": "5",
     "worstRating": "1"
   },
+  {{/* Person, not Organization. Changed 2026-08-14.
+
+       This shortcode is the ONLY Review markup on comparison pages, and it was
+       declaring the reviewer as the company while schema_json.html declares a
+       Person on schema_type "Review" pages. Same site, same writer, two answers.
+       Google's review guidance favours a named identifiable reviewer with
+       first-hand experience, so the weaker claim was sitting on exactly the pages
+       where the stronger one helps. It also contradicted /about/team/, which
+       states MJ writes the verdicts and signs off on every review.
+
+       Fields match schema_json.html exactly so the site speaks with one voice.
+       URL is hardcoded, as in extend_head.html, because it must resolve to the
+       Person entity at /about/#person and must not depend on GetPage. */}}
   "author": {
-    "@type": "Organization",
-    "name": "SoloBrief",
-    "url": "https://solobrief.co"
+    "@type": "Person",
+    "name": "G Mohan Jayanth",
+    "url": "https://solobrief.co/about/"
   },
   "itemReviewed": {
     "@type": "{{ $productType }}",

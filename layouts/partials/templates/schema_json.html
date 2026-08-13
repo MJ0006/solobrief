@@ -110,6 +110,33 @@
 }
 </script>
 
+{{- else if eq $schemaType "AboutPage" }}
+{{/* Added 2026-08-14. /about/team/ declared schema_type "AboutPage" and the else
+     branch below hardcodes BlogPosting, so the page that exists to prove a named
+     human stands behind the reviews was telling Google it was a blog article.
+     That page is one of the few E-E-A-T assets a zero-authority site has.
+
+     mainEntity points at the single Person entity defined on /about/ rather than
+     repeating it, so there is exactly one Person for this human on the site. */}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": {{ .Title | plainify }},
+  "description": {{ with .Description | plainify }}{{ . }}{{ else }}{{ .Summary | plainify }}{{ end }},
+  "url": {{ .Permalink | safeHTML }},
+  "dateModified": {{ .Lastmod }},
+  "mainEntity": {
+    "@id": "https://solobrief.co/about/#person"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": {{ site.Title }},
+    "url": {{ site.Home.Permalink | safeHTML }}
+  }
+}
+</script>
+
 {{- else if eq $schemaType "ItemList" }}
 <script type="application/ld+json">
 {
