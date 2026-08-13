@@ -1,7 +1,7 @@
 ---
 title: "Hostinger Review for Freelancers 2026: Is Under $3/Month Worth It?"
 date: 2026-05-20
-lastmod: 2026-05-25
+lastmod: 2026-08-09
 slug: "hostinger-review-freelancers-2026"
 description: "Honest Hostinger review for freelancers. We cover pricing, portfolio site setup, India market plans, and exactly who should, and shouldn't, use it."
 keywords: ["hostinger review for freelancers 2026", "hostinger for freelancers", "best cheap web hosting for freelancers", "cheapest web hosting india freelancers"]
