@@ -1,6 +1,5 @@
 ---
 title: "About SoloBrief"
-url: "/about/"
 description: "SoloBrief is run by MJ, a freelancer and solopreneur who researches AI tools so you don't have to."
 ---
 
