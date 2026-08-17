@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Redirecting to tl;dv...</title>
+<meta name="robots" content="noindex, nofollow">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QRQV8QDSRG"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QRQV8QDSRG', {send_page_view: false});
+
+(function() {
+  // Cello-hosted affiliate link. The tracking code that credits us is `ucc` and it is
+  // added by Cello's own 307, not by us. Verified 2026-08-17 that appending our UTM
+  // params does NOT displace it: Cello merges them and keeps ucc=G35Xrb1mH62 intact.
+  var dest = "https://tldv.cello.so/G35Xrb1mH62";
+  var slug = "tldv";
+  var ref = document.referrer ? new URL(document.referrer).pathname : "direct";
+  var articleSlug = ref.replace(/\/$/,"").split("/").pop() || "direct";
+
+  var utmParams = [
+    "utm_source=site",
+    "utm_medium=affiliate",
+    "utm_campaign=" + slug,
+    "utm_content=" + articleSlug
+  ].join("&");
+  var sep = dest.indexOf("?") === -1 ? "?" : "&";
+  var finalUrl = dest + sep + utmParams;
+
+  gtag("event", "affiliate_click", {
+    affiliate_program: slug,
+    article_slug: articleSlug,
+    destination: dest,
+    event_callback: function() { window.location.href = finalUrl; }
+  });
+
+  setTimeout(function() { window.location.href = finalUrl; }, 400);
+})();
+</script>
+</head>
+<body>
+<p>Redirecting to <a href="https://tldv.cello.so/G35Xrb1mH62">tl;dv</a>...</p>
+</body>
+</html>
