@@ -82,8 +82,9 @@
     <a href="https://n8n.io/pricing/" rel="nofollow noopener" target="_blank">n8n</a> and
     <a href="https://www.make.com/en/pricing" rel="nofollow noopener" target="_blank">Make</a>
     on 3 August 2026. Zapier's prices were re-checked on 9 August 2026 and were unchanged.
-    The n8n and Make pages render their prices with JavaScript, so we could not re-check
-    those two automatically, which is worth knowing rather than hiding.
+    n8n's prices were re-checked on 18 August 2026: Starter is $20/mo billed annually.
+    Make's page renders its prices with JavaScript, so we could not re-check that one
+    automatically, which is worth knowing rather than hiding.
     Open the vendor page before you buy. The usage numbers above are arithmetic and do not go stale.
   </p>
 </div>
@@ -137,8 +138,9 @@
   };
 
   // Plan tiers. Limits read from the vendor pricing pages 2026-08-03; Zapier
-  // re-verified live 2026-08-09 and unchanged ($0 / $19.99 / $69). n8n and Make
-  // inject prices with JS so they cannot be re-checked automatically.
+  // re-verified live 2026-08-09 and unchanged ($0 / $19.99 / $69). n8n re-verified
+  // live 2026-08-18: Starter $20/mo. Make injects prices with JS so it cannot be
+  // re-checked automatically (its $9 figure was read by hand 2026-08-03).
   // Only tiers we have actually read are listed. Above the top listed tier the
   // calculator says so rather than guessing at a price.
   var PLANS = {
@@ -148,12 +150,12 @@
     ],
     zapierOver: 'Above the entry Professional tier. Zapier prices Professional by task volume, so read the slider on its pricing page.',
     n8n: [
-      { limit: 2500, label: 'Starter, EUR 20/mo billed annually (2,500 executions)' }
+      { limit: 2500, label: 'Starter, $20/mo billed annually (2,500 executions)' }
     ],
     n8nOver: 'Above Starter. n8n Pro and above are priced by execution volume, so check the live page.',
     make: [
       { limit: 1000, label: 'Free, 1,000 credits/mo' },
-      { limit: 5000, label: 'Core, from $9/mo (5,000 credits)' }
+      { limit: 5000, label: 'Core, from $9/mo as of 3 Aug 2026 (5,000 credits); confirm on the live page' }
     ],
     makeOver: 'Above Core. Make prices by credit volume within each plan, so check the live page.'
   };

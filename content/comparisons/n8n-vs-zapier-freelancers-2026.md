@@ -2,7 +2,7 @@
 title: "n8n vs Zapier vs Make for Freelancers 2026: The Billing Model Decides It"
 description: "n8n vs Zapier vs Make for freelancers: how each one bills, what a real multi-step workflow actually costs, where the learning curve really is, and which to pick."
 date: 2026-08-03
-lastmod: 2026-08-13
+lastmod: 2026-08-18
 slug: "n8n-vs-zapier-freelancers-2026"
 keywords: ["n8n vs zapier", "n8n vs zapier vs make", "n8n vs zapier for freelancers", "make vs zapier pricing", "zapier alternatives for freelancers 2026", "is n8n hard to learn", "n8n self hosted cost"]
 author: "G Mohan Jayanth"
@@ -15,6 +15,7 @@ schema_type: "Comparison"
 brief_id: "brief-010"
 multimedia: true
 pricing_verified: 2026-08-03
+pricing_note: "n8n re-verified 2026-08-18 (Starter USD 20/mo, currency corrected from EUR); Zapier re-verified 2026-08-09 unchanged; Make and Railway last verified 2026-08-03"
 pricing_sources:
   - "https://zapier.com/pricing"
   - "https://n8n.io/pricing/"
@@ -23,7 +24,7 @@ pricing_sources:
 products_compared:
   - name: "n8n"
     application_category: "BusinessApplication"
-    price_model: "Self-hosted Community free, Cloud from EUR 20 per month billed annually"
+    price_model: "Self-hosted Community free, Cloud from USD 20 per month billed annually"
     url: "https://n8n.io"
   - name: "Zapier"
     application_category: "BusinessApplication"
@@ -53,7 +54,7 @@ I run a production workflow on self-hosted n8n and I have used Make. I have neve
 | **Bills you per** | workflow execution | task (each successful action) | credit (each module action) |
 | **A 6-step workflow, 500 runs/month** | 500 executions | 2,000 tasks | 2,500 credits |
 | **Free tier** | Community edition, self-hosted, unlimited | 100 tasks/month | 1,000 credits/month |
-| **Entry paid plan** | EUR 20/mo annually, 2,500 executions | USD 19.99/mo annually, 750 tasks | USD 9/mo, 5,000 credits |
+| **Entry paid plan** | USD 20/mo annually, 2,500 executions | USD 19.99/mo annually, 750 tasks | USD 9/mo, 5,000 credits |
 | **Easiest to learn** | third | **first** | second |
 | **Cheapest at volume** | **first** | third | second |
 | **Instant triggers** | polling by default | **yes** | **yes** |
@@ -90,7 +91,7 @@ Take a realistic freelancer workflow. A form submission arrives, a filter drops 
 
 So the honest gap between n8n and Zapier on this workflow is about four to one, not the six to one you get from naive step counting. Four to one is still decisive. It is also defensible line by line, which the inflated version is not.
 
-Now notice what that does to the plans. 2,000 tasks puts you past Zapier's 750-task entry tier. 500 executions sits comfortably inside n8n's 2,500-execution Starter plan at EUR 20 a month. 2,500 credits fits Make's 5,000-credit plan at 9 US dollars.
+Now notice what that does to the plans. 2,000 tasks puts you past Zapier's 750-task entry tier. 500 executions sits comfortably inside n8n's 2,500-execution Starter plan at 20 US dollars a month. 2,500 credits fits Make's 5,000-credit plan at 9 US dollars.
 
 If you would rather see all three side by side before reading on, this third-party walkthrough covers the same ground visually.
 
@@ -220,7 +221,7 @@ For most freelancers reading this, the realistic shortlist is Make or Zapier, an
 
 | | Free tier | Entry paid plan | Billing unit | What is free |
 |---|---|---|---|---|
-| **n8n** | Community edition, self-hosted, unlimited | EUR 20/mo billed annually, 2,500 executions | workflow execution | step count does not affect cost |
+| **n8n** | Community edition, self-hosted, unlimited | USD 20/mo billed annually, 2,500 executions | workflow execution | step count does not affect cost |
 | **Zapier** | 100 tasks/mo | USD 19.99/mo billed annually, 750 tasks | task (successful action) | triggers, Filter, Paths, Formatter, Delay, Looping, Sub-Zap, Digest, Manager, Storage, Tables, Forms |
 | **Make** | 1,000 credits/mo | USD 9/mo, 5,000 credits | credit (module action) | Routers, error handlers |
 

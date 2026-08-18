@@ -1,8 +1,8 @@
----
+﻿---
 title: "Automation Cost Calculator: Zapier vs n8n vs Make"
 description: "Work out what one workflow really costs on Zapier, n8n and Make. Free, no signup, and it counts only what each vendor actually bills you for."
 date: 2026-08-09
-lastmod: 2026-08-11
+lastmod: 2026-08-18
 slug: "automation-cost-calculator"
 keywords: ["zapier cost calculator", "zapier task calculator", "make credits calculator", "n8n vs zapier cost", "how many zapier tasks will i use", "automation cost calculator", "make vs zapier pricing calculator"]
 author: "G Mohan Jayanth"
