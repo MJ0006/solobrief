@@ -19,15 +19,17 @@ SoloBrief is written by **G Mohan Jayanth (MJ)**, a freelancer and solopreneur b
 
 MJ writes the verdicts, evaluates the trade-offs, and signs off on every published review. If a review goes live with the wrong price or a missing limitation, that is on MJ to fix and disclose.
 
-## How we test AI tools
+## How we evaluate AI tools
 
 Every review on SoloBrief follows a documented 5-factor rubric:
 
-1. **Real workflows, not demo flows.** We use the tool inside actual freelance work: client proposals, daily email triage, project scheduling, deliverable writing. Not feature tours.
-2. **Time tracking.** Every review includes time-on-task measurements (with N samples) compared against a baseline of doing the same task without the tool.
+1. **We label our evidence, and we never fake first-hand use.** Each review states plainly whether it is hands-on or research-based. If we have not personally used a tool, we say so in the review itself rather than implying experience we do not have. A research-based review is still useful; a review pretending to be something it is not is worthless.
+2. **Pricing verified at source, with a date.** We read the vendor's own live pricing page and record the date we read it. Where a vendor renders prices in JavaScript that we cannot reliably read, we mark that figure unverified rather than repeating a number we cannot stand behind.
 3. **Pricing math at year 1.** Renewal price after the promo period, not the headline number. We include the math.
-4. **Honest limitation section.** Every review has a "Where this tool falls short" section. If we cannot find weaknesses, we did not test long enough.
-5. **Refund and trial verification.** We confirm the refund window and trial length on the vendor's live pricing page on the day of publication.
+4. **Honest limitation section.** Every review has a "Where this tool falls short" section. A review with no weaknesses in it is a review that did not look hard enough.
+5. **Affiliate relationships disclosed per page.** Where we earn a commission, the page says so, in plain language, near the recommendation and not buried in a footer.
+
+**What this rubric deliberately does not claim.** We do not currently publish time-on-task measurements against a no-tool baseline. Until this page was corrected on 2026-08-19 it claimed we did, which was not true of any published review. Where a review is research-based rather than hands-on, the review says so in its own words.
 
 ## How we use AI in the editorial process
 
