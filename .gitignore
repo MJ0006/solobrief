@@ -1,3 +1,6 @@
 public/
 resources/
 .hugo_build.lock
+
+# Browse-audit tool log. Never ship: it is local telemetry, not site content.
+.gstack/
