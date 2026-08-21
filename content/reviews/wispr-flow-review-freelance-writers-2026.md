@@ -27,6 +27,8 @@ sitemap:
   priority: 0.8
 ---
 
+*This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. We only recommend tools we've researched thoroughly.*
+
 {{< verdict-box
   product="Wispr Flow"
   product-type="SoftwareApplication"
