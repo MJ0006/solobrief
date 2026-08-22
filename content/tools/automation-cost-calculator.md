@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Automation Cost Calculator: Zapier vs n8n vs Make"
 description: "Work out what one workflow really costs on Zapier, n8n and Make. Free, no signup, and it counts only what each vendor actually bills you for."
 date: 2026-08-09
@@ -32,9 +32,16 @@ sitemap:
 
 Every automation tool advertises a monthly price, and none of those prices tell you what you will pay. The reason is that the three big options do not count the same thing. Zapier counts tasks, n8n counts workflow executions, Make counts credits. Feed the same workflow into all three and you get three numbers that are not even the same order of magnitude.
 
-This calculator does that arithmetic for you. Describe one workflow, get the monthly usage on each of the three, and see which plan it lands in.
+This calculator does that arithmetic for you. Describe one workflow, get the monthly usage on each of the three, and see which plan it lands in. If you want the reasoning rather than the number, [how the three platforms price at volume](/comparisons/n8n-vs-zapier-freelancers-2026/) works through it in full.
 
 {{< automation-cost-calculator >}}
+
+> **Key Takeaways**
+> - **The three tools do not count the same thing.** Zapier bills per successful action, n8n per workflow execution, Make per module action. One workflow produces three numbers that are not the same order of magnitude.
+> - **Your bill scales with items processed, not with workflow length.** A three-step workflow looping over 200 rows costs far more than a fifteen-step workflow that runs once and finishes.
+> - **Six visible steps at 500 runs a month is 2,000 Zapier tasks, 500 n8n executions and 2,500 Make credits.** Same work, three billing models, three different answers to which plan you need.
+> - **Zapier does not bill triggers or its own built-in tools.** Formatter, Paths, Filter, Delay and Looping are free, so any comparison that counts every visible step overstates what Zapier charges.
+> - **This gives you usage, not your invoice.** Usage is arithmetic and does not go stale. Prices do, so read the live pricing page before you buy.
 
 ## The one field people get wrong
 
@@ -72,13 +79,42 @@ This matters because the standard argument against Zapier counts every visible s
 
 ## A worked example you can check by hand
 
-A form submission arrives. A filter drops the incomplete ones. Then four things happen: create a CRM record, draft an invoice, send an email, append a row to a sheet. Six visible steps. It fires 500 times a month, one submission at a time.
+A form submission arrives. A filter drops the incomplete ones. Then four things happen: create a CRM record, draft an invoice, send an email, append a row to a sheet. Six visible steps. It fires 500 times a month, one submission at a time. The 500 is an illustrative input; everything derived from it below applies each vendor's own billing rules, retrieved from their pricing pages on 3 August 2026.
 
 | | What actually gets billed | Monthly total |
 |---|---|---|
 | **Zapier** | trigger free, filter free, 4 actions billable | 4 × 500 = **2,000 tasks** |
 | **n8n** | the whole run counts once | **500 executions** |
 | **Make** | trigger module + 4 action modules | 5 × 500 = **2,500 credits** |
+
+<figure class="blog-chart">
+<svg viewBox="0 0 560 380" style="max-width: 100%; height: auto; font-family: 'Inter', system-ui, sans-serif; --chart-muted: #4b5563;" role="img" aria-labelledby="the-same-workflow-billed-three-ways-title the-same-workflow-billed-three-ways-desc">
+  <style>
+    @media (prefers-color-scheme: dark) { svg { --chart-muted: #d1d5db; } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+  </style>
+  <title id="the-same-workflow-billed-three-ways-title">The same workflow, billed three ways</title>
+  <desc id="the-same-workflow-billed-three-ways-desc">The same workflow, billed three ways. horizontal bar data: Make (credits) 2500; Zapier (tasks) 2000; n8n (executions) 500.Source: Worked example on this page, applying the billing rules published by Zapier, n8n and Make pricing pages read 3 August 2026.</desc>
+  <text x="280.0" y="29" text-anchor="middle" font-size="18" font-weight="800" fill="currentColor">The same workflow, billed three ways</text>
+  <text x="280.0" y="48.0" text-anchor="middle" font-size="12" fill="var(--chart-muted, currentColor)"><tspan x="280.0" dy="0">Six visible steps, four billable actions, 500 runs a month, one item</tspan><tspan x="280.0" dy="13">per run</tspan></text>
+  <line x1="145" y1="298.0" x2="510" y2="298.0" stroke="currentColor" opacity="0.08" />
+<line x1="145" y1="243.0" x2="510" y2="243.0" stroke="currentColor" opacity="0.08" />
+<line x1="145" y1="188.0" x2="510" y2="188.0" stroke="currentColor" opacity="0.08" />
+<line x1="145" y1="133.0" x2="510" y2="133.0" stroke="currentColor" opacity="0.08" />
+<line x1="145" y1="78.0" x2="510" y2="78.0" stroke="currentColor" opacity="0.08" />
+<text x="136.0" y="122.2" text-anchor="end" font-size="11" fill="currentColor" opacity="0.8"><tspan x="136.0" dy="0">Make (credits)</tspan></text>
+<rect x="145" y="78.0" width="365.0" height="68.0" rx="4" fill="#f97316" />
+<text x="518.0" y="122.2" font-size="11" fill="currentColor">2500</text>
+<text x="136.0" y="198.2" text-anchor="end" font-size="11" fill="currentColor" opacity="0.8"><tspan x="136.0" dy="0">Zapier (tasks)</tspan></text>
+<rect x="145" y="154.0" width="292.0" height="68.0" rx="4" fill="#38bdf8" />
+<text x="445.0" y="198.2" font-size="11" fill="currentColor">2000</text>
+<text x="136.0" y="274.2" text-anchor="end" font-size="11" fill="currentColor" opacity="0.8"><tspan x="136.0" dy="0">n8n (executions)</tspan></text>
+<rect x="145" y="230.0" width="73.0" height="68.0" rx="4" fill="#a78bfa" />
+<text x="226.0" y="274.2" font-size="11" fill="currentColor">500</text>
+  <text x="280.0" y="366" text-anchor="middle" font-size="10" fill="var(--chart-muted, currentColor)">Source: Worked example on this page, applying the billing rules published by Zapier, n8n and Make (pricing pages read 3 August 2026)</text>
+</svg>
+<figcaption>Source: Worked example on this page, applying the billing rules published by Zapier, n8n and Make, pricing pages read 3 August 2026.</figcaption>
+</figure>
 
 Now watch what that does to the plans. 2,000 tasks puts you past Zapier's entry tier. 500 executions sits comfortably inside n8n's Starter plan. 2,500 credits fits inside Make's entry paid plan. Three tools, one workflow, and the cheapest option depends entirely on a billing rule that none of the marketing pages lead with.
 
@@ -106,12 +142,14 @@ Pick **Make** if you want most of n8n's power without the setup cost. It sits in
 
 For the full picture, including where the learning curve genuinely bites and what broke on a production workflow, read the longer comparison: [n8n vs Zapier vs Make for freelancers](/comparisons/n8n-vs-zapier-freelancers-2026/).
 
+## Common questions
+
 {{< faq-section >}}
 {{< faq question="Does Zapier charge for the trigger step?" >}}No. Zapier bills one task per successful action, and the trigger is not an action. Its built-in tools are also free: Formatter, Paths, Filter, Delay, Looping, Sub-Zap, Digest, Zapier Manager, Storage, Tables and Forms. Failed actions are not billed either. Leave all of those out when you count billable actions.{{< /faq >}}
 {{< faq question="Why does n8n's number not change when I add steps?" >}}Because n8n bills per workflow execution rather than per action. One full run counts once, whether the workflow has three nodes or thirty, and whether it processes one item or two hundred. That is the whole difference in the billing model, and it is why n8n pulls away from the other two on high-volume or fan-out heavy work.{{< /faq >}}
 {{< faq question="What is fan-out and why does it decide my bill?" >}}Fan-out is how many items a single run processes. A form submission is one item. A run that loops over 20 spreadsheet rows is 20. On Zapier and Make, every action inside that loop is billed once per item, so 4 actions over 20 items is 80 billable units per run rather than 4. Your bill scales with how many items you process, not with how long your workflow is.{{< /faq >}}
 {{< faq question="Are Make credits the same as Make operations?" >}}Yes. Make's pricing page now says credits where the community and most older articles still say operations. It is one credit per module action either way. Routers and error handlers are free, and filters live on connections rather than being modules, so they do not count.{{< /faq >}}
-{{< faq question="Is self-hosted n8n really free?" >}}The software is free and there is no execution limit on the Community edition. The cost is hosting. Running it on your own machine costs nothing but only works while that machine is on and n8n is running, which defeats the point for anything that has to fire on a schedule or at 2am. A small always-on VPS is roughly five dollars a month, which is still far below any of the cloud plans.{{< /faq >}}
+{{< faq question="Is self-hosted n8n really free?" >}}The software is free and there is no execution limit on the Community edition. The cost is hosting. Running it on your own machine costs nothing but only works while that machine is on and n8n is running, which defeats the point for anything that has to fire on a schedule or at 2am. A small always-on VPS is roughly five dollars a month, which is still far below any of the cloud plans. The same trade-off inside a real workflow is described in [our own publishing automation](/posts/automate-client-work-with-ai/).{{< /faq >}}
 {{< faq question="Will this calculator tell me my exact bill?" >}}No, and be wary of any that claims to. It gives you monthly usage, which is exact arithmetic, and the plan tier that usage falls into based on published limits read on 3 August 2026. Above the entry paid tier all three vendors price by volume, so check the live pricing page before you buy.{{< /faq >}}
 {{< /faq-section >}}
 

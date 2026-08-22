@@ -13,6 +13,8 @@ categories: ["Guides"]
 affiliate_disclosure: true
 schema_type: "Article"
 brief_id: "brief-011"
+user_notes_used: true
+user_notes: "shared/workspace/user_notes/hostinger-vs-bluehost-notes.md"
 multimedia: true
 cover:
   image: "/img/how-to-set-up-wordpress-on-hostinger.webp"

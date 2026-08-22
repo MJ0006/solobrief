@@ -14,6 +14,8 @@ affiliate_disclosure: true
 schema_type: "Article"
 secondary_schema: "FAQPage"
 brief_id: "brief-011-automate-client-work-with-ai"
+user_notes_used: true
+user_notes: "shared/workspace/user_notes/n8n-notes.md"
 multimedia: true
 cover:
   image: "/img/automate-client-work-with-ai.webp"
@@ -28,7 +30,7 @@ sitemap:
 
 **To automate freelance client work with AI, hand over only the tasks that are repetitive, rule-based and low-judgement, keep a human review step so nothing publishes unread, and cost the workflow by how many items it processes rather than how many steps it has.** That last point is where most of the money gets wasted.
 
-**The short version:**
+## The short version
 
 - **Four jobs are usually worth it:** turning finished work into distribution, proposal and onboarding chase-ups, research gathering, and invoice reminders. Client judgement is not on the list.
 - **Your bill scales with items processed, not workflow length.** A three-step workflow looping 200 rows costs far more than a fifteen-step workflow that runs once.
