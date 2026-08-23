@@ -47,7 +47,7 @@ This calculator does that arithmetic for you. Describe one workflow, get the mon
 
 It is the second one, items per run.
 
-Most people size their automation by counting the boxes on the canvas. That is the wrong unit. **Your bill scales with how many items you process, not with how long your workflow is.** A three-step workflow that loops over 200 spreadsheet rows will cost you far more than a fifteen-step workflow that runs once and finishes.
+Most people size their automation by counting the boxes on the canvas. That is the wrong unit. **Your bill scales with how many items you process, not with how long your workflow is.** A three-step workflow that loops over 200 spreadsheet rows will cost you far more than a fifteen-step workflow that runs once and finishes. If the number above came out higher than you expected, [why a shorter workflow can cost more](/posts/fan-out-tax-automation-billing/) explains exactly which part of it is generating the charge.
 
 This is where surprise bills come from, and it is well documented by the people it happens to. One Zapier user described a loop processing spreadsheet rows: "each step within the loop is consuming tasks individually. For example, if 5 rows are processed, the number of tasks used is significantly higher than expected." A Zapier community manager confirmed in the same thread that the Looping, Filter and Delay actions themselves are not billed, and helped restructure the Zap down to two tasks per row. ([Zapier Community](https://community.zapier.com/troubleshooting-99/excessive-task-usage-in-zap-how-to-optimize-for-email-sending-automation-49372), May 2025)
 

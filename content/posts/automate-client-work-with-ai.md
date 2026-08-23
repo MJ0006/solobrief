@@ -105,7 +105,7 @@ Less than the sticker price suggests and more than the free tier suggests, and t
 
 That is not a detail. It is the single most expensive misunderstanding in this category, and it is where the subscription graveyard comes from.
 
-The trap is that people size an automation by counting the boxes on the canvas. That is the wrong unit. **Your bill scales with how many items you process, not with how long your workflow is.** A three-step workflow looping over 200 spreadsheet rows will cost you far more than a fifteen-step workflow that runs once and stops.
+The trap is that people size an automation by counting the boxes on the canvas. That is the wrong unit. **Your bill scales with how many items you process, not with how long your workflow is.** A three-step workflow looping over 200 spreadsheet rows will cost you far more than a fifteen-step workflow that runs once and stops. We set out [what actually drives an automation bill](/posts/fan-out-tax-automation-billing/) as a formula you can apply to any workflow before you build it.
 
 This is not theoretical, and the people it happens to describe it clearly. One Zapier user working on an email automation reported that "each step within the loop is consuming tasks individually. For example, if 5 rows are processed, the number of tasks used is significantly higher than expected." ([Zapier Community](https://community.zapier.com/troubleshooting-99/excessive-task-usage-in-zap-how-to-optimize-for-email-sending-automation-49372), May 2025)
 

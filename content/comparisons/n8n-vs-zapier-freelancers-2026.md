@@ -105,6 +105,8 @@ One user described a loop processing spreadsheet rows: "each step within the loo
 
 So the rule is: **your bill scales with how many items you process, not with how long your workflow is.** A short workflow that fans out over 200 records will cost more than a long one that runs once. This is the single most useful thing to internalise before you pick a plan on any of the three.
 
+We work through the arithmetic behind this in full, for all three platforms, in [the fan-out tax](/posts/fan-out-tax-automation-billing/).
+
 ## What I actually built, and what broke
 
 I run a self-hosted n8n workflow that handles blog-to-social distribution. A new post publishes, n8n pulls the content, sends it to an AI model with a fixed methodology prompt, converts it into platform-native versions for X, Threads, and an Instagram carousel, pushes each one through the platform API **as a draft rather than a live post**, then logs what it produced to Google Sheets.
