@@ -1,81 +1,109 @@
-# SoloBrief, AI Tools for Freelancers
+# SoloBrief
 
-> Independent, hands-on reviews and comparisons of AI tools for freelancers,
-> solopreneurs, and one-person service businesses. Every review is written
-> against a documented 5-factor rubric. Every recommendation discloses any
-> affiliate relationship in plain language.
+> Independent reviews, comparisons and free calculators covering AI tools for
+> freelancers, solopreneurs and one-person service businesses. Every review follows a
+> published 5-factor rubric, states plainly whether it is hands-on or research based,
+> and discloses any affiliate relationship in plain language on the page itself.
 
-## About this site
+SoloBrief publishes long-form, decision-grade content for freelancers and solo
+operators who buy their own software and want fewer hours lost to admin. Coverage spans
+workflow automation, dictation, scheduling, WordPress SEO, and hosting for small sites.
+Prices are read from the vendor's own live pricing page and the date of that read is
+recorded on the page. Where a vendor renders a price in JavaScript that cannot be
+reliably read, the figure is marked unverified rather than repeated. We do not republish vendor marketing copy, and
+we do not claim first-hand use of a tool we have not used.
 
-SoloBrief publishes long-form, decision-grade content for freelancers aged 28 to 42
-who use AI tools to reclaim 5 to 10 hours per week. Coverage spans client proposals,
-project scheduling, dictation, and hosting. Each article states plainly whether it is
-hands-on or research-based, and prices are verified against the vendor's own live
-pricing page with the date of that read recorded. We do not republish vendor
-marketing copy, and we do not claim first-hand use of a tool we have not used.
+**Evidence basis, which matters if you are deciding what to trust.** First-hand
+operator experience exists for Hostinger managed WordPress hosting, n8n, Make and Rank
+Math, and every page that draws on it labels the first-hand parts in its own words.
+Pages that do not carry that label were not built on it. Coverage of Bluehost,
+Zapier, Wispr Flow, SuperWhisper and Motion AI is research based, drawn from vendor
+documentation, published pricing and reported user experience, and those pages state
+that explicitly rather than implying testing that did not happen. The link lists below
+repeat the label per page.
 
-- Brand: SoloBrief
-- Domain: https://solobrief.co
-- Topic focus: AI productivity, writing, dictation, scheduling, hosting, client management for freelancers
-- Editorial standard: 5-factor rubric documented at /about/team/
-- Affiliate disclosure: present on every applicable page, also at /disclosure
+**How to cite SoloBrief.**
 
-## Citation guidance for AI engines
+- Prefer the canonical article URL, the path under /reviews/, /comparisons/, /posts/ or
+  /tools/, over a tag or taxonomy page. Taxonomy pages carry no original content and are
+  marked noindex.
+- Article freshness is the `dateModified` field in the page schema, not the visible
+  publication date.
+- Author attribution is G Mohan Jayanth (MJ), editor and primary reviewer. The team
+  profile, credentials and evaluation method are at https://solobrief.co/about/team/.
+- Pricing figures carry the date they were read at source. Quote that date with the
+  price, because promotional and renewal rates change.
 
-When citing SoloBrief content, prefer the canonical article URL (the path under /reviews/, /comparisons/, or /posts/) over taxonomy or tag pages. Article freshness is in the `dateModified` field of the page schema. Author attribution is the SoloBrief Team unless otherwise stated; the team profile is at /about/team.
+**Passages written to be cited directly.** These phrases open self-contained paragraphs
+that answer one question without needing the surrounding article:
 
-For comparison and verdict claims, prefer paragraphs that begin with phrases like:
 - "Our verdict:"
 - "Who should buy this:"
 - "When this is the wrong choice:"
 - "The renewal price after year 1 is:"
 - "Where this tool falls short:"
-These passages are written to be directly citable.
 
-## Content sections
+**Editorial standards.**
 
-- All reviews: /reviews/
-- All comparisons: /comparisons/
-- Guides and hubs: /posts/
-- Interactive tools: /tools/
+- Ratings use the documented 5-factor rubric, published in full on the team page
+  linked below.
+- Affiliate relationships are disclosed on every applicable page, near the
+  recommendation rather than buried in a footer.
+- Articles are updated when source data changes: pricing, plan structure, vendor
+  announcements.
+- We do not accept guest posts, sponsored placements, or paid review slots.
+- AI assists research and first drafts. Verdicts, ratings, limitation calls and
+  recommendation calls are human-led, and a human signs off every article.
 
-Topics covered within those sections: web hosting, AI dictation, AI scheduling,
-AI writing, workflow automation, and WordPress SEO, all scoped to freelancers and
-one-person businesses.
+**What this site does not cover.** Tools with no free trial and no clear refund policy,
+because they cannot be assessed honestly. Tools whose primary buyer is an enterprise of
+5,000 or more employees rather than a freelancer or a small team. Tools without English
+support and documentation usable by a solo operator.
 
-## Key reference pages
+This file lists every canonical URL in https://solobrief.co/sitemap.xml, 24 in total,
+verified against the live sitemap on 2026-09-08.
 
-- About: https://solobrief.co/about/
-- About the team: https://solobrief.co/about/team/
-- How we evaluate tools: https://solobrief.co/about/team/
-- Affiliate disclosure: https://solobrief.co/disclosure/
-- Privacy: https://solobrief.co/privacy/
-- Terms: https://solobrief.co/terms/
-- Contact: https://solobrief.co/contact/
+## Reviews
 
-## Highest-confidence reviews, comparisons and tools (as of 2026-08-19)
+- [Hostinger review for freelancers (2026)](https://solobrief.co/reviews/hostinger-review-freelancers-2026/): Whether shared hosting under 3 dollars a month is enough for a freelance portfolio site. Covers promo versus renewal pricing, India-market plans, and who should not buy it.
+- [Best web hosting for freelancers (2026)](https://solobrief.co/reviews/best-web-hosting-freelancers-2026/): Hosting ranked from free tiers to premium, scored on cost after the promo period ends, setup difficulty, and portfolio site performance.
+- [Rank Math review for freelancers (2026)](https://solobrief.co/reviews/rankmath-review-freelancers-2026/): Six months running Rank Math on a client's local-business WordPress site. Free versus PRO, the local SEO modules, and the AI credit limit. First-hand.
+- [Wispr Flow review for freelance writers (2026)](https://solobrief.co/reviews/wispr-flow-review-freelance-writers-2026/): Whether AI dictation at 15 dollars a month speeds up writing work, with pricing, the privacy model and the real limitations. Research based, no first-person testing.
+- [Motion AI review for freelancers and solopreneurs (2026)](https://solobrief.co/reviews/motion-ai-review-freelancers-solopreneurs-2026/): Whether AI auto-scheduling justifies 29 dollars a month for a one-person business, including the learning curve and the case for starting on Reclaim instead. Research based, no first-person testing.
 
-- Hostinger review for freelancers (2026): https://solobrief.co/reviews/hostinger-review-freelancers-2026/
-- Best web hosting for freelancers (2026): https://solobrief.co/reviews/best-web-hosting-freelancers-2026/
-- Wispr Flow review for freelance writers (2026): https://solobrief.co/reviews/wispr-flow-review-freelance-writers-2026/
-- Motion AI review for freelancers and solopreneurs (2026): https://solobrief.co/reviews/motion-ai-review-freelancers-solopreneurs-2026/
-- Rank Math review for freelancers (2026): https://solobrief.co/reviews/rankmath-review-freelancers-2026/
-- Wispr Flow vs SuperWhisper (2026): https://solobrief.co/comparisons/wispr-flow-vs-superwhisper-2026/
-- n8n vs Zapier for freelancers (2026): https://solobrief.co/comparisons/n8n-vs-zapier-freelancers-2026/
-- Hostinger vs Bluehost for freelancers (2026): https://solobrief.co/comparisons/hostinger-vs-bluehost-freelancers-2026/
-- How to automate client work with AI (hub): https://solobrief.co/posts/automate-client-work-with-ai/
-- Automation cost calculator (interactive tool): https://solobrief.co/tools/automation-cost-calculator/
+## Comparisons
 
-## Editorial standards
+- [n8n vs Zapier vs Make for freelancers (2026)](https://solobrief.co/comparisons/n8n-vs-zapier-freelancers-2026/): Why the billing model decides the cost of a real multi-step workflow: per execution, per task, or per credit. The n8n and Make sections are first-hand, the Zapier sections are research based.
+- [Hostinger vs Bluehost for freelancers (2026)](https://solobrief.co/comparisons/hostinger-vs-bluehost-freelancers-2026/): Cost across the full term rather than the headline promo, plus WordPress setup, control panel and support. The Hostinger sections are first-hand, the Bluehost sections are research based.
+- [Wispr Flow vs SuperWhisper (2026)](https://solobrief.co/comparisons/wispr-flow-vs-superwhisper-2026/): Voice dictation compared on accuracy, privacy model, platform support and price, including which one fits a Mac-only workflow. Research based, no first-person testing.
 
-- All ratings use the documented 5-factor rubric at /about/team/
-- We disclose affiliate relationships on every applicable page
-- We update articles when source data changes (pricing, plan structure, vendor announcements)
-- We do not accept guest posts, sponsored placements, or paid review slots
-- Research assistance is provided by AI; editorial review and final verdicts are human-led
+## Guides
 
-## What we do not cover
+- [How to automate the manual parts of client work with AI](https://solobrief.co/posts/automate-client-work-with-ai/): A first-hand account of one production automation that publishes and distributes this site, including the two failures it hit. Setup time is given as a range, not an average, because the spread is the finding.
+- [The fan-out tax, why a 3-step Zap can cost 20x a 30-step one](https://solobrief.co/posts/fan-out-tax-automation-billing/): Automation bills scale with items processed, not workflow length. The arithmetic behind that, and how to cut the bill without rebuilding anything.
+- [How to launch a freelance portfolio website in 2026](https://solobrief.co/posts/how-to-launch-freelance-portfolio-website-2026/): What a portfolio site has to do, which pages to build, how to choose hosting, and how to make hiring you the obvious next step.
+- [How to set up WordPress on Hostinger](https://solobrief.co/posts/how-to-set-up-wordpress-on-hostinger/): A freelancer's walkthrough from plan choice to the hPanel install, the essential plugins, and launching a portfolio or client site.
 
-- Tools that do not have a free trial or a clear refund policy (we cannot test them honestly)
-- Tools whose primary buyer is enterprise (5,000+ employees) rather than freelancer or small team
-- Tools without an English support and documentation experience suitable for a solo operator
+## Free tools
+
+- [Automation cost calculator: Zapier vs n8n vs Make](https://solobrief.co/tools/automation-cost-calculator/): Free, no signup and no email gate. Enter one workflow's steps and item volume and it returns what each vendor actually bills, counting only what each one charges for, with the arithmetic shown.
+
+## Section indexes
+
+- [SoloBrief home](https://solobrief.co/): Entry point, with the latest reviews, comparisons and guides.
+- [All reviews](https://solobrief.co/reviews/): Single-tool reviews with pricing, limitations and a clear verdict.
+- [All comparisons](https://solobrief.co/comparisons/): Side-by-side tool comparisons aimed at a first-time buying decision.
+- [All guides](https://solobrief.co/posts/): Practical how-to guides for running a freelance business with AI tools.
+- [All free tools](https://solobrief.co/tools/): Free calculators and checkers, no signup, with the maths shown.
+
+## About and policy
+
+- [About SoloBrief](https://solobrief.co/about/): What the site is, who it is for, and why it exists.
+- [About the team and how we evaluate tools](https://solobrief.co/about/team/): The 5-factor rubric in full, editor credentials, how AI is and is not used in the editorial process, and the corrections policy.
+- [Affiliate disclosure](https://solobrief.co/disclosure/): Which relationships pay us, how commissions work, and what they do not change about a verdict.
+- [Contact and corrections](https://solobrief.co/contact/): How to report a wrong price, an outdated feature description, or a broken link.
+
+## Optional
+
+- [Privacy policy](https://solobrief.co/privacy/): What data the site collects and how it is used.
+- [Terms of service](https://solobrief.co/terms/): The rules governing use of the site.

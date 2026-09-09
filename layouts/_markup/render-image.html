@@ -1,0 +1,72 @@
+{{- /*
+  SoloBrief override of PaperMod's _markup/render-image.html.
+  Added 2026-09-08 by website-infra alongside the cover.html override.
+
+  The stock hook resolves the image to a Hugo resource and then throws the
+  resource away, emitting a bare img with src, alt, title and loading. So every
+  in-article image is unsized for the same reason every cover was: nothing ever
+  wrote width and height. Article body images were not in the Lighthouse run
+  (it sampled the homepage only), but they are the same defect and the fix
+  belongs at the template level so future images inherit it.
+
+  What this adds when the destination resolves to a raster resource:
+    width and height   always, decode only, no extended Hugo needed
+    srcset and sizes   only when Hugo can re-encode the format
+
+  Everything else, including any image this hook cannot resolve, falls through to
+  exactly what the stock hook emitted.
+
+  BOUNDARY, see the diagram-design section of CLAUDE.md. In-article structural
+  diagrams are INLINE SVG pasted straight into the markdown body. Raw HTML never
+  reaches an image render hook, so this file cannot touch them. It also refuses to
+  process an .svg destination, so a linked SVG stays a vector and is never
+  rasterised.
+*/ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+{{- $res := "" -}}
+{{- if not $u.IsAbs -}}
+  {{- $path := strings.TrimPrefix "./" $u.Path }}
+  {{- with or (.PageInner.Resources.Get $path) (resources.Get $path) -}}
+    {{- $res = . -}}
+    {{- $src = .RelPermalink -}}
+    {{- with $u.RawQuery -}}
+      {{- $src = printf "%s?%s" $src . -}}
+    {{- end -}}
+    {{- with $u.Fragment -}}
+      {{- $src = printf "%s#%s" $src . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $measurable := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif" "webp") -}}
+{{- $processable := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
+{{- if hugo.IsExtended -}}
+  {{- $processable = $processable | append "webp" -}}
+{{- end -}}
+
+{{- $extra := dict -}}
+{{- if and $res (eq $res.ResourceType "image") (in $measurable $res.MediaType.SubType) -}}
+  {{- $w := $res.Width -}}
+  {{- $h := $res.Height -}}
+  {{- $extra = dict "width" (printf "%d" $w) "height" (printf "%d" $h) -}}
+  {{- if and (in $processable $res.MediaType.SubType) (not $u.RawQuery) (not $u.Fragment) -}}
+    {{- $set := slice -}}
+    {{- range $size := (slice 360 480 720 1080 1500) -}}
+      {{- if ge $w $size -}}
+        {{- $set = $set | append (printf "%s %dw" (($res.Resize (printf "%dx" $size)).RelPermalink) $size) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $set = $set | append (printf "%s %dw" $res.RelPermalink $w) -}}
+    {{- $extra = merge $extra (dict "srcset" (delimit $set ", ") "sizes" "(min-width: 768px) 700px, 100vw") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $attributes := merge .Attributes (dict "alt" .Text "src" $src "title" (.Title | transform.HTMLEscape) "loading" "lazy" "decoding" "async") $extra -}}
+<img
+  {{- range $k, $v := $attributes -}}
+    {{- if $v -}}
+      {{- printf " %s=%q" $k $v | safeHTMLAttr -}}
+    {{- end -}}
+  {{- end -}}>
+{{- /**/ -}}

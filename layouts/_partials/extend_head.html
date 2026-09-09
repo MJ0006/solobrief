@@ -1,7 +1,29 @@
 <link rel="icon" href="/images/solobrief-icon.svg" type="image/svg+xml">
 <link rel="shortcut icon" href="/images/solobrief-icon.svg" type="image/svg+xml">
+<!-- Warm the three third-party connections the critical path cannot avoid.
+     Measured 2026-09-02 (Lighthouse 13.4.1 mobile): consent.cookiebot.com 1,104 ms
+     and fonts.googleapis.com 827 ms, both render blocking. A preconnect removes the
+     DNS lookup, TCP handshake and TLS negotiation from each, which is the part of
+     that cost we control. gstatic carries the woff2 files and needs crossorigin
+     because fonts are fetched in CORS mode. -->
+<link rel="preconnect" href="https://consent.cookiebot.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Lora, requested from the HTML rather than waiting on the @import inside
+     custom.css. The @import made this a three hop serial chain: HTML, then
+     custom.css, then the Google Fonts stylesheet, then the woff2. Declaring the
+     same URL here lets the preload scanner start it immediately and in parallel
+     with custom.css. The @import that remains in static/css/custom.css resolves
+     from cache and costs no second request. That file belongs to website-design,
+     so removing the duplicate @import is handed over, not done here. Lora must
+     stay loaded sitewide: the diagram-design skill relies on it so an inlined
+     SVG diagram adds zero extra font requests. -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="/css/custom.css">
-<!-- Cookiebot: GDPR cookie consent,must load first, before any tracking scripts -->
+<!-- Cookiebot: GDPR cookie consent,must load first, before any tracking scripts.
+     It stays a synchronous head script on purpose. data-blockingmode="auto" works
+     by rewriting the tracker script tags below it before they execute, so async or
+     defer would let Clarity and Kit fire before consent. Not speeding this up. -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73f0d960-3239-4cc7-9f31-b77784af19ce" data-blockingmode="auto" type="text/javascript"></script>
 <meta name="google-site-verification" content="uz0sKs9UIV4zhq9xV0ugS-Oq4T99IvfmgzaXY2zY4ZU" />
 <meta name="p:domain_verify" content="e0855cc466f650c6eb7827573f9a79b1"/>

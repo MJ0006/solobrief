@@ -1,0 +1,80 @@
+# SoloBrief security response headers.
+#
+# Cloudflare Pages reads this file from the root of the build output. Hugo copies
+# static/ verbatim into public/, so static/_headers lands at public/_headers.
+#
+# Every comment is kept ABOVE the rule block on purpose. The rule block below is
+# one contiguous run of "Name: value" lines with no blank lines and no inline
+# comments, because a blank line terminates a rule in this file format and an
+# indented comment is not guaranteed to be stripped inside one. A malformed line
+# here fails silently: the site keeps serving, just with no security headers.
+#
+# WHY THIS FILE EXISTS
+# Added 2026-09-09 to close five High severity findings in the Lighthouse 13.4.1
+# run of 2026-09-02: csp-xss, has-hsts, origin-isolation, clickjacking-mitigation
+# and trusted-types-xss. All five are informative mode audits that score 1, so
+# they never appeared in any failing audit list and none of them moves the Best
+# Practices score of 77. Verified absent against the live server the same day:
+# the only security headers solobrief.co sent were x-content-type-options and
+# referrer-policy, and both are Cloudflare Pages defaults rather than ours.
+#
+# Strict-Transport-Security
+#   One year. www.solobrief.co is the only subdomain that resolves and it already
+#   answers 301 over HTTPS, so includeSubDomains costs nothing. preload is
+#   deliberately omitted: it is close to irreversible (removal needs a browser
+#   release cycle) and it only protects a browser's first ever request to us.
+#
+# X-Frame-Options
+#   Chosen over CSP frame-ancestors because frame-ancestors is ignored by spec
+#   when delivered in a Report-Only policy, and this change ships no enforcing
+#   CSP. DENY rather than SAMEORIGIN: the built output contains zero same-origin
+#   iframes, so we never frame ourselves. When the CSP goes enforcing, move to
+#   frame-ancestors 'none' and delete this line rather than keeping both.
+#
+# Cross-Origin-Opener-Policy
+#   Safe here: a grep of the whole built site finds no window.open, so there is
+#   no opener relationship to sever. Cookiebot uses an iframe, and COOP does not
+#   affect iframes. COEP is deliberately NOT set: require-corp would break every
+#   third party that does not send CORP (Google Fonts, Cookiebot, Clarity, gtag)
+#   and the origin-isolation audit does not ask for it.
+#
+# X-Content-Type-Options
+#   Cloudflare already sends this. Restated so the posture lives in the repo and
+#   survives a move off Pages. A duplicate value is harmless for this header.
+#
+# Permissions-Policy
+#   Only APIs nothing on this site can want. Deliberately NOT denied: fullscreen,
+#   autoplay, clipboard-write, encrypted-media, picture-in-picture, accelerometer
+#   and gyroscope. The YouTube facade injects an iframe that requests all seven,
+#   and a document level denial cascades into the frame.
+#
+# Content-Security-Policy-Report-Only
+#   REPORT ONLY, and it must stay that way until the reports have been read.
+#   Origins came from the 41 network requests in the Lighthouse run plus a grep
+#   of the built output, not from guesswork.
+#   'unsafe-inline' in script-src is a real weakening and it is not optional
+#   today: every page carries 8 to 11 inline scripts (announcement banner,
+#   reading progress bar, sticky ToC, Clarity loader, gtag config, JSON-LD) and
+#   every /go/ affiliate redirect page IS an inline script. Removing it needs per
+#   block hashes or nonces, which is follow-up work, not this change. Until that
+#   lands this policy does not stop XSS; it documents the real dependency graph
+#   and catches anything new that appears outside it.
+#   'unsafe-eval' is deliberately absent. If Cookiebot auto-blocking or Clarity
+#   turns out to need it, the report will say so; do not add it pre-emptively.
+#   require-trusted-types-for is deliberately absent. It would break Clarity and
+#   gtag on contact. That is the trusted-types-xss finding, left open on purpose.
+#
+# HOW TO VERIFY, and this is not done yet
+#   There is no reporting endpoint, so violations surface only in the browser
+#   devtools console. Verification is a manual console pass over one page of each
+#   type: home, a post with a YouTube facade, the calculator tool, a /go/ redirect
+#   and the Kit signup. form-action and img-src are the two most likely to report
+#   a false positive. Do not promote to enforcing on the absence of complaints.
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  X-Frame-Options: DENY
+  Cross-Origin-Opener-Policy: same-origin
+  X-Content-Type-Options: nosniff
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+  Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://consent.cookiebot.com https://consentcdn.cookiebot.com https://www.clarity.ms https://scripts.clarity.ms https://www.googletagmanager.com https://solobrief.kit.com https://f.convertkit.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.cookiebot.com https://*.convertkit.com https://*.kit.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com https://*.cookiebot.com https://*.clarity.ms https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; connect-src 'self' https://*.cookiebot.com https://*.clarity.ms https://c.bing.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://*.convertkit.com https://*.kit.com https://static.cloudflareinsights.com; frame-src https://consentcdn.cookiebot.com https://www.youtube.com https://www.googletagmanager.com; form-action 'self' https://*.convertkit.com https://*.kit.com

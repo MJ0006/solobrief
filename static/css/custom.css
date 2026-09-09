@@ -1,5 +1,10 @@
 /* SoloBrief brand CSS -off-white background, amber accent, Lora serif headings */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+/* Lora is requested from the HTML head in layouts/_partials/extend_head.html, not here.
+   An @import made this a serial chain: HTML, then custom.css, then the Google Fonts
+   stylesheet, then the woff2. Measured 2026-09-02 at 827 ms render blocking. Declaring
+   it in the head lets the preload scanner start it in parallel. Do not restore this
+   @import. Lora must stay loaded sitewide: diagram-design relies on it so an inlined
+   SVG diagram adds zero extra font requests. */
 
 :root {
   --bg-primary: #FAFAF8;
@@ -55,12 +60,21 @@ a:hover {
   color: var(--text-primary);
 }
 
-.nav a {
+/* PaperMod v8 renamed the header element from .nav to .header-nav, so a bare
+   ".nav a" selector matches nothing on this site. The primary nav therefore fell
+   through to the global "a" rule and rendered amber. Lighthouse measured all five
+   nav links at 2.11:1 on 2026-09-02 for exactly that reason. Both selectors are
+   kept so a theme revert cannot silently undo the fix. Scoped to .menu so the
+   logo link keeps its ink colour, and left below the #menu toolkit-button rules
+   on specificity so the amber buy button is untouched. */
+.nav a,
+.header-nav .menu a {
   color: var(--text-secondary);
   font-size: 0.92rem;
 }
 
-.nav a:hover {
+.nav a:hover,
+.header-nav .menu a:hover {
   color: var(--accent-text);
   text-decoration: none;
 }
@@ -254,6 +268,7 @@ a:hover {
   max-width: var(--max-content);
 }
 
+.newsletter-cta h2,
 .newsletter-cta h3 {
   margin-top: 0;
   margin-bottom: 0.4rem;
@@ -892,7 +907,20 @@ button:focus:not(:focus-visible) {
   padding: 9px 40px 9px 16px;
   position: relative;
 }
-.sb-banner a { font-weight: 600; }
+/* Ink text with an amber underline. Amber stays the accent, it does not carry
+   the text: #E8A045 on #FEF3E2 measures 2.00:1, ink measures 15.86:1. */
+.sb-banner a {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.sb-banner a:hover {
+  color: var(--text-primary);
+  text-decoration-color: var(--accent-hover);
+}
 .sb-banner .sb-x {
   position: absolute; right: 10px; top: 50%; transform: translateY(-50%);
   cursor: pointer; color: var(--text-muted); background: none; border: 0;
@@ -924,7 +952,10 @@ button:focus:not(:focus-visible) {
   display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between;
 }
 .sb-home-feature .sb-hf-text { flex: 1; min-width: 240px; }
-.sb-home-feature h3 { margin: 0 0 0.3em; }
+/* h2 for a correct document outline, h3 kept so the rule survives a markup
+   revert. Visual size stays at the old h3 scale. */
+.sb-home-feature h2,
+.sb-home-feature h3 { margin: 0 0 0.3em; font-size: 1.2rem; line-height: 1.35; }
 .sb-home-feature p { margin: 0; color: var(--text-secondary); font-size: 0.96rem; }
 
 /* In-article CTA box */

@@ -1,0 +1,107 @@
+{{- /*
+  SoloBrief override of PaperMod's _partials/cover.html.
+  Added 2026-09-08 by website-infra against the Lighthouse audit of 2026-09-02.
+
+  Why this override exists. The stock partial only emits width, height and srcset
+  on the branch where the cover resolves to a Hugo image RESOURCE and the format is
+  processable. Every other branch emits a bare img with no dimensions, which is the
+  branch this site was taking for all 10 homepage covers. Two consequences:
+
+    1. unsized-images, 10 nodes. No width or height, so each cover occupies 0px
+       until it decodes. CLS was measured at 0 only because the covers sit far
+       below the fold. This is prevention, not a live defect.
+    2. image-delivery, 96 KiB wasted across 4 covers. A 1200x630 file was shipped
+       into a 418x219 box.
+
+  Two changes against the stock partial:
+
+    A. Width and height are emitted whenever the cover resolves to a resource, on
+       BOTH branches. Reading dimensions only decodes the image, it does not
+       re-encode it, so it does not depend on the Hugo build being extended.
+       Cloudflare Pages builds with its own Hugo, so anything that silently needs
+       the extended edition is a build-parity trap. See agents/marketing-website-infra.md.
+    B. sizes matches the real layout. Content column is var(--max-content) 700px
+       in static/css/custom.css, not the theme default 720px.
+
+  src stays the ORIGINAL resource permalink on purpose. That keeps /img/{slug}.webp
+  published at its existing URL, which og:image, Pinterest pins and any external
+  share already point at. Do not change src to a resized variant.
+
+  Upgrading PaperMod: re-apply A and B, or delete this file and lose both.
+*/ -}}
+{{- with .cxt }}
+{{- if (and .Params.cover.image (not $.isHidden)) }}
+<figure class="entry-cover">
+    {{- $loading := cond $.IsSingle "eager" "lazy" }}
+    {{- $addLink := (and site.Params.cover.linkFullImages $.IsSingle) }}
+    {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
+    {{- $alt := (.Params.cover.alt | default .Params.cover.caption | plainify) }}
+    {{- $responsiveImages := (.Params.cover.responsiveImages | default site.Params.cover.responsiveImages) | default true }}
+
+    {{- /* Resolve by PATH, not by the stock partial's glob. That glob is
+           printf with a star on each side of .Params.cover.image. For a
+           site-absolute cover path that expands to a pattern requiring a literal
+           slash before img. A global resource name carries no leading slash, so it never
+           matched and every cover silently fell through to the unprocessed branch.
+           Verified 2026-09-08: switching to resources.Get took the 13 covers from
+           "not published at all" to a full srcset. */}}
+    {{- $coverPath := strings.TrimPrefix "/" .Params.cover.image }}
+    {{- $pageBundleCover := or (.Resources.Get $coverPath) ((.Resources.ByType "image").GetMatch (printf "*%s*" (.Params.cover.image))) }}
+    {{- $globalResourcesCover := resources.Get $coverPath }}
+    {{- $cover := (or $pageBundleCover $globalResourcesCover) }}
+
+    {{- /* Formats Hugo can decode for dimensions AND re-encode for srcset. */}}
+    {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") }}
+    {{- if hugo.IsExtended }}
+        {{- $processableFormats = $processableFormats | append "webp" }}
+    {{- end }}
+    {{- /* Formats Hugo can decode for dimensions alone. Decoding webp is not an
+           extended-only feature, so width and height survive a non-extended build. */}}
+    {{- $measurableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif" "webp") }}
+
+    {{- $imgdl := (.Params.cover.image) | absURL }}
+    {{- with $cover }}{{ $imgdl = .Permalink }}{{ end }}
+
+    {{- $w := 0 }}
+    {{- $h := 0 }}
+    {{- if and $cover (in $measurableFormats $cover.MediaType.SubType) }}
+        {{- $w = $cover.Width }}
+        {{- $h = $cover.Height }}
+    {{- end }}
+
+    {{- $candidates := (slice 360 480 720 1080 1500) }}
+
+    {{- if $addLink }}
+        <a href="{{ $imgdl }}" target="_blank" rel="noopener noreferrer">
+    {{- end }}
+
+    {{- if (and $cover (in $processableFormats $cover.MediaType.SubType) $responsiveImages (eq $prod true)) }}
+        <img loading="{{ $loading }}" decoding="async"
+            srcset='{{- range $size := $candidates -}}
+                        {{- if (ge $w $size) }}
+                            {{- printf "%s %dw," (($cover.Resize (printf "%dx" $size)).RelPermalink) $size }}
+                        {{- end }}
+                    {{- end }}
+                    {{- printf "%s %dw" ($cover.RelPermalink) $w }}'
+            src="{{ $cover.RelPermalink }}"
+            sizes="(min-width: 768px) 700px, 100vw"
+            width="{{ $w }}" height="{{ $h }}"
+            alt="{{ $alt }}">
+    {{- else }}
+        <img loading="{{ $loading }}" decoding="async" src="{{ $imgdl }}"
+            {{- if and $w $h }} width="{{ $w }}" height="{{ $h }}"{{ end }}
+            alt="{{ $alt }}">
+    {{- end }}
+
+    {{- if $addLink }}
+        </a>
+    {{- end }}
+
+    {{- if $.IsSingle }}
+        {{- with .Params.cover.caption }}
+        <figcaption>{{ . | markdownify }}</figcaption>
+        {{- end }}
+    {{- end }}
+</figure>
+{{- end }}
+{{- end -}}

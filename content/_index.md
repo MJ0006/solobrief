@@ -1,6 +1,6 @@
 ---
 title: "SoloBrief"
-description: "Honest, first-hand AI tool and web hosting reviews for freelancers and solopreneurs. SoloBrief cuts the hype and shows the software that actually works."
+description: "Honest AI tool and web hosting reviews for freelancers and solopreneurs. Every review says whether it is hands-on or research based, and what it really costs."
 sitemap:
   priority: 1.0
 ---
