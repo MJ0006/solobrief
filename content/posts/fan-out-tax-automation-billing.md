@@ -2,8 +2,9 @@
 title: "The Fan-Out Tax (Why a 3-Step Zap Can Cost 20x a 30-Step One)"
 description: "Automation bills scale with items processed, not workflow length. The arithmetic behind the fan-out tax, and how to cut it without rebuilding anything."
 date: 2026-08-23
-lastmod: 2026-09-08
+lastmod: 2026-09-13
 slug: "fan-out-tax-automation-billing"
+avatar: "overage-refusenik"
 keywords: ["zapier what counts as a task", "why is zapier so expensive", "zapier task usage", "what is a zapier task", "zapier tasks vs zaps", "zapier task limit", "fan out tax"]
 author: "G Mohan Jayanth"
 authorURL: "/about/"
@@ -26,6 +27,8 @@ cover:
 ---
 
 *This page contains one affiliate link, marked where it appears. It costs you nothing extra.*
+
+The bill came in higher than the plan you thought you were on, and none of the automations you built last month look big enough to explain it. The one you suspect is probably not the one spending the money.
 
 Three actions processing 200 spreadsheet rows costs 600 tasks on [Zapier's published task definition](https://zapier.com/pricing). Thirty actions processing one form submission costs 30. The shorter workflow is 20 times more expensive, and nothing on the pricing page tells you that.
 
@@ -167,7 +170,11 @@ Over-counting your Zapier usage is its own kind of expensive, because it pushes 
 
 **Make bills the trigger.** This is the one asymmetry people miss when moving from Zapier. Make charges one credit per module action *including* the trigger module, which is why the Make formula carries that extra `+ 1`. Routers and error handlers are free, and filters live on connections rather than being modules, so they do not count. One naming note worth knowing: [Make's pricing page](https://www.make.com/en/pricing) now uses the word credits, while older writing about the platform still uses operations. They are the same unit.
 
+**Is metered billing just a scheme to make you dip into extra usage?** The suspicion is reasonable and it is worth settling before you touch a plan selector. The meter itself is not the trick. Zapier declines to charge for the trigger, for failed actions and for its built-in tools, and all three vendors publish what they count. What none of them publish is how many units your own work generates, and that is the number an overage is made of. It is also the only number here that is yours to measure.
+
 ## How to work out your own number
+
+Comparing sticker prices across three pricing tabs feels like doing the research, and it cannot answer the question. The variable that decides your bill is not printed on any of those pages. It is your own item volume, and the direction it is heading. Pick an entry plan without knowing it and you meet the same ceiling a few months later, on a different vendor's invoice.
 
 You need four numbers, and the third one is the one that decides your bill:
 
