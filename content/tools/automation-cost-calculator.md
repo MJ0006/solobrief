@@ -2,7 +2,7 @@
 title: "Automation Cost Calculator: Zapier vs n8n vs Make"
 description: "Work out what one workflow really costs on Zapier, n8n and Make. Free, no signup, and it counts only what each vendor actually bills you for."
 date: 2026-08-09
-lastmod: 2026-08-18
+lastmod: 2026-09-15
 slug: "automation-cost-calculator"
 keywords: ["zapier cost calculator", "zapier task calculator", "make credits calculator", "n8n vs zapier cost", "how many zapier tasks will i use", "automation cost calculator", "make vs zapier pricing calculator"]
 author: "G Mohan Jayanth"
@@ -13,6 +13,7 @@ categories: ["Tools & Software"]
 affiliate_disclosure: true
 schema_type: "Article"
 brief_id: "tool-001"
+avatar: "overage-refusenik"
 multimedia: true
 cover:
   image: "/img/automation-cost-calculator.webp"
@@ -29,6 +30,8 @@ sitemap:
 ---
 
 *This page contains one affiliate link, marked where it appears. The calculator itself is free, needs no signup, and does not send your numbers anywhere. Everything runs in your browser.*
+
+The bill that sent you looking for a calculator was bigger than the plan you thought you were on, and nothing about the workflow had changed. That is how most freelancers find out what their automation actually costs: after the fact, from an invoice.
 
 Every automation tool advertises a monthly price, and none of those prices tell you what you will pay. The reason is that the three big options do not count the same thing. Zapier counts tasks, n8n counts workflow executions, Make counts credits. Feed the same workflow into all three and you get three numbers that are not even the same order of magnitude.
 
@@ -52,6 +55,8 @@ Most people size their automation by counting the boxes on the canvas. That is t
 This is where surprise bills come from, and it is well documented by the people it happens to. One Zapier user described a loop processing spreadsheet rows: "each step within the loop is consuming tasks individually. For example, if 5 rows are processed, the number of tasks used is significantly higher than expected." A Zapier community manager confirmed in the same thread that the Looping, Filter and Delay actions themselves are not billed, and helped restructure the Zap down to two tasks per row. ([Zapier Community](https://community.zapier.com/troubleshooting-99/excessive-task-usage-in-zap-how-to-optimize-for-email-sending-automation-49372), May 2025)
 
 Set items per run to 1, then to 20, and watch what happens. Zapier and Make climb together. n8n does not move at all, because it charges for the run and not for what is inside it. That single behaviour is most of the reason people migrate to n8n at volume, and it is invisible if you only compare the headline prices.
+
+There is a second number the headline prices cannot give you, and it is the one almost nobody works out: your own trajectory. Usage climbs with clients, not with steps, so the volume you get billed on in six months is not the volume you are on today. Run the calculator twice. Once at this month's runs, once at the runs you expect after two more clients. The gap between those two answers is the real decision, because that gap is usually where one tool crosses a tier limit and the other two do not move at all.
 
 ## How each number is calculated
 
@@ -133,6 +138,10 @@ It also assumes one workflow. If you run five, add up the usage from five passes
 ## Which one should you actually pick
 
 Usage is one input to that decision and it is not the only one.
+
+First, the suspicion worth saying out loud: metered plans are built so the cheapest tier sits just under what a normal month uses, which is how a small subscription turns into a larger one without anybody deciding anything. That is a fair reading of how this market prices, and none of the three lead with it.
+
+What makes it survivable is that the meter is countable in advance. Every figure on this page comes from a published billing rule rather than a guess, so you can work out which tier your real workflow lands in before you hand over a card, and you can pick the billing unit that suits the shape of your work. Do that and the upgrade stops being a surprise, which is the part of this you actually control.
 
 Pick **Zapier** if your automations are small and you never want to think about them again. It has the most guided builder, instant triggers as standard, and the largest app library. You are paying for not having to care.
 

@@ -2,7 +2,7 @@
 title: "n8n vs Zapier vs Make for Freelancers 2026: The Billing Model Decides It"
 description: "n8n vs Zapier vs Make for freelancers: how each one bills, what a real multi-step workflow actually costs, where the learning curve really is, and which to pick."
 date: 2026-08-03
-lastmod: 2026-08-18
+lastmod: 2026-09-15
 slug: "n8n-vs-zapier-freelancers-2026"
 keywords: ["n8n vs zapier", "n8n vs zapier vs make", "n8n vs zapier for freelancers", "make vs zapier pricing", "zapier alternatives for freelancers 2026", "is n8n hard to learn", "n8n self hosted cost"]
 author: "G Mohan Jayanth"
@@ -13,6 +13,7 @@ categories: ["Tools & Software"]
 affiliate_disclosure: true
 schema_type: "Comparison"
 brief_id: "brief-010"
+avatar: "overage-refusenik"
 multimedia: true
 pricing_verified: 2026-08-03
 pricing_note: "n8n re-verified 2026-08-18 (Starter USD 20/mo, currency corrected from EUR); Zapier re-verified 2026-08-09 unchanged; Make and Railway last verified 2026-08-03"
@@ -42,6 +43,8 @@ cover:
 sitemap:
   priority: 0.8
 ---
+
+Most people arrive at this comparison holding an invoice. The workflow did not change, the volume did, and the plan that covered January had quietly stopped covering March.
 
 Most comparisons of these three line the features up side by side and leave you to guess. But features are rarely what bites you. What decides this is how each tool counts what you owe it, and all three count differently enough that the same workflow can be cheap on one and expensive on another.
 
@@ -105,7 +108,11 @@ One user described a loop processing spreadsheet rows: "each step within the loo
 
 So the rule is: **your bill scales with how many items you process, not with how long your workflow is.** A short workflow that fans out over 200 records will cost more than a long one that runs once. This is the single most useful thing to internalise before you pick a plan on any of the three.
 
+The number that decides your bill is therefore not the one on your screen today. It is your trajectory: items processed per month, a year out, with the clients you expect to have then. Almost nobody works that out before choosing, which is why the plan that looked generous in month one runs out in month five. Price the workflow you are growing into, not the one you are testing.
+
 We work through the arithmetic behind this in full, for all three platforms, in [the fan-out tax](/posts/fan-out-tax-automation-billing/).
+
+It is reasonable to read all of this as a trap. Metered pricing does put the entry tier just below what a working month uses, so usage creeps over the cap and the upgrade arrives without anyone choosing it. The defence is not loyalty to a vendor, it is arithmetic: every number in this article comes from a published billing rule, so you can count your own usage before you commit and pick the billing unit that matches the shape of your work. A per-execution meter cannot punish you for adding steps, and a per-task meter cannot surprise you if you have already counted the actions. Either way the overage stops being a mystery, which is the whole point of reading a comparison like this one.
 
 ## What I actually built, and what broke
 
