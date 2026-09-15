@@ -2,7 +2,7 @@
 title: "How to Set Up WordPress on Hostinger: A Freelancer's Walkthrough (2026)"
 description: "A step-by-step guide to setting up WordPress on Hostinger for freelancers: pick the right plan, install WordPress in hPanel, add the essential plugins, and launch a portfolio or client site fast."
 date: 2026-05-31
-lastmod: 2026-05-31
+lastmod: 2026-09-15
 slug: "how-to-set-up-wordpress-on-hostinger"
 keywords: ["how to set up wordpress on hostinger", "install wordpress hostinger", "hostinger wordpress setup", "hostinger hpanel wordpress", "set up portfolio website hostinger", "hostinger wordpress for freelancers", "best hostinger plan for wordpress"]
 author: "G Mohan Jayanth"
@@ -14,7 +14,8 @@ affiliate_disclosure: true
 schema_type: "Article"
 brief_id: "brief-011"
 user_notes_used: true
-user_notes: "shared/workspace/user_notes/hostinger-vs-bluehost-notes.md"
+user_notes: "shared/workspace/03-production/user_notes/hostinger-vs-bluehost-notes.md"
+avatar: "flow-protector"
 multimedia: true
 cover:
   image: "/img/how-to-set-up-wordpress-on-hostinger.webp"
@@ -29,13 +30,15 @@ sitemap:
 
 ---
 
-You can have a working WordPress site on Hostinger in under 15 minutes: choose a plan, let hPanel install WordPress for you, point your domain, add a handful of plugins, and publish. No FTP, no database setup, no command line. This guide walks through the exact steps a freelancer needs to launch a portfolio or client site, and the one cost most tutorials skip.
+Building the site is rarely what eats the day. The back and forth is: the registrar tab, the host tab, the theme demo that wants one more plugin, the client asking for a preview link while you are half way through the install. The afternoon goes, and the site itself accounted for twenty minutes of it.
+
+So this is written to be finished in one sitting, with no context switch in the middle. You can have a working WordPress site on Hostinger in under 15 minutes: choose a plan, let hPanel install WordPress for you, point your domain, add a handful of plugins, and publish. No FTP, no database setup, no command line. This guide walks through the exact steps a freelancer needs to launch a portfolio or client site, and the one cost most tutorials skip.
 
 I have done this on Hostinger's managed WordPress Business plan: my own portfolio, a couple of WordPress blogs, and client sites all run from one account. So this is the process I actually use, not a theoretical one.
 
 ## The short version
 
-- **Pick the plan by site count.** One site: Premium. Several sites (portfolio plus client work): Business WordPress.
+- **Pick the plan by site count.** Up to three sites: Premium. More than three, or you want daily backups: Unlimited.
 - **Let hPanel install WordPress.** The one-click auto installer handles the database, core files, and admin account.
 - **Add five plugins, not fifty.** SEO, caching, security, backups, and a page builder cover almost every freelance site.
 - **Budget for the renewal, not the promo price.** The intro rate is real but temporary. This is the single most common surprise.
@@ -49,8 +52,8 @@ WordPress runs roughly 43% of all websites on the internet, according to W3Techs
 
 Match the plan to how many sites you will run, not to the feature list.
 
-- **One portfolio or a single client site:** the Premium shared plan is enough. It runs WordPress fine and includes a free domain for year one on annual terms.
-- **Several sites at once (your portfolio plus client work), or you want managed WordPress extras:** the Business WordPress plan. This is what I use. It allows around 100 websites and adds daily backups, a one-click staging environment, and object caching, which you start to care about the moment a paying client's site is involved.
+- **One portfolio, or up to three sites:** the Premium plan is enough. It holds three websites on 20 GB of SSD storage, runs WordPress fine, and includes a free domain for the first year ([Hostinger pricing](https://www.hostinger.com/pricing)).
+- **More than three sites at once, or you want daily backups:** the Unlimited plan. It removes the site cap, moves you from 20 GB SSD to 50 GB NVMe, and turns weekly backups into daily ones, which you start to care about the moment a paying client's site is involved ([Hostinger pricing](https://www.hostinger.com/pricing)). The plan I ran my own portfolio, client sites and test builds on was sold as Business at the time. Unlimited is the tier that sits in that slot on the current lineup.
 
 Both tiers use LiteSpeed web servers and include the LiteSpeed Cache plugin, which is a real speed advantage over basic Apache hosts. Both include a free SSL certificate.
 
@@ -100,10 +103,10 @@ The fastest way to slow down and break a WordPress site is to install too many p
 1. **SEO:** an SEO plugin manages your titles, meta descriptions, sitemaps, and schema. This is non-negotiable if you want the site to rank. [Rank Math](/go/rankmath/) is a strong choice for freelancers because its free tier includes schema and content analysis that some competitors charge for.
 2. **Caching:** on Hostinger, install **LiteSpeed Cache**. It is built for Hostinger's LiteSpeed servers and is the single biggest speed win you can apply in one click.
 3. **Security:** a security plugin adds a firewall, login protection, and malware scanning. Brute-force login attempts are constant on any live WordPress site, so this is worth setting up on day one.
-4. **Backups:** the Business WordPress plan includes daily backups, but a backup plugin gives you on-demand restore points before big changes. Always back up before updating themes or plugins.
+4. **Backups:** the Unlimited plan includes daily backups and Premium only weekly ones, so a backup plugin gives you on-demand restore points before big changes. Always back up before updating themes or plugins.
 5. **Page builder (optional):** if you want visual layout control, add one page builder. Pick one and learn it well rather than stacking several.
 
-Keep the list short. Every plugin is code that can slow the site, conflict with another plugin, or introduce a security hole. Audit your plugins every few months and remove anything you are not using.
+Keep the list short. Every plugin is code that can slow the site, conflict with another plugin, or introduce a security hole. The stronger reason is not the milliseconds: every plugin is one more dashboard to check, one more update prompt, and one more small interruption in a week that already has too many. A freelance site should cost you an afternoon once and close to nothing after that. Audit your plugins every few months and remove anything you are not using.
 
 ## Step 6: What should you configure before launch?
 
@@ -138,7 +141,7 @@ If that fits how you work, you can [start a Hostinger plan here](/go/hostinger/)
 
 {{< faq-section >}}
 {{< faq question="Which Hostinger plan is best for a WordPress site?" >}}
-For a single portfolio or one client site, the Premium plan is enough. If you run several WordPress sites at once or want managed WordPress features like staging and built-in caching, the Business WordPress plan is the better fit. I used the Business WordPress plan and it comfortably held a portfolio, client sites, and test builds on one account. Buy the longest term you are comfortable with, since the intro price is much lower than the renewal.
+For a portfolio or up to three sites, the Premium plan is enough at $2.99 per month on the 48 month term. If you run more than three WordPress sites at once, or you want daily rather than weekly backups, Unlimited at $3.99 is the better fit, and it removes the site cap entirely ([Hostinger pricing](https://www.hostinger.com/pricing)). I ran a portfolio, client sites and test builds together on one account, on the plan that was sold as Business at the time. Buy the longest term you are comfortable with, since the intro price is much lower than the renewal.
 {{< /faq >}}
 {{< faq question="How long does it take to install WordPress on Hostinger?" >}}
 Under 15 minutes from signup to a live WordPress dashboard. Hostinger's hPanel has a guided onboarding that installs WordPress for you and asks a few setup questions. The one-click installer handles the database, the WordPress core, and the admin account in one step, so there is no manual configuration.
@@ -153,7 +156,7 @@ Yes. Annual Hostinger plans typically include a free domain for the first year a
 The renewal. The low advertised price is an introductory rate tied to a multi-year prepay. When that term ends, hosting renews at a materially higher monthly rate. Lock in the longest term you are comfortable with up front and budget for the renewal rate, not the promo rate.
 {{< /faq >}}
 {{< faq question="Can I host multiple client WordPress sites on one Hostinger plan?" >}}
-Yes, on the Premium and Business plans, which allow up to around 100 websites. The Business WordPress plan adds daily backups, a staging environment, and object caching, which matter once you are managing live client work rather than a single hobby site.
+Yes, but check the number first. Premium holds three websites. Unlimited removes the cap and holds as many as you want, and it is also the plan that upgrades weekly backups to daily, which matters once you are managing live client work rather than a single hobby site ([Hostinger pricing](https://www.hostinger.com/pricing)).
 {{< /faq >}}
 {{< /faq-section >}}
 
