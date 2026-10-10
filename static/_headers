@@ -78,3 +78,18 @@
   X-Content-Type-Options: nosniff
   Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
   Content-Security-Policy-Report-Only: default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self' 'unsafe-inline' https://consent.cookiebot.com https://consentcdn.cookiebot.com https://www.clarity.ms https://scripts.clarity.ms https://www.googletagmanager.com https://solobrief.kit.com https://f.convertkit.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.cookiebot.com https://*.convertkit.com https://*.kit.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https://i.ytimg.com https://*.cookiebot.com https://*.clarity.ms https://*.google-analytics.com https://www.googletagmanager.com https://stats.g.doubleclick.net; connect-src 'self' https://*.cookiebot.com https://*.clarity.ms https://c.bing.com https://*.google-analytics.com https://analytics.google.com https://stats.g.doubleclick.net https://www.googletagmanager.com https://*.convertkit.com https://*.kit.com https://static.cloudflareinsights.com; frame-src https://consentcdn.cookiebot.com https://www.youtube.com https://www.googletagmanager.com; form-action 'self' https://*.convertkit.com https://*.kit.com
+
+# KEEP THE COPY AT solobrief.pages.dev OUT OF SEARCH INDEXES (added 2026-10-11, owner request)
+#
+# Cloudflare Pages serves a full second copy of the site at solobrief.pages.dev. It answered
+# 200 with robots "index, follow" on 2026-10-11. Every page's canonical tag already points at
+# solobrief.co, so this is a second layer, not the first.
+#
+# THIS RULE MUST NEVER MATCH solobrief.co. The pattern names the pages.dev host, so a request
+# to our own domain does not match it. A noindex that reached the real domain would remove the
+# whole site from Google. After EVERY deploy that touches this file, check both:
+#   curl -sI https://solobrief.pages.dev/ | grep -i x-robots-tag     (must print noindex)
+#   curl -sI https://solobrief.co/ | grep -i x-robots-tag            (must print nothing)
+# scripts/tests/test_headers_noindex_scope.py guards the file side of this.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
