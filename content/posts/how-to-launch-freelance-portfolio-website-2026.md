@@ -2,7 +2,7 @@
 title: "How to Launch a Freelance Portfolio Website in One Weekend (2026)"
 description: "A weekend plan for solo freelancers: five pages, case studies that win work, and the real four-year hosting cost before you sign up."
 date: 2026-05-31
-lastmod: 2026-05-31
+lastmod: 2026-10-12
 user_notes_used: true
 slug: "how-to-launch-freelance-portfolio-website-2026"
 keywords: ["how to launch a freelance portfolio website", "freelance portfolio website 2026", "build a portfolio site freelancer", "freelance website pages", "portfolio website for freelancers", "how to make a freelance website"]

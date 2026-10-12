@@ -2,7 +2,7 @@
 title: "What Counts as a Zapier Task? Why a 3-Action Zap Can Cost 20x a 30-Action One"
 description: "Automation bills scale with items processed, not workflow length. The arithmetic behind the fan-out tax, and how to cut it without rebuilding anything."
 date: 2026-08-23
-lastmod: 2026-09-13
+lastmod: 2026-10-12
 slug: "fan-out-tax-automation-billing"
 avatar: "overage-refusenik"
 keywords: ["zapier what counts as a task", "why is zapier so expensive", "zapier task usage", "what is a zapier task", "zapier tasks vs zaps", "zapier task limit", "fan out tax"]

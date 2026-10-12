@@ -1,7 +1,7 @@
 ---
 title: "Motion AI Review for Freelancers 2026: Does It Stop Calls Breaking Your Focus?"
 date: 2026-05-20
-lastmod: 2026-10-10
+lastmod: 2026-10-12
 slug: "motion-ai-review-freelancers-solopreneurs-2026"
 description: "Motion AI review for freelancers whose focus keeps getting broken by client calls: what Motion fixes, what it cannot, and the free fix to try first."
 keywords: ["motion ai for freelancers solopreneurs", "motion ai scheduling review 2026", "is motion worth it for freelancers", "best ai scheduling tool for freelancers", "motion vs reclaim for freelancers", "motion ai productivity freelancer"]

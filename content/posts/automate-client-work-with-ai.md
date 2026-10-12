@@ -2,7 +2,7 @@
 title: "How Freelance Writers and Designers Can Automate Client Admin With AI"
 description: "What client admin a freelance writer or designer can automate, how Zapier, Make and n8n bill, and what their own forums show going wrong."
 date: 2026-08-11
-lastmod: 2026-10-11
+lastmod: 2026-10-12
 slug: "automate-client-work-with-ai"
 keywords: ["how to automate freelance client work with ai", "what can freelancers automate", "automate client onboarding freelancer", "how to save time as a freelancer with ai", "freelance workflow automation without code", "stop doing manual work freelance"]
 author: "G Mohan Jayanth"

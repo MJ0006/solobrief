@@ -2,7 +2,7 @@
 title: "How to Set Up WordPress on Hostinger: A Freelancer's Walkthrough (2026)"
 description: "A step-by-step guide to setting up WordPress on Hostinger for freelancers: pick the right plan, install WordPress in hPanel, add the essential plugins, and launch a portfolio or client site fast."
 date: 2026-05-31
-lastmod: 2026-10-11
+lastmod: 2026-10-12
 slug: "how-to-set-up-wordpress-on-hostinger"
 keywords: ["how to set up wordpress on hostinger", "install wordpress hostinger", "hostinger wordpress setup", "hostinger hpanel wordpress", "set up portfolio website hostinger", "hostinger wordpress for freelancers", "best hostinger plan for wordpress"]
 author: "G Mohan Jayanth"
