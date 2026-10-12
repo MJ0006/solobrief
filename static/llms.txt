@@ -60,8 +60,8 @@ because they cannot be assessed honestly. Tools whose primary buyer is an enterp
 5,000 or more employees rather than a freelancer or a small team. Tools without English
 support and documentation usable by a solo operator.
 
-This file lists every canonical URL in https://solobrief.co/sitemap.xml, 24 in total,
-verified against the live sitemap on 2026-09-08.
+This file lists every canonical URL in https://solobrief.co/sitemap.xml, 25 in total,
+verified against the built sitemap on 2026-10-13.
 
 ## Reviews
 
@@ -81,6 +81,7 @@ verified against the live sitemap on 2026-09-08.
 
 - [How to automate the manual parts of client work with AI](https://solobrief.co/posts/automate-client-work-with-ai/): A first-hand account of one production automation that publishes and distributes this site, including the two failures it hit. Setup time is given as a range, not an average, because the spread is the finding.
 - [The fan-out tax, why a 3-step Zap can cost 20x a 30-step one](https://solobrief.co/posts/fan-out-tax-automation-billing/): Automation bills scale with items processed, not workflow length. The arithmetic behind that, and how to cut the bill without rebuilding anything.
+- [How many freelance writers use AI? Four surveys (2026 data)](https://solobrief.co/posts/how-much-ai-freelance-writers-use/): Published AI-use figures run from 45% to 85% depending on who was asked. Four surveys compared by sample, collection dates and definitions, with a guide to which number to quote and what the data cannot tell you. Research based, no first-person testing.
 - [How to launch a freelance portfolio website in 2026](https://solobrief.co/posts/how-to-launch-freelance-portfolio-website-2026/): What a portfolio site has to do, which pages to build, how to choose hosting, and how to make hiring you the obvious next step.
 - [How to set up WordPress on Hostinger](https://solobrief.co/posts/how-to-set-up-wordpress-on-hostinger/): A freelancer's walkthrough from plan choice to the hPanel install, the essential plugins, and launching a portfolio or client site.
 
