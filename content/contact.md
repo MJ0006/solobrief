@@ -1,7 +1,7 @@
 ---
-title: "Contact"
+title: "Contact and Corrections"
 url: "/contact/"
-description: "Get in touch with SoloBrief, corrections, questions, or partnership inquiries."
+description: "Email SoloBrief to report a review correction, suggest a tool, ask a press question or discuss an affiliate program. I aim to reply within 2 business days."
 ---
 
 ## Get in touch

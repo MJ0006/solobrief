@@ -1,7 +1,7 @@
 ---
 title: "Privacy Policy"
 url: "/privacy/"
-description: "SoloBrief privacy policy, what data we collect and how we use it."
+description: "What SoloBrief collects and why: Google Analytics 4 data, email subscriptions, cookies, and how affiliate links and third parties are handled."
 ---
 
 **Effective date:** May 2026

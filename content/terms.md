@@ -1,7 +1,7 @@
 ---
 title: "Terms of Service"
 url: "/terms/"
-description: "SoloBrief terms of service, the rules governing your use of this site."
+description: "The terms for using solobrief.co: how affiliate links and commissions work, no warranties, limits of liability, email subscriptions and governing law."
 ---
 
 **Effective date:** May 2026
