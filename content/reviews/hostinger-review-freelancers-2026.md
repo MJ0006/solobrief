@@ -40,6 +40,13 @@ sitemap:
 
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. We only recommend tools we've researched thoroughly.*
 
+## TL;DR
+
+- **Hostinger is worth it for most freelancers starting out.** Premium is $2.99/month on the 48 month term and renews at $10.99/month, per [Hostinger's pricing page](https://www.hostinger.com/pricing).
+- **Budget against the renewal, not the headline.** The promo rate is tied to your first term, and the standard rate after it is several times higher.
+- **Premium covers a portfolio plus two client sites:** three websites, 20 GB SSD, a free domain for year one, free SSL and weekly backups. Unlimited removes the site cap and adds daily backups.
+- **Skip it** if you need WooCommerce at scale or server-level control.
+
 ---
 
 The hosting bill that freelancers remember is the second one. The first term runs out, the card gets charged at the standard rate, and the plan you picked for its headline price becomes the most expensive line in your tool budget.
@@ -121,7 +128,7 @@ If you don't have a domain, register one during signup using the included free d
 
 **Step 3: Install WordPress from hPanel**
 
-Go to hPanel, then Websites, then Install WordPress. The installer takes under 2 minutes. Choose your site language, set your admin username and a strong password, and confirm. You get a dashboard link immediately.
+Go to hPanel, then Websites, then Install WordPress. The installer takes under 2 minutes. Choose your site language, set your admin username and a strong password, and confirm. You get a dashboard link immediately. The full walkthrough, plugins included, is in [setting up WordPress on Hostinger](/posts/how-to-set-up-wordpress-on-hostinger/).
 
 **Step 4: Install a fast, portfolio-ready theme**
 
@@ -185,7 +192,7 @@ If you're building a straightforward portfolio, you're unlikely to run into the 
 
 *Hostinger and Bluehost figures read from their own pricing pages on 15 September 2026 ([Hostinger pricing](https://www.hostinger.com/pricing), [Bluehost shared hosting](https://www.bluehost.com/hosting/shared)). SiteGround renders its promotional price in JavaScript, so we could not read it and have not guessed at it; the $17.99 renewal and the one-website limit are stated in that page's own text ([SiteGround shared hosting](https://www.siteground.com/shared-hosting.htm)).*
 
-Price is closer than the promo column suggests. Hostinger is cheaper to start, $2.99 against $3.99, but Bluehost Starter renews at $9.99 against Hostinger Premium's $10.99, and it carries ten websites against three. If you expect to be running more than three sites by the time the first term ends, Bluehost is the cheaper shared plan on these numbers, which is not the conclusion the headline prices point at. SiteGround is the most expensive of the three at renewal and has the strongest support record.
+Price is closer than the promo column suggests. Hostinger is cheaper to start, $2.99 against $3.99, but Bluehost Starter renews at $9.99 against Hostinger Premium's $10.99, and it carries ten websites against three. If you expect to be running more than three sites by the time the first term ends, Bluehost is the cheaper shared plan on these numbers, which is not the conclusion the headline prices point at. SiteGround is the most expensive of the three at renewal and has the strongest support record. For the two-way detail on control panels and support, see [our Hostinger and Bluehost comparison](/comparisons/hostinger-vs-bluehost-freelancers-2026/).
 
 [View the full web hosting comparison for freelancers →](/reviews/best-web-hosting-freelancers-2026/)
 

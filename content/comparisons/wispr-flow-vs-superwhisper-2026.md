@@ -37,17 +37,22 @@ sitemap:
 
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. We only recommend tools we've researched thoroughly.*
 
+## TL;DR
+
+- **Wispr Flow is better if you want frictionless, instant dictation** that works in every app with zero setup. $15/month, with a free plan.
+- **SuperWhisper is better if you handle confidential client work.** It processes audio on your machine, works offline, and costs $12/month or $99 one-time.
+- **Wispr Flow is more accurate on short-form; SuperWhisper's Ultra mode wins on long-form.**
+- **Both now run on Mac and Windows.** Wispr Flow also covers iPhone and Android, SuperWhisper covers iOS.
+
 ---
 
 Think about the last project kickoff that took a week. Not because the work was hard, but because every step of it was a message you had to stop and type: the scoping reply on Monday, the revised scope on Wednesday, the confirmation on Friday. That back-and-forth is where a freelance week quietly goes.
 
 If you spend more than an hour a day writing client emails, drafting proposals, or responding to messages, voice dictation can realistically save you 20 to 30 minutes a day. On a 250-day work year, that adds up to around 80 hours back. The question is which Mac dictation app actually delivers on that promise.
 
-That figure also undersells it, in a way worth being precise about. The cost of a four-minute reply is almost never four minutes. It is the stop, the switch into the inbox, the admin that catches your eye while you are in there, and the stretch on the other side spent finding your place again in the work you were actually doing. Most people price each of these jobs in minutes and never count the interruption around it, which is why a tool that shaves the typing can be worth far more than the typing was. Dictation matters because it makes the context switch short enough to survive, not because it saves you keystrokes.
+That figure also undersells it, in a way worth being precise about. The cost of a four-minute reply is almost never four minutes. It is the stop, the switch into the inbox, the admin that catches your eye while you are in there, and the stretch on the other side spent finding your place again in the work you were actually doing. Most people price each of these jobs in minutes and never count the interruption around it, which is why a tool that shaves the typing can be worth far more than the typing was. Dictation matters because it makes the context switch short enough to survive, not because it saves you keystrokes. If the replies themselves repeat, [automating repetitive client work](/posts/automate-client-work-with-ai/) removes some of them altogether.
 
 Two tools come up consistently among freelancers: **Wispr Flow** and **SuperWhisper**. Both run on Mac. Both use AI to transcribe speech into text. But they make very different trade-offs, and for certain freelancers, those differences matter a lot.
-
-The short answer: **Wispr Flow is better if you want frictionless, instant dictation** that works in every app with zero setup. **SuperWhisper is better if you handle confidential client work** and cannot afford to send audio to a cloud server.
 
 Both tools now run on Windows as well as Mac, so this is a real choice whichever machine you work on. Wispr Flow covers Mac, Windows, iPhone and Android. SuperWhisper covers Mac, Windows and iOS.
 

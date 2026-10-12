@@ -44,13 +44,20 @@ sitemap:
   priority: 0.8
 ---
 
+## TL;DR
+
+- **The billing unit decides the cost, not the feature list.** n8n bills per workflow execution, Zapier per successful action, Make per module action.
+- **A 6-step workflow running 500 times a month** is 500 n8n executions, 2,000 Zapier tasks and 2,500 Make credits.
+- **Pick Zapier** if your automations are small and you never want to think about them, **Make** if you want most of n8n's power without the setup cost, and **n8n** if you run high-volume workflows and are comfortable hosting something.
+- **Zapier is the easiest to learn; n8n is the cheapest at volume.** Pricing verified against all three vendor pages on 3 August 2026.
+
 Most people arrive at this comparison holding an invoice. The workflow did not change, the volume did, and the plan that covered January had quietly stopped covering March.
 
 Most comparisons of these three line the features up side by side and leave you to guess. But features are rarely what bites you. What decides this is how each tool counts what you owe it, and all three count differently enough that the same workflow can be cheap on one and expensive on another.
 
 I run a production workflow on self-hosted n8n and I have used Make. I have never paid for Zapier, so everything below about Zapier comes from its own pricing pages and from its users, and I have said so wherever it applies.
 
-## The short version
+## Side by side
 
 | | n8n | Zapier | Make |
 |---|---|---|---|
@@ -110,7 +117,7 @@ So the rule is: **your bill scales with how many items you process, not with how
 
 The number that decides your bill is therefore not the one on your screen today. It is your trajectory: items processed per month, a year out, with the clients you expect to have then. Almost nobody works that out before choosing, which is why the plan that looked generous in month one runs out in month five. Price the workflow you are growing into, not the one you are testing.
 
-We work through the arithmetic behind this in full, for all three platforms, in [the fan-out tax](/posts/fan-out-tax-automation-billing/).
+We work through the arithmetic behind this in full, for all three platforms, in [the fan-out tax](/posts/fan-out-tax-automation-billing/). To run your own workflow through all three, use [the automation cost calculator](/tools/automation-cost-calculator/).
 
 It is reasonable to read all of this as a trap. Metered pricing does put the entry tier just below what a working month uses, so usage creeps over the cap and the upgrade arrives without anyone choosing it. The defence is not loyalty to a vendor, it is arithmetic: every number in this article comes from a published billing rule, so you can count your own usage before you commit and pick the billing unit that matches the shape of your work. A per-execution meter cannot punish you for adding steps, and a per-task meter cannot surprise you if you have already counted the actions. Either way the overage stops being a mystery, which is the whole point of reading a comparison like this one.
 

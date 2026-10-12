@@ -30,6 +30,13 @@ sitemap:
 
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. I'm writing this from six months of first-hand use, not a feature-list summary.*
 
+## TL;DR
+
+- **Rank Math is the pick for freelancers who build or manage WordPress sites**, especially anything with a local-SEO angle. Rated 4.5/5 after six months on a client's WordPress site.
+- **The free version is genuinely capable.** PRO adds Content AI, advanced schema, deeper local SEO and analytics integration, from EUR 7.99/month billed annually at the current promotional rate.
+- **Setup is the easiest part:** the wizard connects Google Search Console and submits your sitemap for you.
+- **Skip it if your site is static** (Hugo, Astro, plain HTML). Rank Math is WordPress-only.
+
 {{< verdict-box
   product="Rank Math"
   product-type="SoftwareApplication"
@@ -152,7 +159,7 @@ This credit-wall problem is not unique to Rank Math. It is how most AI-adjacent 
 ![Rank Math free vs PRO feature comparison for freelancers](/img/rankmath-review-freelancers-2026-infographic.webp)
 *What's in each tier, based on six months of actual use. The free plan covers most sites; PRO earns its place on client and local-SEO work.*
 
-**Stay on free if:** you're running a single portfolio or a simple WordPress site and you mainly need titles, meta descriptions, sitemaps, schema, and the on-page score. The free version covers all of that without nagging you to pay.
+**Stay on free if:** you're running [a single portfolio](/posts/how-to-launch-freelance-portfolio-website-2026/) or a simple WordPress site and you mainly need titles, meta descriptions, sitemaps, schema, and the on-page score. The free version covers all of that without nagging you to pay.
 
 **Upgrade to PRO if:** you do local SEO for clients, or you want the Content AI assistant and accept the credit model. PRO sits at EUR 7.99/month billed annually, which is EUR 95.88 a year excluding VAT, verified on 9 August 2026 and re-verified at source on 19 August 2026. Two things worth knowing before you compare that to anything else. Rank Math prices in euros, not dollars, so budget accordingly if you earn in another currency. And that rate includes a promotional discount off a EUR 8.99/month list price, so check the live page before committing, because the discount is not permanent. For one client project with a local angle, I found the PRO cost easy to fold into the project fee.
 
@@ -166,7 +173,7 @@ If you build or manage WordPress sites, this is an easy recommendation. My own t
 
 The only people who should skip it are those not on WordPress at all. If your portfolio is a static site built with Hugo, Astro, or plain HTML, like the site you're reading this on, an SEO plugin is not the tool you need. Everyone else on WordPress: install the free version today, and upgrade to PRO the first time a client's local SEO or an AI workflow makes it pay for itself.
 
-If you are still choosing where to host that WordPress site, our [best web hosting for freelancers guide](/reviews/best-web-hosting-freelancers-2026/) walks through the full setup, including where Rank Math fits in at Step 7.
+If you are still choosing where to host that WordPress site, our [best web hosting for freelancers guide](/reviews/best-web-hosting-freelancers-2026/) walks through the full setup, including where Rank Math fits in at Step 7. If you are on Hostinger, [our WordPress setup walkthrough](/posts/how-to-set-up-wordpress-on-hostinger/) puts an SEO plugin among the five you add first.
 
 **[Set up Rank Math on your WordPress site →](/go/rankmath/)**
 

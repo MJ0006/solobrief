@@ -1,5 +1,5 @@
 ---
-title: "The Fan-Out Tax (Why a 3-Step Zap Can Cost 20x a 30-Step One)"
+title: "What Counts as a Zapier Task? Why a 3-Action Zap Can Cost 20x a 30-Action One"
 description: "Automation bills scale with items processed, not workflow length. The arithmetic behind the fan-out tax, and how to cut it without rebuilding anything."
 date: 2026-08-23
 lastmod: 2026-09-13
@@ -28,19 +28,20 @@ cover:
 
 *This page contains one affiliate link, marked where it appears. It costs you nothing extra.*
 
+## TL;DR
+
+- Zapier and Make bill **per item processed**, not per workflow. Four actions looping over 20 rows is 80 billable units per run, not 4.
+- n8n bills **per execution**. The same run counts once whether the workflow has 3 nodes or 30, and whether it processes 1 item or 200. This is the whole difference between the models.
+- Zapier does **not** bill the trigger, failed actions, or most of its built-in tools (Formatter, Paths, Filter, Delay, Looping, Digest, Storage, Tables). Code by Zapier, AI by Zapier and calls to a sub-Zap do use tasks. It is easy to over-count.
+- The fix is almost never a shorter workflow. It is filtering earlier, batching, or moving the fan-out heavy job to per-execution billing.
+
 The bill came in higher than the plan you thought you were on, and none of the automations you built last month look big enough to explain it. The one you suspect is probably not the one spending the money.
 
-Three actions processing 200 spreadsheet rows costs 600 tasks on [Zapier's published task definition](https://zapier.com/pricing). Thirty actions processing one form submission costs 30. The shorter workflow is 20 times more expensive, and nothing on the pricing page tells you that.
+Three actions processing 200 spreadsheet rows costs 600 tasks on [Zapier's published task definition](https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier). Thirty actions processing one form submission costs 30. The shorter workflow is 20 times more expensive, and nothing on the pricing page tells you that.
 
 Call it the **fan-out tax**: the gap between what your automation looks like it should cost and what it actually costs, created entirely by how many items each run touches. It is invisible if you are counting steps, which is exactly what everyone does.
 
-Neither figure is an estimate. Each vendor publishes its billing unit: Zapier counts one task per successful action, [n8n](https://n8n.io/pricing/) counts one execution per workflow run, and [Make](https://www.make.com/en/pricing) counts one credit per module action. Every number here is arithmetic on those three definitions, read on 23 August 2026.
-
-> **Key Takeaways**
-> - Zapier and Make bill **per item processed**, not per workflow. Four actions looping over 20 rows is 80 billable units per run, not 4.
-> - n8n bills **per execution**. The same run counts once whether the workflow has 3 nodes or 30, and whether it processes 1 item or 200. This is the whole difference between the models.
-> - Zapier does **not** bill the trigger, its built-in tools (Formatter, Paths, Filter, Delay, Looping, Digest, Storage, Tables), or failed actions. It is easy to over-count.
-> - The fix is almost never a shorter workflow. It is filtering earlier, batching, or moving the fan-out heavy job to per-execution billing.
+Neither figure is an estimate. Each vendor publishes its billing unit: [Zapier](https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier) counts one task per successful action, [n8n](https://n8n.io/pricing/) prices on workflow executions "regardless of complexity", and [Make](https://help.make.com/operations) counts one operation per module run per bundle, which [costs one credit for non-AI apps](https://help.make.com/credits). Every number here is arithmetic on those definitions, first read on 23 August 2026 and re-checked against each vendor's own page on 10 October 2026.
 
 ## What the fan-out tax actually is
 
@@ -147,9 +148,11 @@ Here is the arithmetic, using the billing formulas each vendor publishes. `R` is
 
 | Platform | What one run costs | Why |
 |---|---|---|
-| **Zapier** | (B + A × I) | One task per successful action. The trigger is free, and so are the built-in tools. |
+| **Zapier** | (B + A × I) | One task per successful action. The trigger is free, and so are most built-in tools. |
 | **n8n** | 1 | One execution per run, whether the workflow has three nodes or thirty. |
-| **Make** | (1 + B + A × I) | One credit per module action. The extra 1 is the trigger module, which Make does bill. |
+| **Make** | (1 + B + A × I) | One operation per module run per bundle, one credit each for non-AI apps. The extra 1 is the trigger module, which Make does bill. |
+
+Sources for each row: [Zapier's task usage article](https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier), [n8n's pricing page](https://n8n.io/pricing/) and [Make's operations article](https://help.make.com/operations), all checked 10 October 2026.
 
 Notice what is missing from the n8n row: `A` and `I` do not appear at all. Workflow length and item count are both irrelevant to the bill. n8n is measuring something else entirely, which is why its column barely moves while the other two climb.
 
@@ -164,13 +167,13 @@ The three-step automation costs 20 times more than the thirty-step one. Both loo
 
 Over-counting your Zapier usage is its own kind of expensive, because it pushes you onto a higher plan than you need.
 
-**Zapier does not bill:** the trigger step, failed actions, or any of its built-in tools. That list is longer than it looks: Formatter, Paths, Filter, Delay, Looping, Sub-Zap, Digest, Zapier Manager, Storage, Tables and Forms. A Zap that looks like eight steps may only have four billable actions.
+**Zapier does not bill:** the trigger step, failed actions, Filter and Paths steps, Tables and Forms steps, or the Formatter, Delay, Looping, Digest, Zapier Manager and Storage apps. A Zap that looks like eight steps may only have four billable actions. Not every built-in tool is free, though: Code by Zapier uses at least one task per run, AI by Zapier uses tasks by model tier, and the Call a Sub-Zap and Return From a Sub-Zap steps cost one task each, plus every action inside the sub-Zap. All of this is listed on [Zapier's task usage article](https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier), checked 10 October 2026.
 
-**n8n does not bill by node.** The Community edition has no execution limit at all. The real cost is hosting, and the catch is worth stating plainly. Running n8n on your own machine only works while that machine is on, which defeats the purpose for anything scheduled overnight. A small always-on VPS is roughly five dollars a month.
+**n8n does not bill by node.** Its [pricing page](https://n8n.io/pricing/) prices every paid plan on monthly workflow executions "regardless of complexity", with "unlimited steps" per execution, and lists the self-hosted Community Edition separately as a download from GitHub. Self-hosting moves the cost from the n8n invoice to your hosting bill, and the catch is worth stating plainly: running n8n on your own laptop only works while that laptop is on, which defeats the purpose for anything scheduled overnight. An always-on server is a monthly cost of its own, so price one before you count self-hosting as free.
 
-**Make bills the trigger.** This is the one asymmetry people miss when moving from Zapier. Make charges one credit per module action *including* the trigger module, which is why the Make formula carries that extra `+ 1`. Routers and error handlers are free, and filters live on connections rather than being modules, so they do not count. One naming note worth knowing: [Make's pricing page](https://www.make.com/en/pricing) now uses the word credits, while older writing about the platform still uses operations. They are the same unit.
+**Make bills the trigger.** This is the one asymmetry people miss when moving from Zapier. [Make's operations article](https://help.make.com/operations) counts a trigger check as one operation, then one operation per bundle for every module after it: its own example of a trigger returning 10 form responses into three modules totals 31 operations. That is why the Make formula carries that extra `+ 1`. One naming note worth getting right: credits and operations are not the same thing. Operations count what a scenario did; credits are what you pay. [Make's credits article](https://help.make.com/credits) says one operation equals one credit for non-AI apps, but some modules are tagged at 2 or 10 credits per operation, and AI modules can be billed on tokens, so a scenario heavy on AI steps burns credits faster than its operation count suggests.
 
-**Is metered billing just a scheme to make you dip into extra usage?** The suspicion is reasonable and it is worth settling before you touch a plan selector. The meter itself is not the trick. Zapier declines to charge for the trigger, for failed actions and for its built-in tools, and all three vendors publish what they count. What none of them publish is how many units your own work generates, and that is the number an overage is made of. It is also the only number here that is yours to measure.
+**Is metered billing just a scheme to make you dip into extra usage?** The suspicion is reasonable and it is worth settling before you touch a plan selector. The meter itself is not the trick. Zapier declines to charge for the trigger, for failed actions and for most of its built-in tools, and all three vendors publish what they count. What none of them publish is how many units your own work generates, and that is the number an overage is made of. It is also the only number here that is yours to measure.
 
 ## How to work out your own number
 
@@ -235,7 +238,7 @@ Now raise items per run from 1 to 20 and the Zapier figure becomes 40,000 tasks 
 <text x="422.0" y="295.0" text-anchor="middle" font-size="10" fill="currentColor" opacity="0.8"><tspan x="422.0" dy="0">n8n</tspan><tspan x="422.0" dy="11">(executions)</tspan></text>
   <text x="280.0" y="366" text-anchor="middle" font-size="10" fill="var(--chart-muted, currentColor)">Source: Billing units published by Zapier, n8n and Make (read 23 August 2026)</text>
 </svg>
-<figcaption>Source: <a href="https://zapier.com/pricing">Billing units published by Zapier, n8n and Make</a>, read 23 August 2026.</figcaption>
+<figcaption>Source: billing units published by <a href="https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier">Zapier</a>, <a href="https://n8n.io/pricing/">n8n</a> and <a href="https://help.make.com/operations">Make</a>, read 23 August 2026 and re-checked 10 October 2026. Make figures assume non-AI modules at one credit per operation.</figcaption>
 </figure>
 
 ## How to cut the fan-out tax
@@ -250,7 +253,7 @@ Almost everyone starts by shortening the workflow. It is the least effective mov
 
 **Count what is actually billable before you upgrade.** Given how much Zapier does not charge for, the honest first step is recounting. A workflow that looks like it needs a higher tier often does not.
 
-If you recount and the number is still high, the fan-out is genuinely large and per-execution billing is the honest answer. Want to try that kind of builder before you move anything? Start on [Make's free plan](/go/make/). It gives you 1,000 credits a month, enough to learn whether the builder suits you before any money changes hands. *(That is an affiliate link. It costs you nothing extra, and we use it because Make is the one of the three whose affiliate program we are actually in.)*
+If you recount and the number is still high, the fan-out is genuinely large and per-execution billing is the honest answer. Want to try that kind of builder before you move anything? Start on [Make's free plan](/go/make/). It is enough to learn whether the builder suits you before any money changes hands. Make's free plan includes up to 1,000 credits per month, according to [Make's pricing page](https://www.make.com/en/pricing), read by the owner on 12 October 2026 (the page loads its figures with JavaScript, so we could not read it by script). *(That is an affiliate link. It costs you nothing extra, and we use it because Make is the one of the three whose affiliate program we are actually in.)*
 
 ## Where this leaves you
 
@@ -262,10 +265,10 @@ For the wider picture of where each platform makes sense, [how the three platfor
 
 {{< faq-section >}}
 {{< faq question="What is the fan-out tax?" >}}The fan-out tax is the gap between what an automation looks like it should cost and what it actually costs, caused by how many items each run processes. On Zapier and Make, every action inside a loop is billed once per item, so four actions over 20 items is 80 billable units rather than 4. Workflow length is not what drives the bill.{{< /faq >}}
-{{< faq question="What counts as a task on Zapier?" >}}One task is one successful action. The trigger does not count, and neither do Zapier's built-in tools: Formatter, Paths, Filter, Delay, Looping, Sub-Zap, Digest, Zapier Manager, Storage, Tables and Forms. Failed actions are not billed either. The catch is that an action inside a loop is counted once per item, so a three action Zap over 200 items is 600 tasks, not 3.{{< /faq >}}
+{{< faq question="What counts as a task on Zapier?" >}}One task is one successful action, per [Zapier's task usage article](https://help.zapier.com/hc/en-us/articles/8496196837261-How-is-task-usage-measured-in-Zapier). The trigger does not count, and neither do Filter, Paths, Formatter, Delay, Looping, Digest, Zapier Manager, Storage, Tables or Forms steps. Failed actions are not billed either. Code by Zapier, AI by Zapier and the steps that call or return from a sub-Zap do use tasks. The catch is that an action inside a loop is counted once per item, so a three action Zap over 200 items is 600 tasks, not 3.{{< /faq >}}
 {{< faq question="What are the task limits in Zapier?" >}}Every Zapier plan carries a monthly task allowance rather than a limit on how many Zaps you build, and the allowance is what you exhaust. Because actions inside a loop are billed per item, the number of items your Zaps process decides how fast you burn the allowance, far more than the number of Zaps you own. Check the current allowances on [Zapier's pricing page](https://zapier.com/pricing), since the tiers change.{{< /faq >}}
 {{< faq question="What is the difference between a Zap and a task?" >}}A Zap is the automation you build. A task is one successful action that Zap performs. A single Zap looping over 200 items at three actions each spends 600 tasks every time it runs. That is why counting your Zaps tells you nothing useful about your bill, and counting the items they process tells you almost everything.{{< /faq >}}
 {{< faq question="Why does my n8n usage not change when I add steps?" >}}Because n8n bills per workflow execution rather than per action. One full run counts once whether the workflow has three nodes or thirty, and whether it processes one item or two hundred. That is the entire difference in the billing model.{{< /faq >}}
 {{< faq question="Is a shorter workflow cheaper?" >}}Not reliably. A three-action workflow processing 200 items costs 600 Zapier tasks, while a thirty-action workflow processing one item costs 30. Reducing items per run lowers the bill far more than reducing steps.{{< /faq >}}
-{{< faq question="Are Make credits the same as Make operations?" >}}Yes. Make's pricing page now says credits where the community and most older articles still say operations. It is one credit per module action either way, and unlike Zapier, Make does bill the trigger module.{{< /faq >}}
+{{< faq question="Are Make credits the same as Make operations?" >}}No, though they usually match. An operation is one module run, and a credit is what you pay for it. [Make's credits article](https://help.make.com/credits) says one operation equals one credit for non-AI apps, while some modules cost 2 or 10 credits per operation and AI modules can be billed on tokens. Unlike Zapier, Make does bill the trigger module: each check for new data is one operation.{{< /faq >}}
 {{< /faq-section >}}

@@ -43,6 +43,13 @@ sitemap:
 
 *This article contains affiliate links. If you buy through our links, we may earn a commission at no extra cost to you. We only recommend services we've researched thoroughly.*
 
+## TL;DR
+
+- **Hostinger Premium is the best starting point for most freelancers:** $2.99/month on the 48 month term, renewing at $10.99, with a free domain for year one, LiteSpeed servers and one-click WordPress.
+- **Pick SiteGround** if performance and support are the priority, and **Cloudflare Pages** if you build static sites.
+- **Budget against the renewal price, not the promo.** Promo rates need a long first term, and the plan renews at three or four times the rate that sold it.
+- **Skip free shared hosting entirely.**
+
 {{< verdict-box
   verdict="Hostinger Premium is the best starting point for most freelancers: $2.99/month on the 48 month term, renewing at $10.99, with a free domain for year one, LiteSpeed servers and one-click WordPress. SiteGround if performance and support are the priority. Cloudflare Pages if you build static sites. Skip free shared hosting entirely."
   best-for="Freelancers launching a first portfolio site on a budget"
