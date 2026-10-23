@@ -6,7 +6,6 @@
      DNS lookup, TCP handshake and TLS negotiation from each, which is the part of
      that cost we control. gstatic carries the woff2 files and needs crossorigin
      because fonts are fetched in CORS mode. -->
-<link rel="preconnect" href="https://consent.cookiebot.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- Lora, requested from the HTML rather than waiting on the @import inside
@@ -20,11 +19,74 @@
      SVG diagram adds zero extra font requests. -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 <link rel="stylesheet" href="/css/custom.css">
-<!-- Cookiebot: GDPR cookie consent,must load first, before any tracking scripts.
-     It stays a synchronous head script on purpose. data-blockingmode="auto" works
-     by rewriting the tracker script tags below it before they execute, so async or
-     defer would let Clarity and Kit fire before consent. Not speeding this up. -->
-<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73f0d960-3239-4cc7-9f31-b77784af19ce" data-blockingmode="auto" type="text/javascript"></script>
+<!-- Consent: Silktide Consent Manager (MIT, self-hosted in /vendor/silktide/).
+     Replaced Cookiebot on 2026-10-24. Cookiebot's 14 day trial had lapsed, its banner
+     stopped rendering for solobrief.co, and data-blockingmode="auto" then blocked GA4
+     and Clarity for every new visitor from about 2026-06-10.
+     Silktide does NOT block scripts that are already in the HTML. So nothing that sets
+     cookies may be added to the page directly: GA4 and Clarity are loaded only inside
+     loadAnalytics() below, after the visitor accepts Analytics, and never when the
+     browser sends Do Not Track. Hugo's built in GA4 snippet is switched off by removing
+     googleAnalytics from hugo.toml. The static /go/ redirect pages carry their own gtag
+     and are not covered by this block. -->
+<link rel="stylesheet" href="/vendor/silktide/silktide-consent-manager.css">
+<script defer src="/vendor/silktide/silktide-consent-manager.js"></script>
+<style>
+/* Brand colours for the consent banner: paper, ink and the amber accent from custom.css. */
+#stcm-wrapper{--primaryColor:#E8A045;--backgroundColor:#1A1A1A;--textColor:#FAFAF8;--iconColor:#1A1A1A;--iconBackgroundColor:#E8A045}
+</style>
+<script>
+(function(){
+  var GA_ID = 'G-QRQV8QDSRG', CLARITY_ID = 'wx18h76oye', loaded = false;
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function(){ dataLayer.push(arguments); };
+  gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
+  function loadAnalytics(){
+    var dnt = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+    if (loaded || dnt === '1' || dnt === 'yes') return;
+    loaded = true;
+    gtag('consent', 'update', {analytics_storage: 'granted'});
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, 'clarity', 'script', CLARITY_ID);
+  }
+  function reloadIfLoaded(){
+    // Silktide only reloads on revoke for scripts it injected itself. Ours are loaded in
+    // loadAnalytics(), so a revoke after Accept must reload to stop GA4 and Clarity.
+    if (loaded) setTimeout(function(){ location.reload(); }, 100);
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    window.silktideConsentManager.init({
+      prompt: {position: 'bottomCenter'},
+      icon: {position: 'bottomLeft'},
+      text: {
+        prompt: {
+          description: '<p>SoloBrief uses cookies for anonymous traffic statistics (Google Analytics and Microsoft Clarity) so we can see which pages help readers. No advertising cookies.</p>',
+          acceptAllButtonText: 'Accept',
+          rejectNonEssentialButtonText: 'Reject',
+          preferencesButtonText: 'Preferences'
+        },
+        preferences: {
+          title: 'Cookie preferences',
+          description: '<p>Choose whether statistics cookies are allowed. Essential cookies are always on.</p>'
+        }
+      },
+      consentTypes: [
+        {id: 'essential', label: 'Essential', description: 'Needed for the site to work. Always on.', required: true},
+        {id: 'analytics', label: 'Analytics', description: 'Anonymous visit statistics and session recordings (Google Analytics 4 and Microsoft Clarity).', defaultValue: false, gtag: 'analytics_storage', onAccept: loadAnalytics, onReject: reloadIfLoaded}
+      ]
+    });
+  });
+})();
+</script>
 <meta name="google-site-verification" content="uz0sKs9UIV4zhq9xV0ugS-Oq4T99IvfmgzaXY2zY4ZU" />
 <meta name="p:domain_verify" content="e0855cc466f650c6eb7827573f9a79b1"/>
 <meta name="impact-site-verification" value="86a63f88-a3d6-4cb1-94ca-77ea5cbfed60" />
@@ -106,14 +168,7 @@
 {{- end }}
 <!-- Email capture is handled by Kit (ConvertKit) per-form embeds in home_info.html
      and extend_post_content.html. No universal loader script needed. -->
-<!-- Microsoft Clarity: free heatmaps and session recordings -->
-<script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wx18h76oye");
-</script>
+<!-- Microsoft Clarity is loaded by loadAnalytics() in the consent block above, after consent. -->
 <!-- Freelancer AI Toolkit announcement banner (dismissible, sitewide) -->
 <script>
 (function(){
