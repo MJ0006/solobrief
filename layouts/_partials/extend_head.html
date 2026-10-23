@@ -32,8 +32,14 @@
 <link rel="stylesheet" href="/vendor/silktide/silktide-consent-manager.css">
 <script defer src="/vendor/silktide/silktide-consent-manager.js"></script>
 <style>
-/* Brand colours for the consent banner: paper, ink and the amber accent from custom.css. */
-#stcm-wrapper{--primaryColor:#E8A045;--backgroundColor:#1A1A1A;--textColor:#FAFAF8;--iconColor:#1A1A1A;--iconBackgroundColor:#E8A045}
+/* Consent banner in the SoloBrief light theme (tokens from custom.css): paper ground, ink
+   text, amber buttons. Silktide uses --primaryColor for both button fill and link text, so
+   the buttons are set explicitly: ink on amber is 8:1, amber as link text would be 2:1, so
+   link text uses --accent-text (#96631A, 4.5:1 on paper). */
+#stcm-wrapper{--primaryColor:#96631A;--backgroundColor:#FAFAF8;--textColor:#1A1A1A;--iconColor:#1A1A1A;--iconBackgroundColor:#E8A045;--fontFamily:'Lora',Georgia,'Times New Roman',serif;--boxShadow:0 8px 32px rgba(26,26,26,.16)}
+#stcm-wrapper #stcm-banner,#stcm-wrapper #stcm-modal{border:1px solid #D4D0C8;border-radius:6px}
+#stcm-wrapper .stcm-button,#stcm-wrapper .stcm-button-primary,#stcm-wrapper .stcm-button-secondary{background-color:#E8A045;border-color:#E8A045;color:#1A1A1A;border-radius:6px;font-weight:600}
+#stcm-wrapper .stcm-button:hover,#stcm-wrapper .stcm-button-primary:hover,#stcm-wrapper .stcm-button-secondary:hover{background-color:#C8852F;border-color:#C8852F;color:#1A1A1A}
 </style>
 <script>
 (function(){
